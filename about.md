@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: About Me
+title: About
 templateClass: tmpl-post
 menu:
   visible: true

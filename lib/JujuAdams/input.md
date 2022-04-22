@@ -1,6 +1,10 @@
 ---
 title: Input
 description: This is a post on My Blog about leveraging agile frameworks.
+author: [JujuAdams, Alynne]
+authors: 
+  -JujuAdams
+  -Alynne
 tags:
   - text-renderer
 ---

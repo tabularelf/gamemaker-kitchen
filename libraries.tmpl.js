@@ -1,4 +1,4 @@
-export const layout = "layouts/archive.njk";
+export const layout = "layouts/libraries.njk";
 export const title = "Libraries";
 
 export default function* ({ search, paginate }) {
@@ -11,7 +11,7 @@ export default function* ({ search, paginate }) {
     if (data.pagination.page === 1) {
       data.menu = {
         visible: true,
-        order: 1,
+        order: 2,
       };
     }
 
