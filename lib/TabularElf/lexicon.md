@@ -2,6 +2,7 @@
 title: Lexicon
 description: This is a post on My Blog about leveraging agile frameworks.
 author: TabularElf
+link: https://github.com/tabularelf/lexicon
 tags:
   - localization
 ---
