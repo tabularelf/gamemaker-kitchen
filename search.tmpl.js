@@ -15,7 +15,7 @@ export default function ({ search }, { url }) {
   // Search libraries
   for (const lib of search.pages("type=lib")) {
     result.push({
-      label: `Lib: lib.data.title`,
+      label: `Lib: ${lib.data.title}`,
       search: `${lib.data.title} ${lib.data.tags.join(" ")}`,
       value: url(lib.data.url),
     });
@@ -33,7 +33,7 @@ export default function ({ search }, { url }) {
   // Search posts
   for (const post of search.pages("type=posts")) {
     result.push({
-      label: `Post: post.data.title`,
+	label: `Post: ${post.data.title}`,
       search: `${post.data.title} ${post.data.tags.join(" ")}`,
       value: url(post.data.url),
     });
