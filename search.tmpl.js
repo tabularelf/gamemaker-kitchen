@@ -2,8 +2,26 @@ export const url = "/search.json";
 
 export default function ({ search }, { url }) {
   const result = [];
+  
+  // Search tags from libraries
+  for (const tag of search.tags("type=lib")) {
+    result.push({
+      label: `Tag: ${tag}`,
+      search: tag,
+      value: url(`/tags/${tag}/`),
+    });
+  }
+  
+  // Search libraries
+  for (const lib of search.pages("type=lib")) {
+    result.push({
+      label: lib.data.title,
+      search: `${lib.data.title} ${lib.data.tags.join(" ")}`,
+      value: url(lib.data.url),
+    });
+  }
 
-  // Search tags
+  // Search tags from posts
   for (const tag of search.tags("type=posts")) {
     result.push({
       label: `Tag: ${tag}`,
