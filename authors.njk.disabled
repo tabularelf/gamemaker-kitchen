@@ -1,8 +1,0 @@
----
-layout: layouts/base.njk
----
-<h1>Authors</h1>
-
-{% for page in search.pages("type=author", "author") %}
-  <a href="{{ page.data.url }}" class="tag is-big">{{ page.data.author.data.authors }}</a>
-{% endfor %}

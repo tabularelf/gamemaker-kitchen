@@ -1,0 +1,9 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "lib",
+      "path": "[[workspace]]/lib"
+    }
+  ]
+}

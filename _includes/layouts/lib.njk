@@ -4,6 +4,11 @@ bodyClass: body-post
 ---
 <article class="post">
 	<header class="post-header">
+	<style>
+		div.donation {
+			text-align: right;
+		}
+	</style>
 	<h1 class="post-title">{{ title }}</h1>
 	<h2>
 	<nav class="post-author">
@@ -29,7 +34,11 @@ bodyClass: body-post
 	</time>
 	
 	{% if link %} 
-		<br><a href="{{ link }}" rel="prev">Link to {{ title }}</a></br>
+		<br><a href="{{ link }}" target="_blank">Link to {{ title }}</a>
+	{% endif %}
+	
+	{% if donation_link %}
+		<a href="{{ donation_link }}" target="_blank">Donate!</a>
 	{% endif %}
 	</header>
 
