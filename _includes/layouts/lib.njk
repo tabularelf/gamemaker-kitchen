@@ -28,7 +28,9 @@ bodyClass: body-post
 	{{ date | date('HUMAN_DATE') }}
 	</time>
 	
-	<br><a href="{{ link }}" rel="prev">Link to {{ title }}</a></br>
+	{% if link %} 
+		<br><a href="{{ link }}" rel="prev">Link to {{ title }}</a></br>
+	{% endif %}
 	</header>
 
   <div class="post-body">
