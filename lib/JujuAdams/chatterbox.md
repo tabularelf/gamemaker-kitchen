@@ -2,6 +2,7 @@
 title: Chatterbox
 description: This is a post on My Blog about leveraging agile frameworks.
 author: JujuAdams
+link: https://github.com/JujuAdams/chatterbox
 tags:
   - text-renderer
 ---

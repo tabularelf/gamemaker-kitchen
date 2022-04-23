@@ -1,6 +1,7 @@
 ---
 title: Input
 description: This is a post on My Blog about leveraging agile frameworks.
+link: https://github.com/JujuAdams/Input
 author: [JujuAdams, Alynne]
 authors: 
   - JujuAdams
