@@ -9,5 +9,5 @@ tags:
   - camera
 ---
 
-Lens is a `camera_*` wrapper for GameMaker.
+Lens is a `camera_*` wrapper for GameMaker. Test
 
