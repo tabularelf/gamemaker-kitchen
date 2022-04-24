@@ -7,16 +7,18 @@
 	{% else %}
 		<code>{{ post.url }}</code>
 	{% endif %}
-	{% if post.data.author is string %}
-		<strong>- @{{ post.data.author }}</strong>
-		{% else %} 
-		<strong>- 
-		{% for user in post.data.author %}
-			@{{ user }},
+	</a>
+	<strong>
+	{% if post.data.authors %}
+		{% for author in post.data.authors %}
+			{% if loop.first %} - {% endif %} 
+			<a href="/authors/{{ author | lowercase | replace(" ", "-")}}/" class="postList-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+			@{{ author }}{% if not loop.last %}, {% endif %}
+			</a>
 		{% endfor %}
-		</strong>
 	{% endif %} 
-    </a>
+	</strong>
+    
 
     <time class="postList-date" datetime="{{ post.data.date | date('DATETIME') }}">
       {{ post.data.date | date('HUMAN_DATE') }}

@@ -1,7 +1,8 @@
 ---
 title: Scribble
 description: This is a post on My Blog about leveraging agile frameworks.
-author: JujuAdams
+authors: 
+  - JujuAdams
 link: https://github.com/JujuAdams/scribble
 tags:
   - text-renderer

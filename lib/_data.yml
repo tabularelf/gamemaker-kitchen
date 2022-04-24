@@ -1,4 +1,6 @@
 type: lib
 title: Unknown
 layout: layouts/lib.njk
-author: Unknown
+donation_text: Donate!
+authors: 
+  - Unknown Author

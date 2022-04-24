@@ -1,10 +1,11 @@
-export const layout = "layouts/tag.njk";
+export const layout = "layouts/author.njk";
 
-export default function* ({ search }) {
-  for (const author of search.pages("authors")) {
+export default function* (site) {
+  for (const author of { site }.site.getAuthors()) {
     yield {
-      url: `/authors/${author}/`,
-      title: `author “${author}”`,
+      url: (`/authors/${author}/`).replace(/\s+/g, '-'),
+      title: `Author “${author}”`,
+	  name: author,
       type: "author",
       author,
     };

@@ -20,6 +20,15 @@ export default function ({ search }, { url }) {
       value: url(lib.data.url),
     });
   }
+  
+  // Search authors
+  for (const author of search.pages("type=author")) {
+    result.push({
+      label: `Author: ${author.data.name}`,
+      search: `${author.data.title} ${author.data.tags.join(" ")}`,
+      value: url(author.data.url),
+    });
+  }
 
   // Search tags from posts
   for (const tag of search.tags("type=posts")) {
@@ -41,3 +50,16 @@ export default function ({ search }, { url }) {
 
   return JSON.stringify(result);
 }
+
+
+
+  // Search authors 
+  /*for (const author of { site }.site.getAuthors()) {
+	for (const page of getAuthorPages(author)) {
+	result.push({
+      label: `Author: ${author}`,
+      search: author,
+      value: url(`/authors/${author}/`),
+    });
+	}
+  }*/

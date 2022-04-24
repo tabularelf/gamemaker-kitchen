@@ -1,12 +1,9 @@
 ---
 layout: layouts/base.njk
+title: Authors
 ---
 <h1>Authors</h1>
 
-{% for page in search.pages("type=lib", "authors") %}
-	{% if page.data.authors %}
-		{% for author in page.data.authors %} 
-			<a href="{{ page.data.url }}" class="tag is-big">{{ author }}</a>
-		{% endfor %}
-	{% endif %}
+{% for page in search.pages("type=author", "author") %}
+	<a href="{{ page.data.url }}" class="tag is-big">{{ page.data.author }}</a>
 {% endfor %}
