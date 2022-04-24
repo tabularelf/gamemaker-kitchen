@@ -7,4 +7,5 @@ menu:
   order: 4
 ---
 
-I am a person that writes stuff.
+We're a community who makes and uses GameMaker Libraries. [@JujuAdams](https://github.com/jujuadams) is the owner! 
+This website was created by [@TabularElf!](https://tabelf.link/)
