@@ -9,5 +9,5 @@ tags:
   - camera
 ---
 
-Lexicon is a localization system focused around on simplifying implementation of adding translation to your GameMaker Studio 2.3+ project, all the while allowing specific sections to be replaced on the fly!
+Lens is a `camera_*` wrapper for GameMaker.
 
