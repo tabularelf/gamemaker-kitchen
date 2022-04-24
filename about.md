@@ -7,5 +7,6 @@ menu:
   order: 4
 ---
 
-We're a community who makes and uses GameMaker Libraries. [@JujuAdams](https://github.com/jujuadams) is the owner! 
-<br>This website was created by [@TabularElf!](https://tabelf.link/)
+We're a community who makes and uses GameMaker Libraries. [@JujuAdams](https://github.com/jujuadams) is the owner!
+
+This website was created by</br> [@TabularElf!](https://tabelf.link/)
