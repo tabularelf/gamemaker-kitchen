@@ -16,7 +16,7 @@ const site = lume({
 
 site
   .ignore("README.md")
-  .copy("_src/assets", "img")
+  .copy("assets/")
   .use(postcss())
   .use(terser())
   .use(date())
