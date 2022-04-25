@@ -5,6 +5,7 @@ authors:
   - TabularElf
 link: https://github.com/tabularelf/Collage
 donation_link: https://ko-fi.com/tabularelf/
+version: v0.1.1
 tags:
   - texture-page
   - image
