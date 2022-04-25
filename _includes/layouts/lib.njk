@@ -9,7 +9,13 @@ bodyClass: body-post
 			text-align: right;
 		}
 	</style>
-	<h1 class="post-title">{{ title }}</h1>
+	{% if logo %} <img src="{{ logo }}" 
+		{% if logo_alt %} alt="{{ logo_alt }}" {% endif %} 
+		{% if logo_width %} width="{{ logo_width }}" {% endif %}
+		{% if logo_height %} height="{{ logo_height }}" {% endif %}
+	> 
+	{% endif %}
+	<h1 class="post-title">{{ title }} {{ version }}</h1>
 	<h2>
 	<nav class="post-author">
 		{% if authors %}
