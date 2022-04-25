@@ -6,7 +6,7 @@ authors:
 link: https://github.com/tabularelf/Collage
 donation_link: https://ko-fi.com/tabularelf/
 logo: /assets/img/cathehehe.gif
-version: v0.1.1
+version: v0.1.1 
 tags:
   - texture-page
   - image
