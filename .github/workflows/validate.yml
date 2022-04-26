@@ -14,8 +14,6 @@ jobs:
           node-version: '16'
 
       - uses: stefanbuck/github-issue-praser@v2
-        env:
-          TARGET_BRANCH: 'content'
         id: issue-parser
         with:
           template-path: .github/ISSUE_TEMPLATE/submit-library.yml
@@ -32,8 +30,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
           git config --global user.name "github-actions[bot]" && \
           git add . && \
-          git diff-index --quiet HEAD ||  git commit -am "deploy files"  # commit to the repository (ignore if no modification)
-          git push origin $TARGET_BRANCH # push to remote 
+          git commit -m 'Submitted library!' && \
+          git push
       - uses: peter-evans/close-issue@v1
         with:
           comment: Library has been submitted! Please check out the website!<a href="https://gamemakerkitchen.com/">README</a>.
