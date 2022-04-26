@@ -16,6 +16,7 @@ const site = lume({
 
 site
   .ignore("README.md")
+  .ignore("run_submission_library.js")
   .copy("assets/")
   .use(postcss())
   .use(terser())
