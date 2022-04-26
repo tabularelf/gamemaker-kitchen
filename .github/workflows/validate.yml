@@ -1,0 +1,37 @@
+name: Process order
+on:
+  issues:
+    types: opened
+concurrency: 'main'
+jobs:
+  place_order:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - uses: stefanbuck/github-issue-praser@v2
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/submit-library.yml
+
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > submitlibrary.json
+
+      - run: cat submitlibrary.json
+
+      - run: node ./run_submission_library.js
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
+          git config --global user.name "github-actions[bot]" && \
+          git add . && \
+          git diff-index --quiet HEAD ||  git commit -am "deploy files"  # commit to the repository (ignore if no modification)
+          git push origin $TARGET_BRANCH # push to remote 
+      - uses: peter-evans/close-issue@v1
+        with:
+          comment: Library has been submitted! Please check out the website!<a href="https://gamemakerkitchen.com/">README</a>.

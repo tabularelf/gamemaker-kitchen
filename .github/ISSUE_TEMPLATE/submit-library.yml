@@ -1,0 +1,56 @@
+name: Submit a library!
+description: Codeless contribution made easy!
+labels: [submit-library]
+
+title: "Sumbit a library!"
+
+body:
+- type: input
+  id: title
+  attributes: 
+    label: Title of your submission
+  validations:
+     required: true
+- type: input
+  id: description
+  attributes:
+     label: Description
+     description: This is what would appear whenever you share a link to someone.
+  validations:
+     required: true
+- type: input
+  id: authors
+  attributes:
+    label: Authors
+    description: Please list each author that has contributed, followed by a comma for each contributing author. (i.e, without quotes. "yourname, myname")
+  validations:
+    required: true
+- type: input
+  id: link
+  attributes:
+    label: Link to your library
+    description: Provide a link to where your library is located. (i.e. https://github.com/yourname/repository)
+  validations:
+    required: true
+- type: input
+  id: version
+  attributes:
+    label: Version
+    value: v0.0.0
+    description: Initial version of your submission.
+  validations:
+    required: true
+- type: input
+  id: tags
+  attributes:
+    label: Tags 
+    description: Please list out all of the tags that your library relates to, followed by a comma for each tag. (i.e, without quotes. "tagA, tagB")
+  validations:
+    required: true   
+- type: textarea
+  id: post
+  attributes:
+    label: Post 
+    description: Please provide an extensive description and or provide images here
+  validations:
+    required: true
