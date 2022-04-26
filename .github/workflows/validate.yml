@@ -34,4 +34,4 @@ jobs:
           git push
       - uses: peter-evans/close-issue@v1
         with:
-          comment: Library has been submitted! Please wait a few minutes while we publish your submission before visiting <a href="https://gamemakerkitchen.com/">https://gamemakerkitchen.com/</a>!
+          comment: Library has been submitted! Please wait a few minutes while we prepare your page before visiting <a href="https://gamemakerkitchen.com/">https://gamemakerkitchen.com/</a>!
