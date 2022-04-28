@@ -30,6 +30,7 @@ jobs:
           SRC_FOLDER_PATH: '*'
           TARGET_BRANCH: 'content'
         run: |
+          files=$(find $SRC_FOLDER_PATH -type f) # get the file list
           git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
           git config --global user.name "github-actions[bot]" && \
           git fetch                         # fetch branches
