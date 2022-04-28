@@ -35,9 +35,9 @@ jobs:
           git fetch                         # fetch branches
           git checkout $TARGET_BRANCH       # checkout to your branch
           git checkout ${GITHUB_REF##*/} -- $files # copy files from the source branch
-          git add . && \
-          git commit -m 'Submitted library!' && \
-          git push
+          git add -A
+          git diff-index --quiet HEAD ||  git commit -am 'Submitted library!'  # commit to the repository (ignore if no modification)
+          git push origin $TARGET_BRANCH # push to remote 
       - uses: peter-evans/close-issue@v1
         with:
           comment: Library has been submitted! Please wait a few minutes while we prepare your page before visiting <a href="https://gamemakerkitchen.com/">https://gamemakerkitchen.com/</a>!
