@@ -21,8 +21,8 @@ export default function* ({ search, paginate }) {
 
 function url(n) {
   if (n === 1) {
-    return "/lib/";
+    return "/libraries/";
   }
 
-  return `/lib/${n}/`;
+  return `/libraries/${n}/`;
 }
