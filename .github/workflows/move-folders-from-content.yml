@@ -21,7 +21,7 @@ jobs:
           BRANCH_TO_COPY: 'content'
         run: |
           git fetch                         # fetch branches
-          git checkout $BRANCH_TO_COPY
+          git switch $BRANCH_TO_COPY
           files=$(find $SRC_FOLDER_PATH -type f) # get the file list
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
