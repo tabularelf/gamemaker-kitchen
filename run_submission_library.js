@@ -32,15 +32,15 @@ content += "---\n\n";
 content += post;
 
 
-if (!fs.existsSync("./lib")) {
-	fs.mkdirSync("./lib");
+if (!fs.existsSync("./libs")) {
+	fs.mkdirSync("./libs");
 }
 
-if (!fs.existsSync("./lib/" + _authors[0])) {
-	fs.mkdirSync("./lib/" + _authors[0]);
+if (!fs.existsSync("./libs/" + _authors[0])) {
+	fs.mkdirSync("./libs/" + _authors[0]);
 }
 
-var path = "./lib/" + _authors[0] + "/" + title.replace(" ", "-") + ".md";
+var path = "./libs/" + _authors[0] + "/" + title + ".md";
 fs.stat(path, function(err, stat) {
 	if(err == null) {
 		console.log('File exists ' + path);
