@@ -11,6 +11,10 @@ description: ${description}
 link: ${link}
 version: ${version}`;
 
+let _date = new Date();
+
+content += "date: " + string(_date.getFullYear()) + "-" + string(_date.getMonth() + 1) + "-" + string(_date.getDate()) + "\n";
+
 content += "\ntags:\n";
 
 var _tags = tags.split(",");
