@@ -44,6 +44,8 @@ content += "---\n\n";
 
 content += post;
 
+var _title = encodeURIComponent(title.replace(/[ .*+?^${}()|[\]\\]/g, "-")) + ".md";
+var _author = encodeURIComponent(_authors[0].replace(/[ .*+?^${}()|[\]\\]/g, "-"));
 
 if (!fs.existsSync("./lib")) {
 	fs.mkdirSync("./lib");
@@ -53,7 +55,7 @@ if (!fs.existsSync("./lib/" + _authors[0])) {
 	fs.mkdirSync("./lib/" + _authors[0]);
 }
 
-var path = "./lib/" + _authors[0] + "/" + title.replace(" ", "-") + ".md";
+var path = "./lib/" + _authors[0] + "/" + title;
 fs.stat(path, function(err, stat) {
 	if(err == null) {
 		console.log('File exists ' + path);
