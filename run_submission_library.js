@@ -13,7 +13,7 @@ version: ${version}`;
 
 let _date = new Date();
 
-content += "date: " + string(_date.getFullYear()) + "-" + string(_date.getMonth() + 1) + "-" + string(_date.getDate()) + "\n";
+content += "date: " + new String(_date.getFullYear()) + "-" + new String(_date.getMonth() + 1) + "-" + new String(_date.getDate()) + "\n";
 
 content += "\ntags:\n";
 
