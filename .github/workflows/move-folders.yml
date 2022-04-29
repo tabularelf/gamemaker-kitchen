@@ -3,10 +3,6 @@ name: Commit lib/posts
 on:
   push:
     branches: [ content ]
-  workflow_run:
-    workflows: ["Submit a library!"]
-    types:
-      - completed
 
 jobs:
   build:
