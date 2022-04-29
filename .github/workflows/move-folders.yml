@@ -1,4 +1,4 @@
-name: Commit lib/posts
+name: Commit lib/posts from issue
 
 on:
   push:
