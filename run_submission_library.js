@@ -13,7 +13,7 @@ version: ${version}`;
 
 let _date = new Date();
 
-content += "date: " + new String(_date.getFullYear()) + "-" + new String(_date.getMonth() + 1) + "-" + new String(_date.getDate()) + "\n";
+content += "\ndate: " + new String(_date.getFullYear()) + "-" + new String(_date.getMonth() + 1) + "-" + new String(_date.getDate()) + "\n";
 
 content += "\ntags:\n";
 
@@ -23,7 +23,7 @@ for (var entry in _tags) {
 	content += "  - " + _tags[entry] +"\n";
 }
 
-content += "\authors:\n";
+content += "authors:\n";
 
 var _authors = authors.split(",");
 
