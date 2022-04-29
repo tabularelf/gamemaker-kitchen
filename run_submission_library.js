@@ -5,6 +5,10 @@ const library = require('./submitlibrary.json');
 const user = eventPayload.sender.login;
 const [title, description, authors, link, version, tags, post] = Object.values(library);
 
+function pad(n) {
+    return (n < 10) ? ("0" + n) : n;
+}
+
 var content = `---
 title: ${title}
 description: ${description}
@@ -13,7 +17,7 @@ version: ${version}`;
 
 let _date = new Date();
 
-content += "\ndate: " + new String(_date.getFullYear()) + "-" + new String(_date.getMonth() + 1) + "-" + new String(_date.getDate());
+content += "\ndate: " + new String(_date.getFullYear()) + "-" + new String(pad(_date.getMonth() + 1)) + "-" + new String(_date.getDate());
 
 content += "\ntags:\n";
 
