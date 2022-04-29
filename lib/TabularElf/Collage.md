@@ -6,9 +6,9 @@ version: v0.1.1
 date: 2022-04-29 18:44:02
 tags:
   - texture-page
-  -  texture
-  -  page
-  -  builder
+  - texture
+  - page
+  - builder
 authors:
   - TabularElf
 ---
