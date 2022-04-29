@@ -17,7 +17,12 @@ version: ${version}`;
 
 let _date = new Date();
 
-content += "\ndate: " + new String(_date.getFullYear()) + "-" + new String(pad(_date.getMonth() + 1)) + "-" + new String(_date.getDate());
+content += "\ndate: " + new String(_date.getFullYear()) + "-" 
++ new String(pad(_date.getMonth() + 1)) + "-" 
++ new String(pad(_date.getDate())) + " " 
++ new String(pad(_date.getHours())) + "-" 
++ new String(pad(_date.getMinutes())) + "-" 
++ new String(pad(_date.getSeconds()));
 
 content += "\ntags:\n";
 
