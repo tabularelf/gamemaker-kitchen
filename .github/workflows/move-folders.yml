@@ -4,7 +4,7 @@ on:
   push:
     branches: [ content ]
   workflow_run:
-    workflows: ["submit-library"]
+    workflows: ["Submit a library!"]
     types:
       - completed
 
