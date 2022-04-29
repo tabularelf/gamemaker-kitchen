@@ -3,7 +3,7 @@ title: Collage
 description: Texture page manager
 link: https://github.com/tabularelf/collage
 version: v0.1.1
-date: 2022-04-29 18-44-02
+date: 2022-04-29 18:44:02
 tags:
   - texture-page
   -  texture

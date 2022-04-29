@@ -1,17 +1,16 @@
 ---
 title: Collage
-description: Texture Page Builder for GameMaker.
-authors: 
-  - TabularElf
-link: https://github.com/tabularelf/Collage
-donation_link: https://ko-fi.com/tabularelf/
-logo: /assets/img/cathehehe.gif
-version: v0.1.1 
+description: Texture page manager
+link: https://github.com/tabularelf/collage
+version: v0.1.1
+date: 2022-04-29 18:44:02
 tags:
   - texture-page
-  - image
+  -  texture
+  -  page
+  -  builder
+authors:
+  - TabularElf
 ---
 
-Lexicon is a localization system focused around on simplifying implementation of adding translation to your GameMaker Studio 2.3+ project, all the while allowing specific sections to be replaced on the fly!
-
-![](/assets/img/cathehehe.gif)
+Collage is a Texture Page Builder and image manager, built from the ground up to mimic GameMaker’s texture page packing, while offer a lot of flexibility.
