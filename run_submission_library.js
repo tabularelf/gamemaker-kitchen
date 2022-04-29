@@ -51,11 +51,11 @@ if (!fs.existsSync("./lib")) {
 	fs.mkdirSync("./lib");
 }
 
-if (!fs.existsSync("./lib/" + _authors[0])) {
-	fs.mkdirSync("./lib/" + _authors[0]);
+if (!fs.existsSync("./lib/" + _author)) {
+	fs.mkdirSync("./lib/" + _author);
 }
 
-var path = "./lib/" + _authors[0] + "/" + title;
+var path = "./lib/" + _author + "/" + title;
 fs.stat(path, function(err, stat) {
 	if(err == null) {
 		console.log('File exists ' + path);
