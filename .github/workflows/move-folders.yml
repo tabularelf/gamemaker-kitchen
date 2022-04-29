@@ -4,7 +4,7 @@ on:
   push:
     branches: [ content ]
   workflow_run:
-    workflows: ["Submit a library!"]
+    workflows: ["Commit lib/posts from issue"]
     types:
       - completed
 
