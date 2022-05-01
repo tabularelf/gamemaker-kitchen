@@ -36,7 +36,7 @@ body:
   id: version
   attributes:
     label: Version
-    value: v0.0.0
+    value: 0.0.0
     description: Initial version of your submission.
   validations:
     required: true
