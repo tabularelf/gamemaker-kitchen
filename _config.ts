@@ -18,6 +18,7 @@ site
   .ignore("README.md")
   .ignore("run_submission_library.js")
   .copy("assets/")
+  .copy("CNAME")
   .use(postcss())
   .use(terser())
   .use(date())
