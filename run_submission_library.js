@@ -44,8 +44,8 @@ content += "---\n\n";
 
 content += post;
 
-var _title = encodeURIComponent(title.replace(/[ .*+?^${}()|[\]\\]/g, "-")) + ".md";
-var _author = encodeURIComponent(_authors[0].replace(/[ .*+?^${}()|[\]\\]/g, "-"));
+var _title = encodeURIComponent(title.replace(/[ .*+?^${}()|[\]\\]/g, "-").toLowerCase()) + ".md";
+var _author = encodeURIComponent(_authors[0].replace(/[ .*+?^${}()|[\]\\]/g, "-").toLowerCase());
 
 if (!fs.existsSync("./lib")) {
 	fs.mkdirSync("./lib");
