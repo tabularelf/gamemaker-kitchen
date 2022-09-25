@@ -15,7 +15,7 @@ body:
   id: description
   attributes:
      label: Description
-     description: This is what would appear whenever you share a link to someone.
+     description: This is what will appear whenever you share a link to someone.
   validations:
      required: true
 - type: input
@@ -51,6 +51,6 @@ body:
   id: post
   attributes:
     label: Post 
-    description: Please provide an extensive description and or provide images here
+    description: Please provide an extensive description and or provide images here. (Post field supports markdown!)
   validations:
     required: true
