@@ -1,7 +1,9 @@
 name: Submit a library!
 on:
   issues:
-    types: opened
+    types: 
+    - opened
+    - reopened
 concurrency: 'main'
 jobs:
   place_order:
@@ -18,7 +20,10 @@ jobs:
         with:
           template-path: .github/ISSUE_TEMPLATE/submit-library.yml
 
-      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > submitlibrary.json
+      - name: Export into JSON file using env var
+        run: echo $JSON_STRING > submitlibrary.json
+        env:
+            JSON_STRING: ${{ steps.issue-parser.outputs.jsonString }}
 
       - run: cat submitlibrary.json
 
