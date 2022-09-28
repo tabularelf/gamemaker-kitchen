@@ -1,14 +1,12 @@
+@@ -1,41 +1,43 @@
 name: Submit a library!
 on:
   issues:
-    types:
-      - reopened
-      - opened
+    types: opened
 concurrency: 'main'
 jobs:
   place_order:
     runs-on: ubuntu-latest
-    
     steps:
       - uses: actions/checkout@v2
 
@@ -20,11 +18,8 @@ jobs:
         id: issue-parser
         with:
           template-path: .github/ISSUE_TEMPLATE/submit-library.yml
-           
-        - name: Export into JSON file using env var
-          run: echo $JSON_STRING > submitlibrary.json
-          env:
-            JSON_STRING: ${{ steps.issue-parser.outputs.jsonString }}
+
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > submitlibrary.json
 
       - run: cat submitlibrary.json
 
