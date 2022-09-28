@@ -17,8 +17,9 @@ jobs:
         id: issue-parser
         with:
           template-path: .github/ISSUE_TEMPLATE/submit-library.yml
-
-        - run: echo $JSON_STRING > submitlibrary.json
+           
+        - name: Export into JSON file using env var
+          run: echo $JSON_STRING > submitlibrary.json
           env:
             JSON_STRING: ${{ steps.issue-parser.outputs.jsonString }}
 
