@@ -19,9 +19,7 @@ jobs:
           template-path: .github/ISSUE_TEMPLATE/submit-library.yml
            
         - name: Export into JSON file using env var
-          run: echo $JSON_STRING > submitlibrary.json
-          env:
-            JSON_STRING: ${{ steps.issue-parser.outputs.jsonString }}
+          run: echo `${{ steps.issue-parser.outputs.jsonString }}` > submitlibrary.json
 
       - run: cat submitlibrary.json
 
