@@ -1,32 +1,23 @@
-name: Publish on GitHub Pages
+ame: Publish on GitHub Pages 
 
-on:
-  push:
-    branches: [ master ]
-  workflow_run:
-    workflows: ["Commit lib/posts"]
-    types:
-      - completed
+on: 
+  push: 
+    branches: [ main ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+permissions: 
+  contents: read 
+  pages: write 
+  id-token: write 
 
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v2
+jobs: 
+  build: 
+    runs-on: ubuntu-latest 
 
-      - name: Setup Deno environment
-        uses: denoland/setup-deno@v1
-        with:
+    steps: 
+      - name: Clone repository 
+        uses: actions/checkout@v3 
+
+      - name: Setup Deno environment 
+        uses: denoland/setup-deno@v1 
+        with: 
           deno-version: v1.x
-
-      - name: Build site
-        run: |
-          deno run -A server.ts --location=https://docs.tabularelf.com/gamemaker-kitchen
-
-      - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2.0.1
-        with:
-          repo: gamemaker-kitchen/tabularelf.github.io
-          build_dir: _site
