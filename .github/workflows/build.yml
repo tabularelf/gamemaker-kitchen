@@ -1,4 +1,4 @@
-ame: Publish on GitHub Pages 
+name: Publish on GitHub Pages 
 
 on: 
   push: 
