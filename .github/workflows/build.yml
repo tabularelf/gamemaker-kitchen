@@ -23,7 +23,7 @@ jobs:
 
       - name: Build site
         run: |
-          deno run -A server.ts --location=https://docs.tabularelf.github.io/gamemaker-kitchen
+          deno run -A server.ts --location=https://docs.tabularelf.com/gamemaker-kitchen
 
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2.0.1
