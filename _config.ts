@@ -10,7 +10,8 @@ import netlifyCMS from "lume/plugins/netlify_cms.ts";
 import gpm from "https://deno.land/x/gpm@v0.4.1/mod.ts";
 
 const site = lume({
-  location: new URL("https://tabularelf.github.io/"),
+  location: new URL("https://gamemakerkitchen.com"),
+  src: "./src",
 });
 
 
@@ -39,11 +40,6 @@ site.filter("uppercase", (value) => value.toUpperCase());
 
 // Filter to convert a string to uppercase
 site.filter("lowercase", (value) => value.toLowerCase());
-
-// Set a function
-site.data("randomNumber", function () {
-  return Math.random();
-});
 
 site.data("getAuthors", function authors(): string[] {
   const authors = new Set();

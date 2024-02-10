@@ -1,7 +1,0 @@
-{
-  "build": {
-    "image": "oscarotero/lume",
-    "command": "lume --location=https://lume-blog.on.fleek.co",
-    "publicDir": "_site"
-  }
-}
