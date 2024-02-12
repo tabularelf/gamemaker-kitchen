@@ -3,7 +3,7 @@ name: Submit a resource!
 description: Codeless contribution made easy!
 labels:
   - submit-library
-title: Submit a library!
+title: Submit a resource!
 body:
   - type: input
     id: title
@@ -29,17 +29,9 @@ body:
   - type: input
     id: link
     attributes:
-      label: Link to your library
-      description: Provide a link to where your library is located. (i.e.
+      label: Link to your resource
+      description: Provide a link to where your resource is located. (i.e.
         https://github.com/yourname/repository)
-    validations:
-      required: true
-  - type: input
-    id: version
-    attributes:
-      label: Version
-      value: 0.0.0
-      description: Initial version of your submission.
     validations:
       required: true
   - type: input
