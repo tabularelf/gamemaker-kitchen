@@ -75,5 +75,3 @@ body:
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
-      validations:
-        required: true
