@@ -2,22 +2,8 @@ name: Submit a Resource!
 description: Codeless contribution made easy!
 labels:
   - submit-resource
-title: Title of submission
+title: 
 body:
-  - type: dropdown
-    id: resourceType
-    attributes:
-      label: What kind of resource is it?
-      multiple: true
-      options:
-        - Library
-        - Tool
-        - Framework
-        - Asset
-        - Tutorial
-        - Other (Please fill in the box below)
-    validations:
-      required: true
   - type: input
     id: resourceTypeOther
     attributes:
@@ -75,3 +61,5 @@ body:
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
+      validations:
+        required: true
