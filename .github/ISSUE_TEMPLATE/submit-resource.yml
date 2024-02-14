@@ -1,16 +1,28 @@
 ---
-name: Submit a library!
+name: Submit a Resource!
 description: Codeless contribution made easy!
 labels:
   - submit-library
-title: Submit a library!
+title: 
 body:
-  - type: input
-    id: title
+  - type: dropdown
+    id: resourceType
     attributes:
-      label: Title of your submission
+      label: What kind of resource is it?
+      multiple: true
+      options:
+        - Library
+        - Tool
+        - Framework
+        - Asset
+        - Tutorial
+        - Other (Please fill in the box below)
     validations:
       required: true
+  - type: input
+    id: resourceTypeOther
+    attributes:
+      label: If the resource is set to "other", what is it?
   - type: input
     id: description
     attributes:
@@ -35,14 +47,6 @@ body:
     validations:
       required: true
   - type: input
-    id: version
-    attributes:
-      label: Version
-      value: 0.0.0
-      description: Initial version of your submission.
-    validations:
-      required: true
-  - type: input
     id: tags
     attributes:
       label: Tags
@@ -50,7 +54,7 @@ body:
         followed by a comma for each tag. (i.e, without quotes. "tagA, tagB")
     validations:
       required: true
-  - type: textarea
+  - type: textArea
     id: post
     attributes:
       label: Post
@@ -72,3 +76,5 @@ body:
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
+      validations:
+        required: true
