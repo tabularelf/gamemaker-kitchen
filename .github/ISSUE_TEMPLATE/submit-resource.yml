@@ -1,8 +1,7 @@
----
 name: Submit a Resource!
 description: Codeless contribution made easy!
 labels:
-  - submit-library
+  - submit-resource
 title: 
 body:
   - type: dropdown
@@ -41,8 +40,8 @@ body:
   - type: input
     id: link
     attributes:
-      label: Link to your library
-      description: Provide a link to where your library is located. (i.e.
+      label: Link to your resource
+      description: Provide a link to where your resource is located. (i.e.
         https://github.com/yourname/repository)
     validations:
       required: true
