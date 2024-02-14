@@ -2,10 +2,9 @@ name: Submit a Resource!
 description: Codeless contribution made easy!
 labels:
   - submit-resource
-title: Title of submission
+title: 
 body:
   - type: dropdown
-    id: resourceType
     attributes:
       label: What kind of resource is it?
       multiple: true
@@ -19,18 +18,15 @@ body:
     validations:
       required: true
   - type: input
-    id: resourceTypeOther
     attributes:
       label: If the resource is set to "other", what is it?
   - type: input
-    id: description
     attributes:
       label: Description
       description: This is what will appear whenever you share a link to someone.
     validations:
       required: true
   - type: input
-    id: authors
     attributes:
       label: Authors
       description: Please list each author that has contributed, followed by a comma
@@ -38,7 +34,6 @@ body:
     validations:
       required: true
   - type: input
-    id: link
     attributes:
       label: Link to your resource
       description: Provide a link to where your resource is located. (i.e.
@@ -46,7 +41,6 @@ body:
     validations:
       required: true
   - type: input
-    id: tags
     attributes:
       label: Tags
       description: Please list out all of the tags that your library relates to,
@@ -54,7 +48,6 @@ body:
     validations:
       required: true
   - type: textArea
-    id: post
     attributes:
       label: Post
       description: Please provide an extensive description and or provide images here.
@@ -62,7 +55,6 @@ body:
     validations:
       required: true
   - type: checkboxes
-    id: supported
     attributes:
       label: What versions does your library/tool support?
       description: Helps us know how compatiable your library/tool is with previous versions.
@@ -75,3 +67,5 @@ body:
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
+      validations:
+        required: true
