@@ -4,19 +4,6 @@ labels:
   - submit-resource
 title: 
 body:
-  - type: dropdown
-    attributes:
-      label: What kind of resource is it?
-      multiple: true
-      options:
-        - Library
-        - Tool
-        - Framework
-        - Asset
-        - Tutorial
-        - Other (Please fill in the box below)
-    validations:
-      required: true
   - type: input
     attributes:
       label: If the resource is set to "other", what is it?
