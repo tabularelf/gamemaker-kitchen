@@ -4,7 +4,7 @@ title: About
 templateClass: tmpl-post
 menu:
   visible: true
-  order: 4
+  order: 9
 ---
 
 We're a community who makes and uses GameMaker Libraries. [@TabularElf](https://github.com/tabularelf) is the owner!
