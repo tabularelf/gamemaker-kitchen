@@ -6,9 +6,6 @@ title:
 body:
   - type: input
     attributes:
-      label: If the resource is set to "other", what is it?
-  - type: input
-    attributes:
       label: Description
       description: This is what will appear whenever you share a link to someone.
     validations:
@@ -54,5 +51,3 @@ body:
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
-      validations:
-        required: true
