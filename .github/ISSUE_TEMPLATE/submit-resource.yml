@@ -80,5 +80,6 @@ body:
         - label: iOS
         - label: Android
         - label: Consoles
+        - label: All of the above
         - label: I've selected a platform per above
           required: true
