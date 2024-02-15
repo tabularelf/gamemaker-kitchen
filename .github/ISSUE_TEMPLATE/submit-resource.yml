@@ -12,6 +12,7 @@ body:
         - Framework
         - Tutorial
         - Asset
+        - Script
         - Other (please specify below)
     validations:
       required: true
