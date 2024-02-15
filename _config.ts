@@ -18,7 +18,7 @@ const site = lume({
 site
   .ignore("README.md")
   .ignore("run_submission_library.js")
-  .copy("assets/")
+  .copy("site-assets/")
   .copy("CNAME")
   .use(postcss())
   .use(terser())
@@ -27,7 +27,6 @@ site
   .use(basePath())
   .use(slugifyUrls({ alphanumeric: false }))
   .use(resolveUrls())
-  //.use(netlifyCMS({ netlifyIdentity: true }))
   .addEventListener(
     "beforeBuild",
     () => gpm(["oom-components/searcher"], "js/vendor"),
