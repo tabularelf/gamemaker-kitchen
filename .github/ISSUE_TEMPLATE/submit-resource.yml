@@ -8,12 +8,12 @@ body:
     attributes:
       label: What kind of resource is this?
       options:
-        - label: Library
-        - label: Tool 
-        - label: Framework
-        - label: Tutorial
-        - label: Asset
-        - label: Other (please specify below)
+        - Library
+        - Tool 
+        - Framework
+        - Tutorial
+        - Asset
+        - Other (please specify below)
     validations:
         requred: true
   - type: input
