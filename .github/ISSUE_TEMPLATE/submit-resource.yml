@@ -58,7 +58,6 @@ body:
       label: What versions does your library/tool support?
       description: Helps us know how compatiable your library/tool is with previous versions.
       options:
-        - label: GMS2
         - label: LTS
         - label: 2023.1+
         - label: 2024.4+ 
@@ -67,4 +66,4 @@ body:
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
     validations:
-        required: true
+      required: true
