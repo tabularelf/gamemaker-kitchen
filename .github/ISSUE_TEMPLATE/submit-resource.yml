@@ -4,6 +4,21 @@ labels:
   - submit-resource
 title: "Submission: "
 body:
+  - type: dropdown
+    attributes:
+      label: What kind of resource is this?
+      options:
+        - label: Library
+        - label: Tool 
+        - label: Framework
+        - label: Tutorial
+        - label: Asset
+        - label: Other (please specify below)
+      validations:
+        requred: true
+  - type: input
+    attributes:
+      label: If other was selected, what is it?
   - type: input
     attributes:
       label: Description
@@ -51,3 +66,5 @@ body:
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
+      validations:
+        required: true
