@@ -14,7 +14,7 @@ body:
         - label: Tutorial
         - label: Asset
         - label: Other (please specify below)
-      validations:
+    validations:
         requred: true
   - type: input
     attributes:
@@ -66,5 +66,5 @@ body:
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
-      validations:
+    validations:
         required: true
