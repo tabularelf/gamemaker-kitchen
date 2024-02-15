@@ -2,7 +2,7 @@ name: Submit a Resource!
 description: Codeless contribution made easy!
 labels:
   - submit-resource
-title: name
+title: 
 body:
   - type: input
     attributes:
@@ -31,7 +31,7 @@ body:
         followed by a comma for each tag. (i.e, without quotes. "tagA, tagB")
     validations:
       required: true
-  - type: textArea
+  - type: textarea
     attributes:
       label: Post
       description: Please provide an extensive description and or provide images here.
