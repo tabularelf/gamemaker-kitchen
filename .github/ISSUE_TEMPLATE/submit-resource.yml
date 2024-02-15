@@ -15,7 +15,7 @@ body:
         - Asset
         - Other (please specify below)
     validations:
-        requred: true
+      required: true
   - type: input
     attributes:
       label: If other was selected, what is it?
