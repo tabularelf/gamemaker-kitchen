@@ -2,7 +2,7 @@ name: Submit a Resource!
 description: Codeless contribution made easy!
 labels:
   - submit-resource
-title: 
+title: "Submission: "
 body:
   - type: input
     attributes:
