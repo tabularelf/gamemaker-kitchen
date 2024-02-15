@@ -67,3 +67,14 @@ body:
         - label: New runtime (prefabs)
     validations:
       required: true
+  - type: checkboxes
+    attributes:
+      label: What platforms does it support?
+      options:
+        - label: Windows
+        - label: MacOSX
+        - label: Linux
+        - label: HTML5/GX.games
+        - label: iOS
+        - label: Android
+        - label: Consoles
