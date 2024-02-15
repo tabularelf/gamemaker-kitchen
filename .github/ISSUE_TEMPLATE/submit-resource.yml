@@ -78,3 +78,5 @@ body:
         - label: iOS
         - label: Android
         - label: Consoles
+        - label: I've selected a platform per above
+          required: true
