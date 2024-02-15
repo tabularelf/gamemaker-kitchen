@@ -65,6 +65,8 @@ body:
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
         - label: New runtime (prefabs)
+        - label: I've selected a version per above
+          required: true
     validations:
       required: true
   - type: checkboxes
