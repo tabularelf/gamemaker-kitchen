@@ -54,7 +54,7 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: What versions does your library/tool support?
+      label: What versions does your resource support?
       description: Helps us know how compatiable your library/tool is with previous versions.
       options:
         - label: LTS
