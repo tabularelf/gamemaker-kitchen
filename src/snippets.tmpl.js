@@ -1,5 +1,5 @@
 export const layout = "layouts/libraries.njk";
-export const title = "Scripts";
+export const title = "Snippets";
 
 export default function* ({ search, paginate }) {
   const posts = search.pages("type=script", "date=desc");
@@ -21,8 +21,8 @@ export default function* ({ search, paginate }) {
 
 function url(n) {
   if (n === 1) {
-    return "/c/scripts/";
+    return "/c/snippets/";
   }
 
-  return `/c/scripts/${n}/`;
+  return `/c/snippets/${n}/`;
 }
