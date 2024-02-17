@@ -43,7 +43,27 @@
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+        <nav class="navbar">
+
+      <ul class="navbar-links">
+      {%- for entry in search.pages("footerMenu.visible=true", "footerMenu.order") %}
+        <li>
+          <a href="{{ entry.data.url }}"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+            {{ entry.data.menu.title or entry.data.title }}
+          </a>
+        </li>
+      {%- endfor %}
+	  {%- for entry in search.pages("footer_ext_link.visible=true", "footer_ext_link.order") %}
+        <li>
+          <a href="{{ entry.data.ext_link.url }}"{% if entry.data.ext_link.url == url %} aria-current="page"{% endif %} {{ entry.data.ext_link.target }}>
+            {{ entry.data.ext_link.title or entry.data.title }}
+          </a>
+        </li>
+      {%- endfor %}
+      </ul>
+    </nav>
+    </footer>
 
     <!-- Current page: {{ url }} -->
   </body>

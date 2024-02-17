@@ -3,7 +3,6 @@ title: Lexicon
 description: Localization System for GameMaker Studio 2.3.1+
 link: https://github.com/tabularelf/lexicon
 version: 2.0.4
-date: 2022-05-01 15:55:53
 tags:
   - localization
   - translation
