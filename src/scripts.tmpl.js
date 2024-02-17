@@ -21,8 +21,8 @@ export default function* ({ search, paginate }) {
 
 function url(n) {
   if (n === 1) {
-    return "/scripts/";
+    return "/c/scripts/";
   }
 
-  return `/scripts/${n}/`;
+  return `/c/scripts/${n}/`;
 }

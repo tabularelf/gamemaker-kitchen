@@ -1,6 +1,0 @@
-type: framework
-title: Unknown
-version: v0.0.0
-layout: layouts/lib.njk
-authors: 
-  - Unknown Author
