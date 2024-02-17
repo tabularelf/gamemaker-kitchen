@@ -70,7 +70,7 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: What platforms does it support?
+      label: What platforms has this been tested on? 
       options:
         - label: Windows
         - label: MacOSX
