@@ -1,5 +1,6 @@
 type: tool
 title: Unknown
+category: resource
 version: v0.0.0
 layout: layouts/lib.njk
 donation_text: Donate!

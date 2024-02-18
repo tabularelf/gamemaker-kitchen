@@ -1,4 +1,5 @@
 type: lib
+category: resource
 title: Unknown
 layout: layouts/lib.njk
 donation_text: Donate!

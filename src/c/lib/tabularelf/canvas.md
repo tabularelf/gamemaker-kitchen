@@ -2,8 +2,6 @@
 title: Canvas
 description: A surface that you can modify & keep the contents, even when the surface should've had been lost, for GameMaker Studio 2.3+!
 link: https://github.com/tabularelf/Canvas
-version: 1.1.3
-date: 2022-09-28 15:51:01
 tags:
   - surface
   - buffer
@@ -28,4 +26,11 @@ surf.Finish();
 
 // Draw Event
 draw_surface(surf.GetSurfaceID(), 0, 0);
+```
+
+```json
+{
+  "a_string": "Hello World!",
+  "a_num": 32
+}
 ```

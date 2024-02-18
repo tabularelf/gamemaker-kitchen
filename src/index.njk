@@ -15,3 +15,38 @@ menu:
 <p>More posts can be found in <a href="/c/posts/">the archive</a>.</p>
 <hr>
 
+<script>
+  const resourcePages = [
+    {% for page in search.pages("category=resource") %}
+      {
+        title: "{{ page.data.title | safe }}",
+        url: "{{ page.data.url }}",
+        description: "{{ page.data.description | safe }}"
+        // Add any other properties you need here
+      }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ];
+</script>
+
+<script>
+function getRandomResourcePage() {
+  const randomIndex = Math.floor(Math.random() * resourcePages.length);
+  return resourcePages[randomIndex];
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const randomPage = getRandomResourcePage();
+  console.log(randomPage);
+  document.getElementById('randomPageTitle').textContent = randomPage.title;
+  document.getElementById('randomPageLink').setAttribute('href', randomPage.url);
+  document.getElementById('randomLinkDescription').textContent = randomPage.description;
+});
+
+</script>
+
+<div>
+  <h2>Have you checked out...</h2>
+  <h2 id="randomPageTitle"></h2>
+  <p id="randomLinkDescription"></p>
+  <a id="randomPageLink" href="#">Read more</a>
+</div>
