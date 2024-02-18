@@ -13,6 +13,9 @@
       {{ post.data.date | date('HUMAN_DATE') }}
     </time>
 
+	
+	  <!--  Force newline -->
+	  <br>
     {% for tag in post.data.tags %}
     {% set page = search.page("type=tag tag='" + tag + "'") %}
     {% if page %}

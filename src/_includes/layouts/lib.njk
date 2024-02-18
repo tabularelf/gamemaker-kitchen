@@ -15,7 +15,7 @@ bodyClass: body-post
 		{% if logo_height %} height="{{ logo_height }}" {% endif %}
 	> 
 	{% endif %}
-	<h1 class="post-title">{{ title }} v{{ version }}</h1>
+	<h1 class="post-title">{{ title }} {% if version %} v{{ version }} {% endif %}</h1>
 	<h2>
 	<nav class="post-author">
 		{% if authors %}
