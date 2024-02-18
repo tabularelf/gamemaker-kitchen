@@ -1,0 +1,28 @@
+.footer {
+  border-bottom: 1px dashed var(--lightgray);
+  display: flex;
+  flex-wrap: wrap;
+
+  & a {
+    padding: 0.625rem 0rem;
+    display: block;
+    padding-inline-start: 2em;
+
+    &:not(:hover) {
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  & [aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

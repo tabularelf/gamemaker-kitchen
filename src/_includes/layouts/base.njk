@@ -44,9 +44,9 @@
     </main>
 
     <footer>
-        <nav class="navbar">
+        <nav class="footer">
 
-      <ul class="navbar-links">
+      <ul class="footer-links">
       {%- for entry in search.pages("footerMenu.visible=true", "footerMenu.order") %}
         <li>
           <a href="{{ entry.data.url }}"{% if entry.data.url == url %} aria-current="page"{% endif %}>
