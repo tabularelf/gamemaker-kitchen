@@ -2,7 +2,7 @@ export const layout = "layouts/libraries.njk";
 export const title = "Snippets";
 
 export default function* ({ search, paginate }) {
-  const posts = search.pages("type=script", "date=desc");
+  const posts = search.pages("type=snippet", "date=desc");
 
   for (
     const data of paginate(posts, { url, size: 10 })
