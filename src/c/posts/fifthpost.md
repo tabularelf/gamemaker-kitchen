@@ -5,5 +5,3 @@ tags:
   - second-tag
 draft: true
 ---
-
-To see this post, run `lume --dev`

@@ -2,8 +2,30 @@
   --red: #c04;
   --lightgray: #e6e6e6;
   --darkgray: #0d1117;
+  --lightgray2: #a2a2a2;
   --blue: #135;
+  --tabgray: #1f1f1f;
+  --lightblue: rgb(36, 93, 150);
   --white: #fff;
+  --black: #000000
+}
+
+[data-theme="light"] {
+  --color-bg: var(--white);
+  --color-fg: var(--black);
+  --color-a: var(--blue);
+  --color-text: var(--darkgray);
+  --color-text-selected: var(--blue);
+  --color-text-unselected: var(--black);
+}
+
+[data-theme="dark"] {
+  --color-bg: var(--tabgray);
+  --color-fg: var(--white);
+  --color-a: var(--lightblue);
+  --color-text: var(--white);
+  --color-text-selected: var(--white);
+  --color-text-unselected: var(--lightgray2);
 }
 
 html,
@@ -11,9 +33,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, system-ui, sans-serif;
-  color: var(--darkgray);
-  background-color: var(--white);
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
+
+
 
 main {
   padding: 5vh 5vw;
@@ -24,7 +48,7 @@ main {
 }
 
 a {
-  color: var(--blue);
+  color: var(--color-a);
 }
 
 /* Warning */

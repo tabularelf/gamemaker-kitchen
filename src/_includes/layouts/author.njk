@@ -4,6 +4,10 @@ bodyClass: body-tag
 ---
 <h1>Author “{{ author }}”</h1>
 
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+
 {% set authorslist = getAuthorsPage(author) %}
 {% include "templates/authorslist.njk" %}
 

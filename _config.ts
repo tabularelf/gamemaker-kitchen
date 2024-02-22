@@ -30,6 +30,7 @@ site
   .ignore("run_submission_library.js")
   .copy("site-assets/")
   .copy("CNAME")
+  .use(resolveUrls())
   .use(postcss())
   .use(terser())
   .use(date())
@@ -46,7 +47,6 @@ site
   }))
   .use(basePath())
   .use(slugifyUrls({ alphanumeric: false }))
-  .use(resolveUrls())
   .addEventListener(
     "beforeBuild",
     () => gpm(["oom-components/searcher"], "js/vendor"),

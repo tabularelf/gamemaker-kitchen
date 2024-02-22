@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en", data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,18 @@
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.title }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.title }}">
     <script type="module" src="/js/main.js"></script>
+    <script>
+    // Theme toggle
+  let localStorageTheme = localStorage.getItem("theme");
+  let systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+  if (localStorageTheme !== null) {
+    document.querySelector("html").setAttribute("data-theme", localStorageTheme);
+  } else {
+    if (systemSettingDark.matches) {
+      document.querySelector("html").setAttribute("data-theme", "dark");
+    }
+  }
+</script>
   </head>
   <body>
     <nav class="navbar">
@@ -33,6 +45,11 @@
         </li>
       {%- endfor %}
       </ul>
+
+    <div>
+      <button type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme</button>
+      <script src="/js/theme-toggle.js"></script>
+    </div>
 
       <div class="navbar-search">
         <oom-search label="Search" placeholder="Post title or tag" src="{{ '/search.json' | url }}"></oom-search>
