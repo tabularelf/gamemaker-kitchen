@@ -36,7 +36,6 @@ function getRandomResourcePage() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const randomPage = getRandomResourcePage();
-  console.log(randomPage);
   document.getElementById('randomPageTitle').textContent = randomPage.title;
   document.getElementById('randomPageLink').setAttribute('href', randomPage.url);
   document.getElementById('randomLinkDescription').textContent = randomPage.description;
