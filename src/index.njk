@@ -18,12 +18,7 @@ menu:
 <script>
   const resourcePages = [
     {% for page in search.pages("category=resource") %}
-      {
-        title: "{{ page.data.title | safe }}",
-        url: "{{ page.data.url }}",
-        description: "{{ page.data.description | safe }}"
-        // Add any other properties you need here
-      }{% if not loop.last %},{% endif %}
+      {title: "{{ page.data.title | safe }}", url: "{{ page.data.url }}", description: "{{ page.data.description | safe }}"}{% if not loop.last %},{% endif %}
     {% endfor %}
   ];
 </script>
