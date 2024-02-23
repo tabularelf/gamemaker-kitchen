@@ -3,7 +3,6 @@ title: ds_to_struct_array
 description: Converts data structures (ds_map, ds_list, ds_grid) to structs/arrays!
 link: https://gist.github.com/tabularelf/547b62efbcb0beaa8e6478afae8e693f
 version: 1.0.0
-date: 2022-05-01 16:28:54
 tags:
   - data structure
   - ds

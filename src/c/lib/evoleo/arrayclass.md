@@ -3,7 +3,6 @@ title: ArrayClass
 description: Better arrays/ds_lists for GameMaker
 link: https://github.com/GameMakerDiscord/ArrayClass
 version: 2.0.0
-date: 2022-09-28 15:41:48
 tags:
   - arrays
 authors:
