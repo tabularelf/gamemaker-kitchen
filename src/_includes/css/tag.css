@@ -5,7 +5,7 @@
   line-height: 1;
   padding: 0.2em 0.5em;
   margin-right: 0.8em;
-  background-color: var(--red);
+  background-color: var(--color-tag);
   color: var(--white);
   border-radius: 0.25em;
   text-decoration: none;

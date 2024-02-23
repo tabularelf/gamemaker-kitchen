@@ -1,5 +1,6 @@
 :root {
   --red: #c04;
+  --darkred: rgb(126, 3, 44);
   --lightgray: #e6e6e6;
   --darkgray: #0d1117;
   --lightgray2: #a2a2a2;
@@ -22,6 +23,7 @@ img {
   --color-text: var(--darkgray);
   --color-text-selected: var(--blue);
   --color-text-unselected: var(--black);
+  --color-tag: var(--red);
 }
 
 [data-theme="dark"] {
@@ -31,6 +33,7 @@ img {
   --color-text: var(--white);
   --color-text-selected: var(--white);
   --color-text-unselected: var(--lightgray2);
+  --color-tag: var(--darkred);
 }
 
 html,
