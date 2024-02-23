@@ -9,12 +9,7 @@ bodyClass: body-post
 			text-align: right;
 		}
 	</style>
-	{% if logo %} <img src="{{ logo }}" 
-		{% if logo_alt %} alt="{{ logo_alt }}" {% endif %} 
-		{% if logo_width %} width="{{ logo_width }}" {% endif %}
-		{% if logo_height %} height="{{ logo_height }}" {% endif %}
-	> 
-	{% endif %}
+	{% if logo %} {% if logo_centered == true %} <center> {% endif %} <img src="{{ logo }}" {% if logo_alt %} alt="{{ logo_alt }}" {% endif %} width="{{ logo_width }}" height="{{ logo_height }}"> {% if logo_centered == true %} </center> {% endif %} {% endif %}
 	<h1 class="post-title">{{ title }} {% if version %} v{{ version }} {% endif %}</h1>
 	<h2>
 	<nav class="post-author">
@@ -47,7 +42,7 @@ bodyClass: body-post
 	</header>
 
   <div class="post-body">
-    {{ content | safe }}
+    {{ content | md(true) | safe }}
   </div>
 </article>
 

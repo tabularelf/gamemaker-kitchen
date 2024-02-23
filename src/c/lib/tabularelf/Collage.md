@@ -2,6 +2,7 @@
 title: Collage
 description: Texture page manager
 link: https://github.com/tabularelf/collage
+logo: https://static.thenounproject.com/png/3549629-200.png
 tags:
   - texture-page
   - texture

@@ -2,6 +2,7 @@
 title: Lexicon
 description: Localization System for GameMaker Studio 2.3.1+
 link: https://github.com/tabularelf/lexicon
+logo: https://docs.tabularelf.com/lexicon/assets/logo.svg
 tags:
   - localization
   - translation

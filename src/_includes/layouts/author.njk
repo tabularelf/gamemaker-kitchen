@@ -5,7 +5,7 @@ bodyClass: body-tag
 <h1>Author “{{ author }}”</h1>
 
   <div class="post-body">
-    {{ content | safe }}
+    {{ content | md(true) | safe }}
   </div>
 
 {% set authorslist = getAuthorsPage(author) %}

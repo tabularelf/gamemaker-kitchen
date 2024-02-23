@@ -32,6 +32,9 @@
 	
 	<!--  Force newline -->
 	<br>
+	{% if post.data.logo %} 
+		<a href="{{ post.data.url }}" class="postList-title"><img src="{{ post.data.logo }}" {% if post.data.logo_alt %} alt="{{ logo_alt }}" {% endif %} style="width:200px;height:100%;"></a> <br>
+	{% endif %}
     {% for tag in post.data.tags %}
     {% set page = search.page("type=tag tag='" + tag + "'") %}
     {% if page %}

@@ -1,7 +1,6 @@
 export const layout = "layouts/author.njk";
 
 export default function* (site) {
-  console.log("START");
   for (const author of { site }.site.getAuthors()) {
     let content = undefined;
     let authorPage = site.search.page(`type=authors title=${author.replace(/\s+/g, '-')}`);

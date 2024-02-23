@@ -10,6 +10,11 @@
   --black: #000000
 }
 
+img {
+  max-width: 100%;
+  margin: auto;
+}
+
 [data-theme="light"] {
   --color-bg: var(--white);
   --color-fg: var(--black);
