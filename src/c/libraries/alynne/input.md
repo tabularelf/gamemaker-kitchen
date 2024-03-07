@@ -1,6 +1,6 @@
 ---
 title: Input
-description: Efficient multi-effects L10n text renderer
+description: Comprehensive cross-platform input for GameMaker 2022 LTS
 link: https://github.com/offalynne/Input
 date: 2024-03-08 03:00:00
 tags:
