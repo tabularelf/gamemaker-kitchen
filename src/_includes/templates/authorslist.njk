@@ -14,7 +14,7 @@
 			{% if loop.index < 4 %}
 				{% if loop.first %} - {% endif %} 
 				<a href="/authors/{{ author | lowercase | replace(" ", "-")}}/" class="postList-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
-				@{{ author }}{% if not loop.last and loop.index < 3 %}, {% endif %}
+				{{ author }}{% if not loop.last and loop.index < 3 %}, {% endif %}
 				</a>
 			{% elif loop.index == 4 %}
 				</strong>
