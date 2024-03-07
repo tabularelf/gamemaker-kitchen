@@ -7,7 +7,7 @@ tags:
   - lighting
   - 3D
 authors:
-  - Dragonite
+  - DragoniteSpam
 ---
 
 There are three basic 3D light types: directional lights, point lights, and spot lights. These can be implemented using shaders. Here's a set of shaders (and a demo project) to do just that!
