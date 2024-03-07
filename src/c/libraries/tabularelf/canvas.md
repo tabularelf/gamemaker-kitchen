@@ -2,10 +2,11 @@
 title: Canvas
 description: A surface that you can modify & keep the contents, even when the surface should've had been lost, for GameMaker Studio 2.3+!
 link: https://github.com/tabularelf/Canvas
+date: 2024-03-08 01:05:00
 tags:
   - surface
   - buffer
-  - wrapper
+  - LTS
 authors:
   - TabularElf
 ---

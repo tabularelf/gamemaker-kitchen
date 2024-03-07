@@ -2,7 +2,7 @@
 title: Luminous Chicken
 description: 3D Lighting Shaders for GameMaker
 link: https://dragonite.itch.io/chickens
-version: 1.0.0
+date: 2024-03-08 02:05:00
 tags:
   - lighting
   - 3D

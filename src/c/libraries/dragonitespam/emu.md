@@ -2,7 +2,7 @@
 title: Emu
 description: UI in GameMaker
 link: https://dragonite.itch.io/emu
-version: 1.1.0
+date: 2024-03-08 02:03:00
 tags:
   - ui
   - gamemaker

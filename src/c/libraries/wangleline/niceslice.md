@@ -3,6 +3,7 @@ title: NiceSlice
 description: An extended nine-slice library
 link: https://github.com/WangleLine/NiceSlice
 logo: https://i.imgur.com/DKphaUv.png
+date: 2024-03-08 02:00:00
 tags:
   - sprites
   - rendering

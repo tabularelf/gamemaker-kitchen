@@ -2,12 +2,11 @@
 title: Collage
 description: Texture page manager
 link: https://github.com/tabularelf/collage
-logo: https://static.thenounproject.com/png/3549629-200.png
+date: 2024-03-08 01:00:00
 tags:
-  - texture-page
-  - texture
-  - page
-  - builder
+  - texture atlas
+  - images
+  - LTS
 authors:
   - TabularElf
 ---

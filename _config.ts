@@ -78,7 +78,6 @@ site.data("getAuthorsPage", function authors(myAuthor): string[] {
 		if (page.data.authors.includes(myAuthor)) {
 			authors.add(page);
 		}
-		//authors.add({author, page})
 	})
   );
 
