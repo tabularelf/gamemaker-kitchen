@@ -5,7 +5,6 @@ link: https://dragonite.itch.io/emu
 date: 2024-03-08 02:03:00
 tags:
   - ui
-  - gamemaker
 authors:
   - DragoniteSpam
 ---
