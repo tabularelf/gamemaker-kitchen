@@ -6,7 +6,7 @@ date: 2024-03-08 01:05:00
 tags:
   - surface
   - buffer
-  - LTS
+  - lts
 authors:
   - TabularElf
 ---

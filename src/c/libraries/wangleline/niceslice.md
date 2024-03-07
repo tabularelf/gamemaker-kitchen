@@ -9,7 +9,7 @@ tags:
   - rendering
   - drawing
   - nine-slice
-  - LTS
+  - lts
 authors:
   - WangleLine
 ---

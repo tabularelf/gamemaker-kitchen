@@ -8,7 +8,7 @@ tags:
   - i18n
   - localization
   - translation
-  - LTS
+  - lts
 authors:
   - TabularElf
 ---

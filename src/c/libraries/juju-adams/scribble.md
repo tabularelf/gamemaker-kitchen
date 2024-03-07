@@ -7,7 +7,7 @@ tags:
   - i18n
   - text
   - dialogue
-  - LTS
+  - lts
 authors:
   - Juju Adams
 ---

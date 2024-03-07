@@ -6,7 +6,7 @@ date: 2024-03-08 01:00:00
 tags:
   - texture atlas
   - images
-  - LTS
+  - lts
 authors:
   - TabularElf
 ---
