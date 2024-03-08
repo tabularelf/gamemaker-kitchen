@@ -19,7 +19,7 @@ Once this is complete, you can serve the site by running:
 ```
 deno task lume --serve
 ```
-Now you shoul dbe able to see the site! You should be able to open your favorite browser, navigate to `localhost:3000` and see a local version of the site.
+Now you should be able to see the site! You should be able to open your favorite browser, navigate to `localhost:3000` and see a local version of the site.
 
 Lume will automatically watch any code changes and rebuild the site to reflect them. Go crazy!
 
