@@ -59,7 +59,7 @@ body:
       options:
         - label: LTS
         - label: 2023.1+
-        - label: 2024.4+ 
+        - label: 2024.2+ 
         - label: Latest current runtime version (local packages)
         - label: Latest current runtime version (prefabs)
         - label: New runtime (local packages)
