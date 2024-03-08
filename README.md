@@ -28,7 +28,7 @@ If `deno task` is too many characters for you, you may optionally set up an alia
 ```
 deno install --allow-run --allow-env --allow-read --name lume --force --reload https://deno.land/x/lume_cli/mod.ts
 ```
-After you run this command, `lume` in the terminal will be the equivalent of `deno task lune` and you can therefore serve the site with:
+After you run this command, `lume` in the terminal will be the equivalent of `deno task lume` and you can therefore serve the site with:
 ```
 lume --serve
 ```
