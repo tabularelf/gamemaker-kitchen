@@ -31,7 +31,7 @@
     </time>
 	
 	{% if post.data.logo %} 
-		<a href="{{ post.data.url }}" class="resourceCard-title"><img src="{{ post.data.logo }}" {% if post.data.logo_alt %} alt="{{ logo_alt }}" {% endif %} style="width:200px;height:100%;"></a> <br>
+		<a href="{{ post.data.url }}" class="resourceCard-logo"><img src="{{ post.data.logo }}" {% if post.data.logo_alt %} alt="{{ logo_alt }}" {% endif %} ></a>
 	{% endif %}
 	 <div class="resourceCard-rowContainer">
     	{% for tag in post.data.tags %}

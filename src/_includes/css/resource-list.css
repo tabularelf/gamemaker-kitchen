@@ -1,52 +1,75 @@
 .resourceList {
    list-style: none;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    flex-wrap: wrap;
-   flex-basis: auto;
    padding: 0;
  }
  
- .resourceCard-date {
-   display: none;
- }
- 
- .resourceCard-author {
-   font-size: 0.8rem;
-   color: var(--color-text);
-   font-weight: normal;
-   margin-right: 0.2em;
- }
- 
- .resourceCard-rowContainer {
-   margin: 0 0.5em 0.5em;
-
-   .tag {
-      margin-right: 0.1em;
-   }
- }
- 
- .resourceCard-title {
-   display: inline-block;
-   margin: 0em 0.5em 0.2em;
-   font-size: 1.2rem;
-   text-decoration: none;
-   text-wrap: wrap;
-   
-   &[aria-current="page"] {
-     font-weight: bold;
-   }
- }
- 
- .resourceCard {
-   width: 100%;
+.resourceCard {
+   width: 23%;
    box-sizing: border-box;
    display: flex;
    flex-direction: column;
-   padding: 0.75em;
+   padding: 1.75em;
    margin: 1%;
    background-color: var(--color-resourceCard-bg);
    box-shadow: 0.25em 0.25em 0.5em var(--color-resourceCard-shadow);
    border-radius: 1em;
- }
+}
+
+.resourceCard-title {
+   display: inline-block;
+   margin: 0em 0.5em 0.2em;
+   font-size: 1.2rem;
+   text-decoration: none;
+   word-break: break-word;
+
+   &[aria-current="page"] {
+      font-weight: bold;
+   }
+}
+
+.resourceCard-date {
+   display: none;
+}
  
+.resourceCard-author {
+   font-size: 0.8rem;
+   color: var(--color-text);
+   font-weight: normal;
+   margin-right: 0.2em;
+}
+ 
+.resourceCard-logo {
+   flex-grow: 1;
+   img {
+      width: 100%;
+      height: 100%;
+   }
+}
+
+.resourceCard-rowContainer {
+   margin: 0 0.5em 0.5em;
+   .tag {
+      margin-right: 0.1em;
+   }
+}
+
+@media screen and (max-width: 1200px) {
+   .resourceCard {
+      width: 31%;
+   }
+}
+
+ @media screen and (max-width: 640px) {
+   .resourceCard {
+      width: 48%;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .resourceCard {
+      width: 100%;
+   }
+}
