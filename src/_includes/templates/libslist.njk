@@ -25,7 +25,6 @@
 		</div>
 	{% endif %} 
 	</strong>
-    
 
     <time class="resourceCard-date" datetime="{{ post.data.date | date('DATETIME') }}">
       {{ post.data.date | date('HUMAN_DATE') }}
@@ -36,10 +35,10 @@
 	{% endif %}
 	 <div class="resourceCard-rowContainer">
     	{% for tag in post.data.tags %}
-		{% set page = search.page("type=tag tag='" + tag + "'") %}
-		{% if page %}
-		<a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
-		{% endif %}
+			{% set page = search.page("type=tag tag='" + tag + "'") %}
+			{% if page %}
+			<a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
+			{% endif %}
 		{% endfor %}
 	 </div>
   </li>

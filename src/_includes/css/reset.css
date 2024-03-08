@@ -37,7 +37,6 @@ img {
   --color-text-unselected: var(--lightgray2);
   --color-tag: var(--darkred);
   --color-resourceCard-bg: var(--darkgray);
-  --color-resourceCard-bg: var(--darkgray);
   --color-resourceCard-shadow: var(--black);
 }
 
