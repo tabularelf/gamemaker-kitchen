@@ -2,7 +2,6 @@
 title: Scribble
 description: Efficient multi-effects L10n text renderer
 link: https://github.com/JujuAdams/scribble/
-logo: https://raw.githubusercontent.com/JujuAdams/Scribble/master/LOGO.png
 date: 2024-03-08 06:00:00
 tags:
   - i18n

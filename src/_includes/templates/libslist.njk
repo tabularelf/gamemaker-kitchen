@@ -10,10 +10,10 @@
 	</a>
 	<strong>
 	{% if post.data.authors %}
+		<div class="postList-rowContainer">
 		{% for author in post.data.authors %}
 			{% if loop.index < 4 %}
-				{% if loop.first %} - {% endif %} 
-				<a href="/authors/{{ author | lowercase | replace(" ", "-")}}/" class="postList-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+				<a href="/authors/{{ author | lowercase | replace(" ", "-")}}/" class="postList-author"{% if entry.data.url == url %} aria-current="page"{% endif %}>
 				{{ author }}{% if not loop.last and loop.index < 3 %}, {% endif %}
 				</a>
 			{% elif loop.index == 4 %}
@@ -22,6 +22,7 @@
 				<strong>
 			{% endif %} 
 		{% endfor %}
+		</div>
 	{% endif %} 
 	</strong>
     
@@ -30,17 +31,17 @@
       {{ post.data.date | date('HUMAN_DATE') }}
     </time>
 	
-	<!--  Force newline -->
-	<br>
 	{% if post.data.logo %} 
 		<a href="{{ post.data.url }}" class="postList-title"><img src="{{ post.data.logo }}" {% if post.data.logo_alt %} alt="{{ logo_alt }}" {% endif %} style="width:200px;height:100%;"></a> <br>
 	{% endif %}
-    {% for tag in post.data.tags %}
-    {% set page = search.page("type=tag tag='" + tag + "'") %}
-    {% if page %}
-    <a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
-    {% endif %}
-    {% endfor %}
+	 <div class="postList-rowContainer">
+    	{% for tag in post.data.tags %}
+		{% set page = search.page("type=tag tag='" + tag + "'") %}
+		{% if page %}
+		<a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
+		{% endif %}
+		{% endfor %}
+	 </div>
   </li>
 {% endfor %}
 </ul>
