@@ -73,8 +73,8 @@
       {%- endfor %}
 	  {%- for entry in search.pages("footer_ext_link.visible=true", "footer_ext_link.order") %}
         <li>
-          <a href="{{ entry.data.ext_link.url }}"{% if entry.data.ext_link.url == url %} aria-current="page"{% endif %} {{ entry.data.ext_link.target }}>
-            {{ entry.data.ext_link.title or entry.data.title }}
+          <a href="{{ entry.data.footer_ext_link.url }}"{% if entry.data.footer_ext_link.url == url %} aria-current="page"{% endif %} {{ entry.data.footer_ext_link.target }}>
+            {{ entry.data.footer_ext_link.title or entry.data.title }}
           </a>
         </li>
       {%- endfor %}
