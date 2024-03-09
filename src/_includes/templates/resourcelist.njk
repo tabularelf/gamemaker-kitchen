@@ -1,0 +1,50 @@
+<ul class="resourceList">
+	{% for post in postslist %}
+	<li class="resourceCard">
+	{% if post.data.logo %} 
+		<a href="{{ post.data.url }}" class="resourceCard-logo"><img src="{{ post.data.logo }}" {% if post.data.logo_alt %} alt="{{ logo_alt }}" {% endif %} ></a>
+	{% endif %}
+	<div class="resourceCard-info">
+	<a href="{{ post.data.url }}" class="resourceCard-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+	{% if post.data.title %}
+		<strong>{{ post.data.title }}</strong>
+	{% else %}
+		<code>{{ post.url }}</code>
+	{% endif %}
+	</a>
+	<strong>
+	{% if post.data.authors %}
+		<div class="resourceCard-rowContainer">
+		{% for author in post.data.authors %}
+			{% if loop.index < 3 %}
+				<a href="/authors/{{ author | lowercase | replace(" ", "-")}}/" class="resourceCard-author"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+					{{ author }}{% if not loop.last and loop.index < 3 %}, {% endif %}
+				</a>
+			{% elif loop.index == 3 %}
+				<a href="{{ post.data.url }}/" class="resourceCard-author"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+					...
+				</a>
+			{% endif %} 
+		{% endfor %}
+		</div>
+	{% endif %} 
+	</strong>
+
+    <time class="resourceCard-date" datetime="{{ post.data.date | date('DATETIME') }}">
+      {{ post.data.date | date('HUMAN_DATE') }}
+    </time>
+	
+		<div class="resourceCard-rowContainer">
+			{% for tag in post.data.tags %}
+				{% if loop.index <= 3 %}
+					{% set page = search.page("type=tag tag='" + tag + "'") %}
+					{% if page %}
+						<a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	 </div>
+  </li>
+{% endfor %}
+</ul>

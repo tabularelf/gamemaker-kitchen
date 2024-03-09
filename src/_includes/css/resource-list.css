@@ -1,0 +1,78 @@
+.resourceList {
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 0;
+ }
+ 
+.resourceCard {
+   width: 31%;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   padding: 1em;
+   margin: 1%;
+   background-color: var(--color-resourceCard-bg);
+   box-shadow: 0.25em 0.25em 0.5em var(--color-resourceCard-shadow);
+   border-radius: 1em;
+}
+
+.resourceCard-info {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-left: 0.2em;
+   padding-right: 0.5em;
+}
+
+.resourceCard-title {
+   display: inline-block;
+   margin: 0em 0.5em 0.2em;
+   font-size: 1.2rem;
+   text-decoration: none;
+   word-break: break-word;
+
+   &[aria-current="page"] {
+      font-weight: bold;
+   }
+}
+
+.resourceCard-date {
+   display: none;
+}
+ 
+.resourceCard-author {
+   font-size: 0.8rem;
+   color: var(--color-text);
+   font-weight: normal;
+   margin-right: 0.2em;
+}
+ 
+.resourceCard-logo {
+   width: 20%;
+   margin: auto;
+   img {
+      width: 100%;
+   }
+}
+
+.resourceCard-rowContainer {
+   margin: 0 0.5em 0.1em;
+   flex-grow: 1;
+   .tag {
+      margin-right: 0.1em;
+   }
+}
+
+@media screen and (max-width: 900px) {
+   .resourceCard {
+      width: 48%;
+   }
+}
+
+ @media screen and (max-width: 640px) {
+   .resourceCard {
+      width: 100%;
+   }
+}

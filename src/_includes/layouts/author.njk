@@ -8,8 +8,8 @@ bodyClass: body-tag
     {{ content | md(true) | safe }}
   </div>
 
-{% set authorslist = getAuthorsPage(author) %}
-{% include "templates/authorslist.njk" %}
+{% set postslist = getAuthorsPage(author) %}
+{% include "templates/resourcelist.njk" %}
 
 <hr>
 

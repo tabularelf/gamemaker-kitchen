@@ -24,6 +24,8 @@ img {
   --color-text-selected: var(--blue);
   --color-text-unselected: var(--black);
   --color-tag: var(--red);
+  --color-resourceCard-bg: aliceblue;
+  --color-resourceCard-shadow: var(--lightgray);
 }
 
 [data-theme="dark"] {
@@ -34,6 +36,8 @@ img {
   --color-text-selected: var(--white);
   --color-text-unselected: var(--lightgray2);
   --color-tag: var(--darkred);
+  --color-resourceCard-bg: var(--darkgray);
+  --color-resourceCard-shadow: var(--black);
 }
 
 html,
