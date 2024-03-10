@@ -2,7 +2,7 @@
 title: Input
 description: Comprehensive cross-platform input for GameMaker 2022 LTS
 link: https://github.com/offalynne/Input
-logo: https://raw.githubusercontent.com/JujuAdams/Input/master/LOGO.png
+logo: https://raw.githubusercontent.com/offalynne/Input/main/LOGO.png
 date: 2024-03-08 03:00:00
 tags:
   - input
