@@ -4,7 +4,7 @@ description: Finite State Machine for GameMaker
 link: https://github.com/sohomsahaun/SnowState
 date: 2024-03-11 02:49:00
 tags:
-  - fininte state machine
+  - finite state machine
   - state machine
   - lts
 authors:
