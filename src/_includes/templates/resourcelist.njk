@@ -29,11 +29,11 @@
 		</div>
 	{% endif %} 
 	</strong>
-
-    <time class="resourceCard-date" datetime="{{ post.data.date | date('DATETIME') }}">
-      {{ post.data.date | date('HUMAN_DATE') }}
-    </time>
 	
+	<div class="resourceCard-rowContainer">
+		{{ post.data.description }}
+	</div>
+		
 		<div class="resourceCard-rowContainer">
 			{% for tag in post.data.tags %}
 				{% if loop.index <= 3 %}
