@@ -20,8 +20,12 @@ body:
       label: If other was selected, what is it?
   - type: input
     attributes:
+      label: Logo
+      description: A permament link to your logo. (If any)
+  - type: input
+    attributes:
       label: Description
-      description: This is what will appear whenever you share a link to someone.
+      description: A short description that will appear as an embed and on the website.
     validations:
       required: true
   - type: input
