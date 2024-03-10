@@ -6,7 +6,7 @@ date: 2024-03-08 06:00:00
 tags:
   - vectors
 authors:
-  - Faulty
+  - FaultyFunctions
 ---
 
 A Vector2 class for GMS 2.3 mostly ported over from: https://github.com/godotengine/godot/blob/master/core/math/vector2.cpp
