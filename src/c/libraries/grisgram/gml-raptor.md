@@ -3,6 +3,7 @@ title: GML-Raptor
 description: GameMaker Evolved
 link: https://github.com/Grisgram/gml-raptor
 date: 2024-03-11 02:41:00
+logo: https://www.coldrock.games/assets/raptor/gml-raptor-logo.png
 tags:
   - project template
 authors:
