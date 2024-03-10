@@ -11,7 +11,7 @@ body:
         - Tool 
         - Tutorial
         - Asset
-        - Script
+        - Snippet
         - Other (please specify below)
     validations:
       required: true
