@@ -2,6 +2,6 @@ type: tutorial
 category: resource
 title: Unknown
 layout: layouts/resource.njk
-donation_text: Donate!
+includeReadingTime: true
 authors: 
   - Unknown Author

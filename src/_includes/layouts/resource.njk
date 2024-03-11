@@ -29,12 +29,17 @@ bodyClass: body-post
     </nav>
 
 	<time class="post-date" datetime="{{ date | date('DATETIME') }}">
-		{{ date | date('HUMAN_DATE') }}
+		{{ date | date('HUMAN_DATE') }} 
 	</time>
 	
 	{% if link %} 
 		<br><a href="{{ link }}" target="_blank">Link to {{ title }}</a>
 	{% endif %}
+
+	<!-- Add reading time info -->
+	{%- if includeReadingTime == true %}
+      <p>{{ readingInfo.words }} words, {{ readingInfo.minutes }} min read</p>
+    {% endif %}
 	
 	{% if donation_link %}
 		<a href="{{ donation_link }}" target="_blank">{{ donation_text }}</a>
