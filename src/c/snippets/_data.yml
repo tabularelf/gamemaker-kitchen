@@ -1,6 +1,6 @@
 type: snippet
 category: resource
 title: Unknown
-layout: layouts/lib.njk
+layout: layouts/resource.njk
 authors: 
   - Unknown Author

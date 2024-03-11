@@ -1,7 +1,7 @@
 type: lib
 category: resource
 title: Unknown
-layout: layouts/lib.njk
+layout: layouts/resource.njk
 donation_text: Donate!
 logo_width: 300px
 logo_height: 100%

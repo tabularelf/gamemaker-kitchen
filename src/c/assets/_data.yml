@@ -1,7 +1,7 @@
 type: asset
 category: resource
 title: Unknown
-layout: layouts/lib.njk
+layout: layouts/resource.njk
 donation_text: Donate!
 authors: 
   - Unknown Author
