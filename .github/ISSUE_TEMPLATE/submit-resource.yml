@@ -58,18 +58,11 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: What versions does your resource support?
-      description: Only one of these needs to be selected, based on the current version that your resource supports. i.e. If your library is for LTS, select "LTS".
+      label: Does your resource support LTS?
+      description: This is to ensure that we can add in the necessary information.
       options:
-        - label: LTS+
-        - label: 2023.1+
-        - label: 2024.2+ 
-        - label: Latest current runtime version (local packages)
-        - label: Latest current runtime version (prefabs)
-        - label: New runtime (local packages)
-        - label: New runtime (prefabs)
-        - label: I've selected a version per above
-          required: true
+        - label: Yes
+        - label: No
     validations:
       required: true
   - type: checkboxes
