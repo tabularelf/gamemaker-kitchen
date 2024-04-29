@@ -61,8 +61,8 @@ body:
       label: Does your resource support LTS?
       description: This is to ensure that we can add in the necessary information.
       options:
-        - label: Yes
-        - label: No
+        - label: "Yes"
+        - label: "No"
     validations:
       required: true
   - type: checkboxes
