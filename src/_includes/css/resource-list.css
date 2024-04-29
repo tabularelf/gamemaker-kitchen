@@ -50,11 +50,9 @@
 }
 
 .resourceCard-banner {
-   padding: 0em;
-   background-clip: content-box;
-   background-size: contain;
-   background-repeat: repeat;
-   background-position: center center;
+   border-radius: 1em;
+   width: 100%;
+   box-sizing: border-box;
 }
  
 .resourceCard-logo {
