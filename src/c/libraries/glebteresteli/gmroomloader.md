@@ -3,6 +3,7 @@ title: GMRoomLoader
 description: Runtime room loading for GameMaker 2024.2+
 link: https://github.com/glebtsereteli/GMRoomLoader
 date: 2024-03-11 01:57:00
+banner: /site-assets/img/gmroomloader-banner.png
 tags:
   - room-loader
 authors:

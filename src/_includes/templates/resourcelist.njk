@@ -4,7 +4,7 @@
 	{% if post.data.logo %} 
 		<a href="{{ post.data.url }}" class="resourceCard-logo"><img src="{{ post.data.logo }}" {% if post.data.logo_alt %} alt="{{ logo_alt }}" {% endif %} ></a>
 	{% endif %}
-	<div class="resourceCard-info">
+	<div {% if post.data.banner %} class="resourceCard-banner" style="background-image:url({{ post.data.banner }})" {% else %} class="resourceCard-info" {% endif %}>
 	<a href="{{ post.data.url }}" class="resourceCard-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
 	{% if post.data.title %}
 		<strong>{{ post.data.title }}</strong>
@@ -51,3 +51,4 @@
   </li>
 {% endfor %}
 </ul>
+
