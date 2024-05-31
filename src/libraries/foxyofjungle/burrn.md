@@ -4,7 +4,6 @@ description: Built-in particle system for GameMaker, that uses the particle asse
 link: https://github.com/FoxyOfJungle/Burrn
 logo: https://raw.githubusercontent.com/FoxyOfJungle/Burrn/main/ICON.png
 date: 2024-05-31 21:49:00
-paid: true
 tags:
   - particles
 authors:
