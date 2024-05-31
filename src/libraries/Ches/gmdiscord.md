@@ -1,6 +1,6 @@
 ---
 title: GMDiscord
-description: Vertex-based real-time rendering of any sprite resource as a waving flag in the wind
+description: Discord API integration for GameMaker
 link: https://github.com/chesrowe/GMDiscord
 date: 2024-05-31 22:05:00
 tags:
