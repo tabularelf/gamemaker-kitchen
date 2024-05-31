@@ -3,6 +3,7 @@ title: GML-String
 description: A GML syntax highlighter (in-game and for web)
 link: https://yellowafterlife.itch.io/gml-string
 date: 2024-03-11 03:30:00
+paid: true
 tags:
   - syntax
   - highlighter
