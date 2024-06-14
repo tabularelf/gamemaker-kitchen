@@ -9,7 +9,7 @@ tags:
   - debug
   - lts
 authors:
-  - Katsaii
+  - katsaii
 ---
 
 Catspeak is the spiritual successor to the long dead `execute_string` function from GameMaker 8.1, but on overdrive.
