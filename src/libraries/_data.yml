@@ -3,6 +3,7 @@ category: resource
 title: Unknown
 layout: layouts/resource.njk
 donation_text: Donate!
+searchtype: "type=lib"
 logo_width: 300px
 logo_height: 100%
 authors: 

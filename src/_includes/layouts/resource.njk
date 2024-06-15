@@ -55,14 +55,14 @@ bodyClass: body-post
 
 <nav class="post-navigation">
   <ul>
-    {%- set previousPost = search.previousPage(url, "type=lib") %}
+    {%- set previousPost = search.previousPage(url, searchtype) %}
     {%- if previousPost %}
     <li>
       ← Previous: <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
     </li>
     {% endif %}
 
-    {%- set nextPost = search.nextPage(url, "type=lib") %}
+    {%- set nextPost = search.nextPage(url, searchtype) %}
     {%- if nextPost %}
     <li>
       <strong>Next: <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a> →</strong>
