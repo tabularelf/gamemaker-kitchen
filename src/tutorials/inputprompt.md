@@ -55,7 +55,7 @@ As the comments explain, Input will automatically grab the keyboard key as a str
 
 We’re also going to do some quick housekeeping in __input_config_verbs. Under “gamepad”, edit the first four lines as follows, and add a fifth for “interact”:
 
-![](/img/inputprompt_guide_images/input replace.png)
+![](../site-assets/img/inputprompt_guide_images/input replace.png)
 
 Now our console inputs are matched to our keyboard ones! I swapped the order of the first four lines because I already decided I wanted to use the dpad icons.
 
@@ -148,7 +148,7 @@ repeat(array_length(controls)) {
 
 And when we turn it on ...
 
-![](/img/inputprompt_guide_images/cbox1.gif)
+![](../site-assets/img/inputprompt_guide_images/cbox1.gif)
 
 ... I don’t have an Xbox controller handy, so I told GameMaker to use it as the default. Then I used my mouse, and finally a Joycon connected via bluetooth. Et voila!
 
@@ -179,7 +179,7 @@ How does this work?
 
 Here’s how it currently looks: 
 
-![](/img/inputprompt_guide_images/lmb.png)
+![](../site-assets/img/inputprompt_guide_images/lmb.png)
 
 But what happens if we change to a different input source? Currently nothing, but we can change that! We’re gonna make a new script and call it “cvar_update_binding”. Add these lines:
 
@@ -199,7 +199,7 @@ input_hotswap_params_set(cvar_update_binding);
 
 That tells Input to run our update script when it does its hotswap thing. Convenient! Here’s how it looks in action:
 
-![](/img/inputprompt_guide_images/cbox2.gif)
+![](../site-assets/img/inputprompt_guide_images/cbox2.gif)
 
 Some things to note:
 * You can’t force the Chatterbox to refresh its variables, and thus the sprite/verb name, while they’re being displayed, unfortunately. Or, you might be able to finagle it, but I couldn’t get it working.
