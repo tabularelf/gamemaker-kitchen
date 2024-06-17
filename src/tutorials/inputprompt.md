@@ -148,7 +148,7 @@ repeat(array_length(controls)) {
 
 And when we turn it on ...
 
-![](../site-assets/img/inputprompt_guide_images/cbox1.gif)
+![](../site-assets/img/inputprompt_guide_images/cboxgif1.gif)
 
 ... I don’t have an Xbox controller handy, so I told GameMaker to use it as the default. Then I used my mouse, and finally a Joycon connected via bluetooth. Et voila!
 
@@ -199,7 +199,7 @@ input_hotswap_params_set(cvar_update_binding);
 
 That tells Input to run our update script when it does its hotswap thing. Convenient! Here’s how it looks in action:
 
-![](../site-assets/img/inputprompt_guide_images/cbox2.gif)
+![](../site-assets/img/inputprompt_guide_images/cboxgif2.gif)
 
 Some things to note:
 * You can’t force the Chatterbox to refresh its variables, and thus the sprite/verb name, while they’re being displayed, unfortunately. Or, you might be able to finagle it, but I couldn’t get it working.
