@@ -3,12 +3,12 @@
 title: Auto-swapping Input Prompts Icons with Input
 description: A guide on automatically swapping on-screen input prompts using the Input library
 link: N/A
-date: 2024-06-14 18:35:07
+date: 2024-06-17 18:35:07
 tags:
   - Input
 authors:
   - Els
-  
+
 ---
 
 Hi there, and welcome back to Spider Lily Studios Game Maker Tutorials, part 3! This installment is sponsored by Tom, who requested a tutorial for displaying input prompt sprites that change automatically depending on what type of controller is connected, using the Input library. I’m also going to be adding some very simple Scribble/Chatterbox functionality too, using Scribble’s in-line sprite display. Our plan is to create both a simple controls menu, and a line of tutorial dialogue that displays a sprite.
@@ -27,7 +27,7 @@ The first variable here is the “generic” name of a given input, much like th
 
 I’d be here all day if I did all of them, so as examples I’m just doing the face buttons and dpads for Xbox, Switch and Playstation. Should look something like this:
 
-![](/img/inputprompt_guide_images/input_xbox.png)
+![](../site-assets/img/inputprompt_guide_images/input_xbox.png)
 
 Great! So ... what about the keyboard and mouse? Scroll back up and look for this line:
 
