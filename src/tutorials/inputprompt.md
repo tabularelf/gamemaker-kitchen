@@ -1,16 +1,17 @@
 ---
-title: Using Input with GameMaker
-description: A guide on how to use Spine sprites with GameMaker
+
+title: Auto-swapping Input Prompts Icons with Input
+description: A guide on automatically swapping on-screen input prompts using the Input library
 link: N/A
-date: 2022-04-29 18:35:07
-draft: true
+date: 2024-06-14 18:35:07
 tags:
-  - Spine
+  - Input
 authors:
-  - Kormex
+  - Els
+  
 ---
 
-Hi there, I don't know what's happening and welcome back to Spider Lily Studios Game Maker Tutorials, part 3! This installment is sponsored by Tom, who requested a tutorial for displaying input prompt sprites that change automatically depending on what type of controller is connected, using the Input library. I’m also going to be adding some very simple Scribble/Chatterbox functionality too, using Scribble’s in-line sprite display. Our plan is to create both a simple controls menu, and a line of tutorial dialogue that displays a sprite.
+Hi there, and welcome back to Spider Lily Studios Game Maker Tutorials, part 3! This installment is sponsored by Tom, who requested a tutorial for displaying input prompt sprites that change automatically depending on what type of controller is connected, using the Input library. I’m also going to be adding some very simple Scribble/Chatterbox functionality too, using Scribble’s in-line sprite display. Our plan is to create both a simple controls menu, and a line of tutorial dialogue that displays a sprite.
 
 # Getting Started
 
