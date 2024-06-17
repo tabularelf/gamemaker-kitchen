@@ -1,14 +1,13 @@
-
 ---
-title: Auto-swapping Input Prompts Icons with Input
-description: A guide on automatically swapping on-screen input prompts using the Input library
+title: Using Input with GameMaker
+description: A guide on how to use Spine sprites with GameMaker
 link: N/A
-date: 2024-06-14 18:35:07
+date: 2022-04-29 18:35:07
 draft: true
 tags:
-  - Input
+  - Spine
 authors:
-  - Els
+  - Kormex
 ---
 
 Hi there, and welcome back to Spider Lily Studios Game Maker Tutorials, part 3! This installment is sponsored by Tom, who requested a tutorial for displaying input prompt sprites that change automatically depending on what type of controller is connected, using the Input library. I’m also going to be adding some very simple Scribble/Chatterbox functionality too, using Scribble’s in-line sprite display. Our plan is to create both a simple controls menu, and a line of tutorial dialogue that displays a sprite.
@@ -18,6 +17,7 @@ Hi there, and welcome back to Spider Lily Studios Game Maker Tutorials, part 3! 
 First, if we want to draw icons, we’re going to need icon sprites. For this, we’re going to be using Kenney’s free Input Prompts pack, because it has everything we need.
 
 In your project, find the __input_config_icons script. You’ll notice there’s sections labelled “//Xbox”, “Playstation 5”, etc, and underneath them, lot of lines that look like this.
+
 ``` .add("gamepad face south",     	"A")```
 
 The first variable here is the “generic” name of a given input, much like the generic verbs (e.g. “interact”) from the last tutorial. The right is the name of the controller-specific sprite you want to associate it with (as a string, within double quotes.) So for example, since I’m too lazy to change the default names of the Kenney sprites, I’m going to change this line to:
@@ -29,11 +29,12 @@ I’d be here all day if I did all of them, so as examples I’m just doing the 
 ![](/img/inputprompt_guide_images/input_xbox.png)
 
 Great! So ... what about the keyboard and mouse? Scroll back up and look for this line:
+
 ```//Optional remapping for keyboard and mouse```
 
 As the comments explain, Input will automatically grab the keyboard key as a string, but you can set custom sprites here. I’m going for the three choice number keys, WASD, the arrows, and Z, X, and C. Put them underneath input_icons_keyboard_and_mouse().
 
-```
+```gml
 .add("num1",     	"keyboard_1_outline")
 .add("num2",     	"keyboard_2_outline")
 .add("num3",     	"keyboard_3_outline")
@@ -63,7 +64,7 @@ Okay, that’s the worst part. Now we have icons for multiple types of input. We
 
 The information we need Input to tell us is “what button is currently bound to the verbs we want to display?” And to get that, we’re going to use a nice little script whipped up by Tom. Make a new script and call it “get_binding_icon”:
 
-```
+```gml
 function get_binding_icon(verb)
 {
     ///Originally by Tom. Thanks, Tom!
@@ -93,7 +94,8 @@ Okay! We have our icon. Now let’s display it!
 I’m going to start by making a very basic HUD, and to do that I’m going to create an object called oHUD.
 
 oHUD gets a Create event, where I’m going to set: 
-```
+
+```gml
 game_w = window_get_width();
 game_h = window_get_height();
 ```
@@ -106,7 +108,7 @@ Under that, I’m going to make an array.
 
 ... and do some preliminary calculations.
 
-```
+```gml
 longStringW = string_width("Interact");
 
 spriteW = sprite_get_width(keyboard_1_outline);
@@ -118,7 +120,7 @@ You can probably see where I’m going with this. I’m being a bit lazy here si
 
 
 Then, in Draw GUI, we pick a starting place and colour:
-```
+```gml
 var _x = colonPos - longStringW;
 var _y = 50;
 
@@ -127,7 +129,7 @@ draw_set_color(c_white);
 
 ... and draw our array! (I love repeat functions.) Note that we use asset_get_index to turn our icon name (as a string) into the actual sprite index that GameMaker can read.
 
-```
+```gml
 var _i = 0;
 repeat(array_length(controls)) {
     draw_text(_x - string_width(controls[_i]),_y,controls[_i]+":");
@@ -150,14 +152,14 @@ And when we turn it on ...
 ... I don’t have an Xbox controller handy, so I told GameMaker to use it as the default. Then I used my mouse, and finally a Joycon connected via bluetooth. Et voila!
 
 Finally, I wanted to display one of the sprites as an in-line sprite with Scribble. For that, I’m going to introduce you to an important concept: the Chatterbox Variable, or as I call them, cvars. Here’s what you need to know about cvars:
-* Chatterbox can’t read variables directly from GameMaker, so we need to use ChatterboxVariableGet() and * Set() to hold them.
+* Chatterbox can’t read variables directly from GameMaker, so we need to use ChatterboxVariableGet() and Set() to hold them.
 * Chatterbox variables are stored as pairs of “variable name” and “value”. The name is a string; the value can be a string, a number, or a boolean
 
 It’s best practise to declare your Chatterbox variables at initialisation. I’ll be doing mine in the Create event of oInit. This is why initialisation objects are so handy!
 
 In the Create event of oInit, add these lines:
 
-```
+```gml
 ChatterboxVariableDefault("interact","LMB");
 ChatterboxVariableDefault("interactSprite","mouse_left_outline");
 ```
