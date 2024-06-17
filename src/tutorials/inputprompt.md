@@ -55,7 +55,7 @@ As the comments explain, Input will automatically grab the keyboard key as a str
 
 We’re also going to do some quick housekeeping in __input_config_verbs. Under “gamepad”, edit the first four lines as follows, and add a fifth for “interact”:
 
-![](../site-assets/img/inputprompt_guide_images/input replace.png)
+![](../site-assets/img/inputprompt_guide_images/inputreplace.png)
 
 Now our console inputs are matched to our keyboard ones! I swapped the order of the first four lines because I already decided I wanted to use the dpad icons.
 
