@@ -2,5 +2,6 @@ type: snippet
 category: resource
 title: Unknown
 layout: layouts/resource.njk
+searchtype: "type=snippet"
 authors: 
   - Unknown Author

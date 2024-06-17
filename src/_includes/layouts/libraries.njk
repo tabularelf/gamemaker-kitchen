@@ -18,7 +18,7 @@ bodyClass: body-tag
     {% endif %}
 
     <li>
-      Page {{ pagination.page }}
+      Page {{ pagination.page }} / {{ pagination.totalPages }}
     </li>
 
     {%- if pagination.next %}
