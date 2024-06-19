@@ -171,7 +171,7 @@ I’m assuming most people will play with a mouse and keyboard, so I’m setting
 
 Next, we’re going to use the combined functionality of Scribble and Chatterbox with this line of dialogue in our yarn file.
 
-```
+```gml
 "Press [{$interactSprite},0] ({$interact}) to continue."
 ```
 
@@ -185,7 +185,7 @@ Here’s how it currently looks:
 
 But what happens if we change to a different input source? Currently nothing, but we can change that! We’re gonna make a new script and call it “cvar_update_binding”. Add these lines:
 
-```
+```gml
 var intBinding = input_binding_get_name(input_binding_get("interact"))
 ChatterboxVariableSet("interact",intBinding);
 ChatterboxVariableSet("interactSprite",get_binding_icon("interact"));
@@ -195,7 +195,7 @@ Note that the name returned by input_binding_get_name is, per the documentation,
 
 So, we want this to be called when Input detects a hotswap. Fortunately, again, Input has already thought of this. Back in oInit, add this line:
 
-```
+```gml
 input_hotswap_params_set(cvar_update_binding);
 ```
 
