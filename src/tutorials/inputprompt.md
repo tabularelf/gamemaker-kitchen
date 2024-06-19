@@ -2,7 +2,6 @@
 
 title: Auto-swapping Input Prompts Icons with Input
 description: A guide on automatically swapping on-screen input prompts using the Input library
-link: N/A
 date: 2024-06-17 18:35:07
 tags:
   - input
@@ -71,16 +70,19 @@ function get_binding_icon(verb)
     ///Originally by Tom. Thanks, Tom!
 	if (is_string(verb) == false)
 	{
-  	show_debug_message("get_binding_icon: " + string(verb) + " is not a string");
-  	return undefined;
+		show_debug_message("get_binding_icon: " + string(verb) + " is not a string");
+		return undefined;
 	}
+	
 	var binding = input_binding_get(verb);
 	var icon = input_binding_get_icon(binding);
+	
 	if (asset_get_type(icon) != asset_sprite)
 	{
-  	show_debug_message("get_binding_icon: " + string(icon) + " is not a sprite");
-  	return undefined;
+		show_debug_message("get_binding_icon: " + string(icon) + " is not a sprite");
+		return undefined;
 	}
+	
 	return icon;
 }
 ```
@@ -205,4 +207,4 @@ Some things to note:
 * You can’t force the Chatterbox to refresh its variables, and thus the sprite/verb name, while they’re being displayed, unfortunately. Or, you might be able to finagle it, but I couldn’t get it working.
 * That awkward “gamepad face south” is why you would probably want to use your own names.
 
-And there you have it! Dynamically displaying control prompts in Input. As always, check out the updated example project over on [Itch](https://spiderlilystudios.itch.io/), feel free to leave a tip there or on [Ko-fi](https://ko-fi.com/spiderlilystudios) if you found it helpful, and get in touch if you’re interested in sponsoring a tutorial!
+And there you have it! Dynamically displaying control prompts in Input. As always, check out the updated example project over on [Itch](https://spiderlilystudios.itch.io/scribblebox-for-gamemaker), feel free to leave a tip there or on [Ko-fi](https://ko-fi.com/spiderlilystudios) if you found it helpful, and get in touch if you’re interested in sponsoring a tutorial!
