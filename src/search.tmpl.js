@@ -68,6 +68,17 @@ export default function ({ search }, { url }) {
     });
   }
 
+  // Search tools
+  for (const tool of search.tags("type=tools")) {
+    result.push({
+      label: `Tool: ${tool}`,
+      search: tag,
+      value: url(`/tools/${tag}/`),
+      title: tool.data.title,
+      link: tool.data.link,
+    });
+  }
+
   // Search tags from posts
   for (const tag of search.tags("type=posts")) {
     result.push({
