@@ -4,11 +4,12 @@ export default function ({ search }, { url }) {
   const result = [];
   
   // Search tags from libraries
-  for (const tag of search.tags("type=lib|tutorial|script|framework|asset")) {
+  for (const tag of search.tags("type=lib|tutorial|script|asset")) {
     result.push({
       label: `Tag: ${tag}`,
       search: tag,
       value: url(`/tags/${tag}/`),
+      title: tag
     });
   }
   
@@ -18,15 +19,8 @@ export default function ({ search }, { url }) {
       label: `Lib: ${lib.data.title}`,
       search: `${lib.data.title} ${lib.data.tags.join(" ")}`,
       value: url(lib.data.url),
-    });
-  }
-  
-  // Search frameworks
-  for (const framework of search.pages("type=framework")) {
-    result.push({
-      label: `Framework: ${framework.data.title}`,
-      search: `${framework.data.title} ${framework.data.tags.join(" ")}`,
-      value: url(framework.data.url),
+      title: lib.data.title,
+      link: lib.data.link,
     });
   }
   
@@ -36,6 +30,8 @@ export default function ({ search }, { url }) {
       label: `Script: ${script.data.title}`,
       search: `${script.data.title} ${script.data.tags.join(" ")}`,
       value: url(script.data.url),
+      title: script.data.title,
+      link: script.data.link,
     });
   }
   
@@ -45,6 +41,8 @@ export default function ({ search }, { url }) {
       label: `Asset: ${asset.data.title}`,
       search: `${asset.data.title} ${asset.data.tags.join(" ")}`,
       value: url(asset.data.url),
+      title: asset.data.title,
+      link: asset.data.link,
     });
   }
   
@@ -54,6 +52,8 @@ export default function ({ search }, { url }) {
       label: `Tutorial: ${tutorial.data.title}`,
       search: `${tutorial.data.title} ${tutorial.data.tags.join(" ")}`,
       value: url(tutorial.data.url),
+      title: tutorial.data.title,
+      link: tutorial.data.link,
     });
   }
   
@@ -63,6 +63,8 @@ export default function ({ search }, { url }) {
       label: `Author: ${author.data.name}`,
       search: `${author.data.title} ${author.data.tags.join(" ")}`,
       value: url(author.data.url),
+      title: author.data.title,
+      link: author.data.link,
     });
   }
 
@@ -72,15 +74,18 @@ export default function ({ search }, { url }) {
       label: `Tag: ${tag}`,
       search: tag,
       value: url(`/tags/${tag}/`),
+      title: tag.data.title
     });
   }
 
   // Search posts
   for (const post of search.pages("type=posts")) {
     result.push({
-	label: `Post: ${post.data.title}`,
+	    label: `Post: ${post.data.title}`,
       search: `${post.data.title} ${post.data.tags.join(" ")}`,
       value: url(post.data.url),
+      title: post.data.title,
+      link: post.data.link,
     });
   }
 
