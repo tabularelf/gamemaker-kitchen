@@ -4,7 +4,7 @@ export default function ({ search }, { url }) {
   const result = [];
   
   // Search tags from libraries
-  for (const tag of search.tags("type=lib|tutorial|script|asset|tool")) {
+  for (const tag of search.tags("type=lib|tutorial|snippet|asset|tool")) {
     result.push({
       label: `Tag: ${tag}`,
       search: tag,
@@ -22,18 +22,20 @@ export default function ({ search }, { url }) {
       title: lib.data.title,
       link: lib.data.link,
       paid: lib.data.paid,
+      logo: lib.data.logo ?? lib.data.banner,
     });
   }
   
   // Search scripts
-  for (const script of search.pages("type=script")) {
+  for (const snippet of search.pages("type=snippet")) {
     result.push({
-      label: `Script: ${script.data.title}`,
-      search: `${script.data.title} ${script.data.tags.join(" ")}`,
-      value: url(script.data.url),
-      title: script.data.title,
-      link: script.data.link,
-      paid: script.data.paid,
+      label: `Snippet: ${snippet.data.title}`,
+      search: `${snippet.data.title} ${snippet.data.tags.join(" ")}`,
+      value: url(snippet.data.url),
+      title: snippet.data.title,
+      link: snippet.data.link,
+      paid: snippet.data.paid,
+      logo: snippet.data.logo ?? snippet.data.banner,
     });
   }
   
@@ -46,6 +48,7 @@ export default function ({ search }, { url }) {
       title: asset.data.title,
       link: asset.data.link,
       paid: asset.data.paid,
+      logo: asset.data.logo ?? asset.data.banner,
     });
   }
   
@@ -57,6 +60,7 @@ export default function ({ search }, { url }) {
       value: url(tutorial.data.url),
       title: tutorial.data.title,
       link: tutorial.data.link,
+      logo: tutorial.data.logo ?? tutorial.data.banner,
     });
   }
   
@@ -80,6 +84,7 @@ export default function ({ search }, { url }) {
       title: tool.data.title,
       link: tool.data.link,
       paid: tool.data.paid,
+      logo: tool.data.logo ?? tool.data.banner,
     });
   }
 
