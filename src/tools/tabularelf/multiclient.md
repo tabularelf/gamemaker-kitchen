@@ -1,7 +1,7 @@
 ---
 title: MultiClient
 description: A multi client launcher extension for networking development for GameMaker 2022.6
-link: https://github.com/tabularelf/collage
+link: https://github.com/tabularelf/MultiClient
 date: 2024-06-14 23:30:00
 tags:
   - build scripts
