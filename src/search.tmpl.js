@@ -21,6 +21,7 @@ export default function ({ search }, { url }) {
       value: url(lib.data.url),
       title: lib.data.title,
       link: lib.data.link,
+      paid: lib.data.paid,
     });
   }
   
@@ -32,6 +33,7 @@ export default function ({ search }, { url }) {
       value: url(script.data.url),
       title: script.data.title,
       link: script.data.link,
+      paid: script.data.paid,
     });
   }
   
@@ -43,6 +45,7 @@ export default function ({ search }, { url }) {
       value: url(asset.data.url),
       title: asset.data.title,
       link: asset.data.link,
+      paid: asset.data.paid,
     });
   }
   
@@ -76,6 +79,7 @@ export default function ({ search }, { url }) {
       value: url(tool.data.url),
       title: tool.data.title,
       link: tool.data.link,
+      paid: tool.data.paid,
     });
   }
 
