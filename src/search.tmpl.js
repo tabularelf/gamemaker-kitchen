@@ -4,7 +4,7 @@ export default function ({ search }, { url }) {
   const result = [];
   
   // Search tags from libraries
-  for (const tag of search.tags("type=lib|tutorial|script|asset")) {
+  for (const tag of search.tags("type=lib|tutorial|script|asset|tool")) {
     result.push({
       label: `Tag: ${tag}`,
       search: tag,
@@ -65,6 +65,17 @@ export default function ({ search }, { url }) {
       value: url(author.data.url),
       title: author.data.title,
       link: author.data.link,
+    });
+  }
+
+  // Search tools
+  for (const tool of search.pages("type=tool")) {
+    result.push({
+      label: `Tool: ${tool.data.title}`,
+      search: `${tool.data.title} ${tool.data.tags.join(" ")}`,
+      value: url(tool.data.url),
+      title: tool.data.title,
+      link: tool.data.link,
     });
   }
 
