@@ -1,7 +1,8 @@
 ---
 title: BogoGML - Bogosort in GameMaker
-description: UI in GameMaker
+description: Awful sorting algorithms in GameMaker
 link: https://dragonite.itch.io/bogosort-for-gamemaker/
+logo: https://img.itch.zone/aW1nLzM4MTkxNDUucG5n/347x500/sv62w%2F.png
 date: 2024-07-05 02:03:00
 tags:
   - sorting
