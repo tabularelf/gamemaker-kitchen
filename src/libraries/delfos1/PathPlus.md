@@ -5,13 +5,14 @@ description: An extension of GameMaker's paths
 threadLink: https://discord.com/channels/724320164371497020/1249985683414847498
 docs: https://github.com/Delfos1/PathPlus/wiki
 paid: false
-date: 2024-05-11 07:16:50
+date: 2024-06-11 07:16:50
 tags:
   - path
-  - " vector"
+  - vector
 authors:
-  - Delfos
+  - delfos1
 ---
+
 https://delfos1.itch.io/pathplus-for-gamemaker
 
 This was my submission for the **GameMaker Kitchen Cookbook Jam #2**.

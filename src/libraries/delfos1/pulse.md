@@ -7,7 +7,7 @@ tags:
   - particles
   - fx
 authors:
-  - Delfos1
+  - delfos1
 ---
 
 Pulse is a free library for GameMaker that makes more complex particle emitters, systems and particles.
