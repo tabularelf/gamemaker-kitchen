@@ -8,7 +8,7 @@ paid: true
 date: 2024-05-30 23:58:17
 tags:
   - localisation
-  - " i18n"
+  - i18n
 authors:
   - yellowafterlife
 ---
