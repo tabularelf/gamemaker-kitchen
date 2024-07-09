@@ -10,7 +10,7 @@ tags:
   - localisation
   - i18n
 authors:
-  - yellowafterlife
+  - YellowAfterLife
 ---
 It's easy to use and does a variety of cool tricks:
 
