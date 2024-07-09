@@ -9,6 +9,7 @@ date: 2024-05-30 23:58:17
 tags:
   - localisation
   - i18n
+  - lts
 authors:
   - YellowAfterLife
 ---
