@@ -5,10 +5,10 @@ description: Unity Analytics but for GameMaker
 threadLink: https://discord.com/channels/724320164371497020/1260968271319011359
 docs: ""
 paid: false
-date: 2024-06-11 14:37:43
+date: 2024-07-11 14:37:43
 tags:
   - analytics
 authors:
-  - jujuadams
+  - Juju Adams
 ---
 https://github.com/JujuAdams/UnityAnalytics
