@@ -9,6 +9,6 @@ date: 2024-06-11 14:37:43
 tags:
   - analytics
 authors:
-  - Juju Adams
+  - jujuadams
 ---
 https://github.com/JujuAdams/UnityAnalytics
