@@ -9,8 +9,9 @@ date: 2024-05-30 23:58:17
 tags:
   - localisation
   - i18n
+  - lts
 authors:
-  - yellowafterlife
+  - YellowAfterLife
 ---
 It's easy to use and does a variety of cool tricks:
 
