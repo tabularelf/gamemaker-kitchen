@@ -7,7 +7,7 @@ tags:
   - outline
   - shader
 authors:
-  - Grisgram
+  - grisgram
 ---
 
 This shader is based on a Version of [@JujuAdams](https://github.com/JujuAdams/JujuAdams), credits to him for the basic implementation to draw a sprite outlined. He helped me in implementing varying outline strengths, and I took over from that point.
