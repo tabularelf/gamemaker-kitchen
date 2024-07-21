@@ -9,7 +9,7 @@ tags:
   - Gamejam
   - Highscores
 authors:
-  - Grisgram
+  - grisgram
 ---
 
 ## Here's what it can look like

@@ -9,7 +9,7 @@ tags:
   - vertex
   - sprites
 authors:
-  - Grisgram
+  - grisgram
 ---
 
 A simple, vertex based animation, that offers many settings to customize:
