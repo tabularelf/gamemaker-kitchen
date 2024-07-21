@@ -7,7 +7,9 @@ docs: https://github.com/Grisgram/qss
 paid: true
 date: 2024-07-21 22:03:18
 tags:
-  - technical
+  - cli
+  - code-generation
+  - database
   - sql
 authors:
   - grisgram
