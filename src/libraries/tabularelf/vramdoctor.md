@@ -5,7 +5,7 @@ link: https://github.com/tabularelf/VramDoctor/
 date: 2024-06-14 23:22:00
 tags:
   - analyzer
-  - usuage
+  - usage
   - vram
 authors:
   - TabularElf
