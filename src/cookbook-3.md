@@ -7,14 +7,14 @@ menu:
 ---
 
 
-<center>
-    <h1>Cookbook Jam 3: Tutorial Edition</h1>
-    <h2>    
-    <p id="countdown">Getting Countdown...</p>
-    </h2>
-</center>
 
-<center>More soon...</center>
+<h1>Cookbook Jam 3: Tutorial Edition</h1>
+<h2>    
+<p id="countdown">Getting Countdown...</p>
+</h2>
+
+
+More soon...
 
 <script>
 // Set the date we're counting down to
