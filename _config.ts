@@ -120,6 +120,7 @@ site.preprocess([".md"], (page) => {
   };
   
   // Normalize tags
+  tags = [...new Set(tags)];
   tags = tags.map((tag) => {
     tag = tag.toLowerCase().trim();
     if (Object.hasOwn(dbMatch, tag)) {
