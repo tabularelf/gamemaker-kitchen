@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+description: Tutorial Edition
 menu:
   visible: true
   title: Cookbook Jam 3
