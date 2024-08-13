@@ -4,12 +4,12 @@
 	{% if post.data.logo %} 
 		<a href="{{ post.data.url }}" class="resourceCard-logo"><img src="{{ post.data.logo }}" {% if post.data.logo_alt %} alt="{{ logo_alt }}" {% endif %} ></a>
 	{% endif %}
-	<div class="resourceCard-info">
+	<div {% if post.data.banner %} class="resourceCard-banner" style="background-image:url({{ post.data.banner }})" {% else %} class="resourceCard-info" {% endif %}>
 	<a href="{{ post.data.url }}" class="resourceCard-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
 	{% if post.data.title %}
-		<strong>{{ post.data.title }}</strong>
+		<strong>{{ post.data.title }}</strong>{% if post.data.paid %}💰{% endif %}
 	{% else %}
-		<code>{{ post.url }}</code>
+		<code>{{ post.url }}</code>{% if post.data.paid %}💰{% endif %}
 	{% endif %}
 	</a>
 	<strong>
@@ -27,7 +27,7 @@
 			{% endif %} 
 		{% endfor %}
 		</div>
-	{% endif %} 
+	{% endif %}
 	</strong>
 	
 	<div class="resourceCard-rowContainer">
@@ -39,8 +39,11 @@
 				{% if loop.index <= 3 %}
 					{% set page = search.page("type=tag tag='" + tag + "'") %}
 					{% if page %}
-						<a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
+						<a href="{{ page.data.url }}" class="tag">{{ tag }}</a>
 					{% endif %}
+
+					{% elif loop.index == 4 %}
+						and {{ loop.length - (loop.index - 1) }} more!
 				{% endif %}
 			{% endfor %}
 		</div>
@@ -48,3 +51,4 @@
   </li>
 {% endfor %}
 </ul>
+

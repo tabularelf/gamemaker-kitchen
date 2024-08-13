@@ -48,6 +48,12 @@
    font-weight: normal;
    margin-right: 0.2em;
 }
+
+.resourceCard-banner {
+   border-radius: 1em;
+   width: 100%;
+   box-sizing: border-box;
+}
  
 .resourceCard-logo {
    width: 20%;

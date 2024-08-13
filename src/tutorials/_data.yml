@@ -1,0 +1,8 @@
+type: tutorial
+category: resource
+title: Unknown
+layout: layouts/resource.njk
+includeReadingTime: true
+searchtype: "type=tutorial"
+authors: 
+  - Unknown Author

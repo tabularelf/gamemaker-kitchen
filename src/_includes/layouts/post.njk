@@ -13,12 +13,16 @@ bodyClass: body-post
     </nav>
 
     <time class="post-date" datetime="{{ date | date('DATETIME') }}">
-      {{ date | date('HUMAN_DATE') }}
+      {{ date | date('HUMAN_DATE') }} 
     </time>
+
+     {%- if includeReadingTime == true %}
+      <p>{{ readingInfo.words }} words, {{ readingInfo.minutes }} min read</p>
+    {% endif %}
   </header>
 
   <div class="post-body">
-    {{ content | md(true) | safe }}
+    {{ content | safe }}
   </div>
 </article>
 

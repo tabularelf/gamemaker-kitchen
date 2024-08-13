@@ -1,0 +1,72 @@
+---
+layout: layouts/base.njk
+bodyClass: body-post
+---
+<article class="post">
+	<header class="post-header">
+	<style>
+		div.donation {
+			text-align: right;
+		}
+	</style>
+	{% if logo %} {% if logo_centered == true %} <center> {% endif %} <img src="{{ logo }}" {% if logo_alt %} alt="{{ logo_alt }}" {% endif %} width="{{ logo_width }}" height="{{ logo_height }}"> {% if logo_centered == true %} </center> {% endif %} {% endif %}
+	<h1 class="post-title">{{ title }} {% if version %} v{{ version }} {% endif %}</h1>
+	<h2>
+	<nav class="post-author">
+		{% if authors %}
+			{% for author in authors %}
+				<a href="/authors/{{ author | lowercase | replace(" ", "-") }}">{{ author }}</a>{% if not loop.last %}, {% endif %}
+			{% endfor %}
+		{% endif %} 
+	</nav>
+	</h2>
+	
+
+    <nav class="post-tags">
+    {% for tag in tags %}
+      <a href="/tags/{{ tag }}/" class="tag">{{ tag }}</a>
+    {% endfor %}
+    </nav>
+
+	<time class="post-date" datetime="{{ date | date('DATETIME') }}">
+		{{ date | date('HUMAN_DATE') }} 
+	</time>
+	
+	{% if link %} 
+		<br><a href="{{ link }}" target="_blank">Link to {{ title }}</a>
+	{% endif %}
+
+	<!-- Add reading time info -->
+	{%- if includeReadingTime == true %}
+      <p>{{ readingInfo.words }} words, {{ readingInfo.minutes }} min read</p>
+    {% endif %}
+	
+	{% if donation_link %}
+		<a href="{{ donation_link }}" target="_blank">{{ donation_text }}</a>
+	{% endif %}
+	</header>
+
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+</article>
+
+<hr>
+
+<nav class="post-navigation">
+  <ul>
+    {%- set previousPost = search.previousPage(url, searchtype) %}
+    {%- if previousPost %}
+    <li>
+      ← Previous: <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
+    </li>
+    {% endif %}
+
+    {%- set nextPost = search.nextPage(url, searchtype) %}
+    {%- if nextPost %}
+    <li>
+      <strong>Next: <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a> →</strong>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
