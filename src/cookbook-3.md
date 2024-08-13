@@ -76,9 +76,9 @@ How to submit:
 
 <script>
 // Set the date we're counting down to
-var countDownDateTimeStart = new Date("Sep 2, 2024 14:00:00Z"); // UTC
+var countDownDateTimeStart = new Date("9/2/2024 2:00:00 PM UTC"); // UTC
 var countDownDateTime = countDownDateTimeStart;
-var countDownDateTimeEnd = new Date("Oct 2, 2024 14:00:00Z"); // UTC
+var countDownDateTimeEnd = new Date("10/2/2024 2:00:00 PM UTC"); // UTC
 var countDownTime = countDownDateTime.getTime(); 
 var dateText = "Jam Starts";
 
@@ -106,12 +106,12 @@ var x = setInterval(function() {
         let date1 = new Date().getTime();
         let date2 = countDownDateTime.getTime();
         if ((date1 > date2) && (date1 < countDownDateTimeEnd.getTime())) {
-            countDownDateTime = countDownDateTimeEnd // UTC
+            countDownDateTime = countDownDateTimeEnd;
             countDownTime = countDownDateTime.getTime(); 
             dateText = "Jam Ends";
         } else {
             clearInterval(x);
-            document.getElementById("countdown").innerHTML = "Cookbook Jam 3 is over!<br>September 3rd 2024 00:00:00 - October 3rd 2024 00:00:00 AEST";
+            document.getElementById("countdown").innerHTML = `Cookbook Jam 3 is over!<br>${countDownDateTimeStart.toLocaleString()} - ${countDownDateTimeEnd.toLocaleString()}`;
         }
   }
 }, 1000);
