@@ -29,6 +29,7 @@ Requirements for submission:
 - For Videos: All videos should be submitted to YouTube and embeded onto the tutorial page submission directly. 
 
 How to submit:
+
 0. Optional: Install and setup deno (currently located in the readme.md in the repo, will be moved to the wiki soon), as well as a text editor. (I recommend Visual Studio Code)
 1. Fork [this repository](https://github.com/tabularelf/gamemaker-kitchen).
 2. Clone with your favourite git client, and make a new branch.
