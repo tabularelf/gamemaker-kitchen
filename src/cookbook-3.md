@@ -14,13 +14,13 @@ menu:
 </h2>
 </center>
 
-Unlike the previous iterations of Cookbook Jam [1](https://itch.io/jam/cookbook-jam-1) and [2](https://itch.io/jam/cookbook-jam-2), this jam is all about tutorials! Whether it's about a specific game mechanic, a library, a tool, or something in relation to GameMaker. If you like making tutorials, this jam is for you!
+Unlike the previous iterations of Cookbook Jam [1](https://itch.io/jam/cookbook-jam-1) and [2](https://itch.io/jam/cookbook-jam-2), this jam is all about tutorials! Whether it's about a specific game mechanic, a library, a tool, or something in relation to GameMaker. If you like making tutorials, this jam is for you! All tutorials submitted will be hosted on the GameMaker Kitchen website (the one you're on right now!), and will continue to be hosted here even after the jam has ended. Since the purpose of this jam is to create useful community resources, you are free to update your tutorial even after the jam ends to keep it up to date.
 
 [Join the GameMaker Kitchen Discord server](https://discord.gg/EaGY2wyQmz) to discuss the jam in #cookbook_jam! 
 
 Requirements for participation: 
 - Must be familiar with source control (GameMaker Kitchen uses Github, so Git\Source Tree\Github Desktop, etc)
-- Must have a basic fundamental understanding of GameMaker and GameMaker Language (not for complete beginners!) 
+- Must have a basic fundamental understanding of GameMaker and GameMaker Language
 
 Requirements for submission:
 - You may work on a tutorial that was already in progress before the jam started, but it should be in an incomplete or prototype state. No submitting a tutorial that was already finished before the jam started!
@@ -41,20 +41,8 @@ How to submit:
 <button class="collapsible">Open collapsible</button>
 <div class="content">
 
-### Q: What is FOSS?
-**A**: FOSS stands for "Free and Open-Source Software". Indicating that the software and code is available for everyone, to be used by anyone for free. Whether it be commercial or non-commercial used. This is done by a licensed that grants the right to use, copy, study, and change the software in anyway.
-
-### Q: Can I sell my tutorial?
-**A**: The aim of this jam is specifically for FOSS resources. However, we do allow anyone to setup donations for their resources (including pay what you want models)!
-
-### Q: What is a license?
-**A**: A license is a form of legal permission, to use the provided software/code. By providing a license, you allow people to take your existing software/code and use it as per the license terms. These mainly cover usage, modifications and even redistribution. But other license terms may apply.
-
-### Q: What license should I apply to my resources?
-**A**: While I am willing to recommend some, I highly encourage reading out each of the licenses that are available from [https://choosealicense.com/](https://choosealicense.com/) and picking one that suits you best. Every license has its own rules and requirements. If you wish to see what I use, [click here to read up about MIT](https://choosealicense.com/licenses/mit/). 
-
 ### Q: I'm already working on a tutorial for GameMaker, can I join the jam still and submit it?
-**A**: While ideally with many jams it's intended for submissions to be made completely from scratch, I 100% welcome any and all existing submissions that are being worked on, provided that they have not been released previously, were previously undocumented, or were only half completed.
+**A**: While many jams require submissions to be made completely from scratch, I 100% welcome any and all half finished tutorials you've worked on previously, provided that they have not already been released.
 
 ### Q: There’s a tutorial I want to make but XYZ has already made something, is that still allowed?
 **A**: YES! All tutorials count, including ones that are similar to another. 
@@ -62,11 +50,27 @@ How to submit:
 ### Q: How big can my tutorial be?
 **A**: As big as you are willing to write it all. :) 
 
-### Q: I’d like to make something in mind for LTS, what should I do?
-**A**: Make your project in LTS. Even with the project conversion tool now exposed as an UI as of 2024.2, there’s a huge difference in terms of capabilities between both LTS and monthly. To minimize the amount of effort of converting, rewriting any code or using something that just doesn’t exist in LTS, you should use GameMaker LTS from the start.
+### Q: Does my tutorial need to be beginner friendly?
+**A**: No, you can target users of any skill level you like. Tutorials for advanced users only are welcome!
+
+### Q: What version of GM should my tutorial be made for?
+**A**: Ideally your tutorial should be made either for the latest monthly version of GameMaker, or the LTS release of GameMaker. 
 
 ### Q: Am I allowed to make a tutorial on an existing GameMaker resource?
 **A**: Yes, you can make a tutorial on libraries or tools, made for GameMaker! (Including your own)
+
+### Q: Can I sell my tutorial?
+**A**: The aim of this jam is specifically for FOSS resources. However, we do allow anyone to setup donations for their resources (including pay what you want models)!
+
+### Q: What is FOSS?
+**A**: FOSS stands for "Free and Open-Source Software". Indicating that the software and code is available for everyone, to be used by anyone for free. Whether it be commercial or non-commercial used. This is done by a licensed that grants the right to use, copy, study, and change the software in anyway.
+
+### Q: What is a license?
+**A**: A license is a form of legal permission, to use the provided software/code. By providing a license, you allow people to take your existing software/code and use it as per the license terms. These mainly cover usage, modifications and even redistribution. But other license terms may apply.
+
+### Q: What license should I apply to my resources?
+**A**: While I am willing to recommend some, I highly encourage reading out each of the licenses that are available from [https://choosealicense.com/](https://choosealicense.com/) and picking one that suits you best. Every license has its own rules and requirements. If you wish to see what I use, [click here to read up about MIT](https://choosealicense.com/licenses/mit/). 
+
 </div>
 
 
