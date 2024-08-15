@@ -11,7 +11,8 @@ tags:
   - automation
   - scripting
 authors:
-  - coldrock.games / grisgram
+  - coldrock.games 
+  - grisgram
 ---
 Hey,
 
