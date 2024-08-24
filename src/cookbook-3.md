@@ -21,6 +21,7 @@ Unlike the previous iterations of Cookbook Jam [1](https://itch.io/jam/cookbook-
 Requirements for participation: 
 - Must be familiar with source control (GameMaker Kitchen uses Github, so Git\Source Tree\Github Desktop, etc)
 - Must have a basic fundamental understanding of GameMaker and GameMaker Language
+- Must base your tutorial on either LTS or latest monthly. (If it is made for LTS, please append the LTS tag to it!)
 
 Requirements for submission:
 - You may work on a tutorial that was already in progress before the jam started, but it should be in an incomplete or prototype state. No submitting a tutorial that was already finished before the jam started!
@@ -63,7 +64,7 @@ How to submit:
 **A**: The aim of this jam is specifically for FOSS resources. However, we do allow anyone to setup donations for their resources (including pay what you want models)!
 
 ### Q: What is FOSS?
-**A**: FOSS stands for "Free and Open-Source Software". Indicating that the software and code is available for everyone, to be used by anyone for free. Whether it be commercial or non-commercial used. This is done by a licensed that grants the right to use, copy, study, and change the software in anyway.
+**A**: FOSS stands for "Free and Open-Source Software". Indicating that the software and code is available for everyone, to be used by anyone for free. Whether it be commercial or non-commercial used. This is done by a license that grants the right to use, copy, study, and change the software in anyway.
 
 ### Q: What is a license?
 **A**: A license is a form of legal permission, to use the provided software/code. By providing a license, you allow people to take your existing software/code and use it as per the license terms. These mainly cover usage, modifications and even redistribution. But other license terms may apply.
