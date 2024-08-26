@@ -12,7 +12,7 @@ authors:
   - YellowAfterlife
 ---
 **Quick links:** [documentation](https://yal.cc/docs/gm/winmenu/)
-· [itch.io](https://yellowafterlife.itch.io/gamemaker-winwin) · [source code](https://github.com/YAL-GameMaker/winMenu)  
+· [itch.io](https://yellowafterlife.itch.io/gamemaker-winmenu) · [source code](https://github.com/YAL-GameMaker/winMenu)  
 **Platforms:** Windows, Windows (YYC)​  
 **Versions:** _all of them_ (from GameMaker 8.1 to the latest stable)
 
