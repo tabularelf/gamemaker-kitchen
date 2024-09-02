@@ -1,7 +1,7 @@
 ---
 title: SNAP
 description: Data format converters
-link: https://github.com/JujuAdams/scribble/
+link: https://github.com/JujuAdams/snap/
 logo: https://raw.githubusercontent.com/JujuAdams/SNAP/master/LOGO.png
 date: 2024-03-11 02:05:00
 tags:

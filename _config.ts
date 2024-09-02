@@ -106,4 +106,41 @@ site.filter("getRandomPage", (pages) => {
   return pages[randomIndex];
 });
 
+site.preprocess([".md"], (page) => {
+  let tags = page.data.tags;
+
+  // We actually have this here so I don't gotta refactor a bunch of potential files
+  const dbMatch = {
+    "localisation":   "localization",
+    "sprite":        "sprites",
+    "array":         "arrays",
+    "string":        "strings",
+    "vector":        "vectors",
+    "buffer":        "buffers",
+  };
+  
+  // Normalize tags
+  if (tags != undefined) {
+	tags = [...new Set(tags)];
+	tags = tags.map((tag) => {
+		tag = tag.toLowerCase().trim();
+		if (Object.hasOwn(dbMatch, tag)) {
+			tag = dbMatch[tag];
+		}
+	
+		return tag;
+	});
+	
+	// Save the normalized tags 
+	page.data.tags = tags;
+  }
+  
+  let authors = page.data.authors;
+  if (authors != undefined) {
+	authors = authors.map((author) => {return author.toLowerCase().trim()});
+	page.data.authors = authors;
+	console.log(authors);
+  }
+});
+
 export default site;
