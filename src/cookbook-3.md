@@ -35,7 +35,7 @@ How to submit:
 1. Fork [this repository](https://github.com/tabularelf/gamemaker-kitchen).
 2. Clone with your favourite git client, and make a new branch.
 3. Make a new folder in `/src/tutorials/` with your name, for your tutorial/s.
-4. Refer to this [page](https://github.com/tabularelf/gamemaker-kitchen/wiki/Making-or-editing-an-entry-(Post-Library-Tool-Asset-etc)) for setting up your tutorial page, as well as markdown that is valid.
+4. Refer to this [page](https://github.com/tabularelf/gamemaker-kitchen/wiki/Making-or-editing-an-entry-(Post-Library-Tool-Asset-etc)) for setting up your tutorial page, as well as markdown that is valid. (For video tutorials, please embed your video).
 5. Once you have finished setting up your tutorial page and you are ready to submit, make a pull request to the main repository.
 
 <h3>Frequently asked questions</h3>
