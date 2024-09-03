@@ -28,6 +28,7 @@ Requirements for submission:
 - The tutorial *may* be in video or text form. (Or both!)
 - With exception to videos, you may use `/site-assets/*` to store specific things in relation to the tutorial (such as images, within reasonable file sizes of no greater than 10MB).
 - For Videos: All videos should be submitted to YouTube and embeded onto the tutorial page submission directly. 
+- For Text: The tutorial *must* be on your page submission directly, and not linked offsite.
 
 How to submit:
 
@@ -35,7 +36,7 @@ How to submit:
 1. Fork [this repository](https://github.com/tabularelf/gamemaker-kitchen).
 2. Clone with your favourite git client, and make a new branch.
 3. Make a new folder in `/src/tutorials/` with your name, for your tutorial/s.
-4. Refer to this [page](https://github.com/tabularelf/gamemaker-kitchen/wiki/Making-or-editing-an-entry-(Post-Library-Tool-Asset-etc)) for setting up your tutorial page, as well as markdown that is valid. (For video tutorials, please embed your video).
+4. Refer to this [page](https://github.com/tabularelf/gamemaker-kitchen/wiki/Making-or-editing-an-entry-(Post-Library-Tool-Asset-etc)) for setting up your tutorial page, as well as markdown that is valid. 
 5. Once you have finished setting up your tutorial page and you are ready to submit, make a pull request to the main repository.
 
 <h3>Frequently asked questions</h3>
