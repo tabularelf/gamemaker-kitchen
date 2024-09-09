@@ -391,6 +391,20 @@ If you haven't used enumerators before, they're a great way of representing a fi
 
 Instead, we use an enumerator which lets us refer to ```jump_types.NORMAL``` in the code, while GameMaker reads that as a 0. Sure, you could use strings instead (i.e. ```if jump_type == "normal"```) but if you accidentally typed "Normal" or "nomal" instead of "normal", your code would stop working at it might be harder to debug. With enumerators, as soon as you type ```jump_types```, GameMaker will suggest NORMAL and BOUNCE as your two options.
 
+We can also define a method which is simply a block of code which can be called from elsewhere in your code without repeating yourself. To start, write add the following code in the 'Create' event:
+
+```gml
+jump = function(_multiplier)
+{
+    vsp = -jspd * _multiplier;
+    key_jump = 0;
+}
+```
+
+The benefit of doing this is that we don't have to repeat the jump code in our check for collisions with bounce pads or collisions with walls.
+
+To make this even more useful, the method takes a number as an argument which represents the vertical velocity multiplier. That means that ```jump(1)``` will execute a standard jump but ```jump(2)``` will execute a x2 height jump.
+
 Moving onto the 'Step' event, make these changes:
 
 ```gml
@@ -398,12 +412,6 @@ Moving onto the 'Step' event, make these changes:
 //if key_jump > 0 key_jump--;
 
 // Jump
-
-function Jump(_multiplier)
-{
-    vsp = -jspd * _multiplier;
-    key_jump = 0;
-}
 
 //vsp += grav;
 
@@ -418,7 +426,7 @@ function Jump(_multiplier)
 
     if _inst.object_index == obj_bounce
     {
-        Jump(1.5);
+        jump(1.5);
         jump_type = jump_types.BOUNCE;
     }
     else if _inst.object_index == obj_wall
@@ -435,7 +443,7 @@ if jump_type = jump_types.NORMAL
 {
     if key_jump > 0 and coyote_time > 0
     {
-        Jump(1);
+        jump(1);
     }
 
     if vsp < 0 and !keyboard_check(vk_up)
@@ -447,15 +455,11 @@ if jump_type = jump_types.NORMAL
 // Collision code here...
 ```
 
-The first thing to notice is the addition of a ```Jump()``` function. The reason for this is that you don't want to have to repeat the jump code in different places depending on whether we jumped off the ground or landed on a bounce pad.
-
-To make this even more useful, the function takes a number as an argument which represents the vertical velocity multiplier. That means that ```Jump(1)``` will execute a standard jump but ```Jump(2)``` will execute a x2 height jump.
-
-Something else to add is a reference to the object the player is standing on. Inside the ```place_meeting``` function, initialize a local variable called ```_inst``` which will store a reference to the object the player is colliding with. Then, check if the ```object_index``` of that object is ```obj_bounce``` and if so perform a 150% jump and set the ```jump_type``` to ```jump_types.BOUNCE```.
+The first thing to notice is the addition of a reference to the object the player is standing on. Inside the ```place_meeting``` function, initialize a local variable called ```_inst``` which will store a reference to the object the player is colliding with. Then, check if the ```object_index``` of that object is ```obj_bounce``` and if so perform a 150% jump and set the ```jump_type``` to ```jump_types.BOUNCE```.
 
 Otherwise, if the object is a wall, just set the jump type to ```jump_types.NORMAL```. This basically means that now whenever the player is standing on top of an object, the game knows what it is.
 
-The last thing to do is change the previous jump code to the ```Jump``` function and wrap all of the previous jump code in the check ```if jump_type = jump_types.NORMAL```. The reason for the check is because we don't want to be able to perform a normal jump or run the variable jump height code if the player is on a bounce pad.
+The last thing to do is change the previous jump code to the ```jump()``` method and wrap all of the previous jump code in the check ```if jump_type = jump_types.NORMAL```. The reason for the check is because we don't want to be able to perform a normal jump or run the variable jump height code if the player is on a bounce pad.
 
 If you wanted bounce pads to also have variable jump heights, you could move that code outside of the ```if``` statement.
 
@@ -482,13 +486,6 @@ The 'Step' event will look like this:
 
 // Jump
 
-//function Jump(_multiplier)
-//{
-//  vsp = -jspd * _multiplier;
-//  key_jump = 0;
-    jump_capacity--;
-//}
-
 //vsp += grav;
 
 //if place_meeting(x, y + 1, obj_collision)
@@ -507,7 +504,7 @@ The 'Step' event will look like this:
 //
 //  if _inst.object_index == obj_bounce
 //  {
-//      Jump(1.5);
+//      jump(1.5);
 //      
 //      jump_type = jump_types.BOUNCE;
 //  }
@@ -525,7 +522,7 @@ var _can_jump = (coyote_time > 0 and jump_type == jump_types.NORMAL) or jump_cap
 
 if key_jump > 0 and _can_jump
 {
-    Jump(1);
+    jump(1);
 
     if jump_type != jump_types.NORMAL
     {
@@ -541,7 +538,7 @@ if jump_type == jump_types.NORMAL and vsp < 0 and !keyboard_check(vk_up)
 // Collision code here...
 ```
 
-Inside the ```Jump()``` function, add the line ```jump_capacity--``` which will take away one of our jumps as needed.
+Inside the ```jump()``` method, add the line ```jump_capacity--``` which will take away one of our jumps as needed.
 
 Then, the code inside the ```place_meeting``` check is mostly the same apart from the fact that - just like for coyote time - you need to set jump capacity to the max if we're standing on the ground.
 
@@ -566,7 +563,7 @@ var _can_jump = (coyote_time > 0 and jump_type == jump_types.NORMAL) or jump_cap
 
 ```_wall_jump``` just checks if there's a wall to the left or right of a player. Then notice I've added that variable as an optional condition to our ```_can_jump``` variable. Now, the player can either jump from the ground, in mid-air if we have a double jump, or off of a wall.
 
-The last thing to change is just after the line that reads ```Jump(1);```. There you need to write:
+The last thing to change is just after the line that reads ```jump(1);```. There you need to write:
 
 ```gml
 if _wall_jump jump_capacity++;
@@ -604,7 +601,7 @@ var _can_jump = (coyote_time > 0 and jump_type == jump_types.NORMAL) or jump_cap
 
 //if key_jump > 0 and _can_jump
 //{
-//  Jump(1);
+//  jump(1);
 //     
     if _wall_jump != 0 and !place_meeting(x, y + 1, obj_collision)
     {
@@ -663,11 +660,11 @@ xscale = 1; // Represents the player's horizontal scale without affecting collis
 
 Now in the 'Step' event, just add these few things.
 
-In the ```Jump()``` function, add the line ```xscale = 0.5;```. This will squish the player's horizontal scale whenever they jump to give some feedback to the player.
+In the ```jump()``` method, add the line ```xscale = 0.5;```. This will squish the player's horizontal scale whenever they jump to give some feedback to the player.
 
 Then, inside the ```if place_meeting(x, y + 1, obj_collision)``` section, next to the line ```coyote_time = coyote_time_max;```, set ```xscale``` to 1.5 (or any value greater than 1 you like). This will stretch the player's horizontal scale whenever they land on the floor and create a nice effect representing the impact of hitting the floor.
 
-Next to the line ```Jump(1.5);``` write ```_inst.image_yscale = 0;```. This will squish the bounce pad down when you land on it which is a neat effect. To make the bounce pad come back up though, you'll have to add a 'Step' event to the bounce pad object and add this line ```image_yscale = lerp(image_yscale, 1, 0.1);```.
+Next to the line ```jump(1.5);``` write ```_inst.image_yscale = 0;```. This will squish the bounce pad down when you land on it which is a neat effect. To make the bounce pad come back up though, you'll have to add a 'Step' event to the bounce pad object and add this line ```image_yscale = lerp(image_yscale, 1, 0.1);```.
 
 However, returning to the player object, add a normal 'Draw' event to your player object and type the following:
 
@@ -709,7 +706,7 @@ Because we all know how scope creep can be, I want to teach you how to add some 
 
 Then in GameMaker, right click the 'Sounds' folder in the 'Asset Browser' and select 'Sound' from the 'Create' sub-menu. Name your sound (I went for 'snd_jump' and 'snd_land') and then select the sound files by clicking the '...' button to the right of the name.
 
-Now, go to the 'Step' event in the player object and inside the ```Jump()``` function add this line:
+Now, go to the 'Step' event in the player object and inside the ```jump()``` method add this line:
 
 ```gml
 audio_play_sound(snd_jump, 10, false);
