@@ -1,8 +1,7 @@
 ---
 title: 10 Levels of Platformer Jumping
 description: square go up -> fully featured platformer jumping
-link: https://github.com/BobsStuff/CoolThing
-date: 2022-04-29 18:35:07
+date: 2024-09-11 18:35:07
 tags:
   - Platformer
 authors:
