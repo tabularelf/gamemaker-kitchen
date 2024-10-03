@@ -1,8 +1,7 @@
 ---
 title: GameMaker Patterns: Step Manager
 description: A tutorial describing a Step Manager pattern, for ensuring correct execution order and easily disabling part of gameplay logic.
-link: N/A
-date: 2022-10-03
+date: 2024-10-03
 gm_versions:
   - Any
 tags:
