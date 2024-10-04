@@ -330,4 +330,4 @@ jobs:
 You will need to add your own app's ID to the appID setting, as well as the branch that the build will be sent to (it's recommended to use any other branch than default, as the sent built is published automatically), you can also change the build description that is used, as well as a few other specific settings that you can read about on steam-deploy's page.
 
 And congrats, you have now set up automatic building and publishing to Steam, saving yourself plentiful of time with just a press of the Push button.
-Thank you for checking out the tutorial and good luck on game-making! ^^
+Thank you for checking out the tutorial and good luck on game-making!
