@@ -35,6 +35,13 @@ bodyClass: body-post
 	{% if link %} 
 		<br><a href="{{ link }}" target="_blank">Link to {{ title }}</a>
 	{% endif %}
+	
+	<!-- GM Version -->
+	<p><b>GameMaker Version:</b>
+	{% for version in gm_versions %}
+      {{ version }}{% if not loop.last %},{% endif %}
+    {% endfor %}
+	</p>
 
 	<!-- Add reading time info -->
 	{%- if includeReadingTime == true %}
