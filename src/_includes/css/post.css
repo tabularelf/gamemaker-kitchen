@@ -15,19 +15,24 @@
   font-size: 1.2em;
   line-height: 1.4;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  overflow-x: hidden;
 
+/*
+  Sets post limit
   & p,
   & ul,
   & ol {
     max-width: 45em;
   }
-
+*/
   & h2,
   & h3,
   & h4,
   & h5,
   & h6 {
-    max-width: 20em;
+    max-width: 100%;
     margin-bottom: 0;
   }
 }

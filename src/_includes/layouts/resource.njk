@@ -32,9 +32,18 @@ bodyClass: body-post
 		{{ date | date('HUMAN_DATE') }} 
 	</time>
 	
-	{% if link %} 
+	{% if link and link != "N/A" %}
 		<br><a href="{{ link }}" target="_blank">Link to {{ title }}</a>
 	{% endif %}
+	
+	<!-- GM Version -->
+	{% if gm_versions %}
+		<p><b>GameMaker Version:</b>
+		{% for version in gm_versions %}
+     	 {{ version }}{% if not loop.last %},{% endif %}
+    	{% endfor %}
+	{% endif %}
+	</p>
 
 	<!-- Add reading time info -->
 	{%- if includeReadingTime == true %}
