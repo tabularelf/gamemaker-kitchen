@@ -52,7 +52,6 @@ And as this could get get vastly bloated easily, I am going to assume that you'r
 
 ### Simple, but effective
 - [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
-- [Kazam](https://launchpad.net/kazam)
 
 ### Powerful GUI recorders
 - [OBS (Open Broadcaster Software)](https://obsproject.com/)
@@ -62,7 +61,7 @@ And as this could get get vastly bloated easily, I am going to assume that you'r
 
 
 # Formatting videos correctly
-For the most part, if you're using a simple recorder, like ShareX, Kazam, SimpleScreenRecorder or Bandicam, those should automatically be in MP4, h264. Which is the universally supported format for all internet services. If you are using the latest version of OBS (Open Broadcaster Software) for the first time ever (as of writing, 30.2.3), it should automatically be set to Hybrid MP4 or Fragmented MP4, which is akin to MKV but within a MP4 container. The codec will be h264.
+For the most part, if you're using a simple recorder, like ShareX, SimpleScreenRecorder or Bandicam, those should automatically be in MP4, h264. Which is the universally supported format for all internet services. If you are using the latest version of OBS (Open Broadcaster Software) for the first time ever (as of writing, 30.2.3), it should automatically be set to Hybrid MP4 or Fragmented MP4, which is akin to MKV but within a MP4 container. The codec will be h264.
 
 If you are using a more complex recorder or have modified your encoder settings, you'll want to ensure that they can be converted to MP4, h264.<br>
 For an explanation on why I keep on mentioning MP4, h264, feel free to read Codec and Container.
