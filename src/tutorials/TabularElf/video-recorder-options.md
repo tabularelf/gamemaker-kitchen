@@ -10,7 +10,28 @@ authors:
 ---
 
 When it comes to making a video, whether it's for showing off something in your project. Or to show off some cool sick gameplay, or anything else you wish to share, it'd be nice if we could record our screen, right?
-If you're looking for potential options, you've come to the right place! While I won't be covering how to use every single video recorder mentioned here, this will cover a general list of small recommendations and very brief tips. It is up to you to look up separate guides online for each of the tools suggested here.
+If you're looking for potential options, you've come to the right place! While I won't be covering how to use every single video recorder mentioned here, this will cover a general list of small recommendations and very brief tips. It is up to you to look up separate guides online for each of the tools suggested here. I will however explain some very basic concepts.
+
+### Codec
+A codec is simply the data of the video itself. It describes the video, how it stores each and every pixel, the amount of bits it has, how it's compressed, whether it's lossless or lossy compression, etc.<br>
+Example codecs:
+- h264 (The internet standard)
+- h265 (A more up to date h264, not widely adopted)
+- AV1
+- VP9
+- Apple Video
+- WMV (It is a container too)
+
+### Container
+A container is simply a small file container for the video itself. Generally, the codec and container are separate from one another, however there are some exceptional ones.<br>
+Example containers:
+- MP4 (The internet standard)
+- MKV
+- MOV
+- AVI
+- WMV (It is a codec too)
+- WebM (Another internet standard) 
+- FLV
 
 # Windows
 Windows nowadays comes with built in tools to recording your screen. So you may actually find those to be worthwhile enough for your needs.
@@ -62,7 +83,7 @@ And as this could get get vastly bloated easily, I am going to assume that you'r
 
 
 # Formatting videos correctly
-For the most part, if you're using a simple recorder, like ShareX, Kazam, SimpleScreenRecorder or Bandicam, those should automatically be in MP4, h264. Which is the universally supported format for all internet services. If you are using the latest version of OBS (Open Broadcaster Software) for the first time ever (as of writing, 30.2.3), it should automatically be set to Hybrid MP4 or Fragmented MP4 format, which is akin to MKV but within a MP4 container.
+For the most part, if you're using a simple recorder, like ShareX, Kazam, SimpleScreenRecorder or Bandicam, those should automatically be in MP4, h264. Which is the universally supported format for all internet services. If you are using the latest version of OBS (Open Broadcaster Software) for the first time ever (as of writing, 30.2.3), it should automatically be set to Hybrid MP4 or Fragmented MP4, which is akin to MKV but within a MP4 container. The codec will be h264.
 
 If you are using a more complex recorder or have modified your encoder settings, you'll want to ensure that they can be converted to MP4, h264.
 
