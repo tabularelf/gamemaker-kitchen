@@ -1,5 +1,7 @@
 ---
-
+logo: /site-assets/img/githubactions_guide_images/GitHubActionsTutorialIcon.png
+logo_width: 160
+logo_height: 160
 title: Using GitHub Actions to automatically build your game and upload it to Steam
 description: Automating building and deploying game and saving yourself some time
 link: https://github.com/TesterHere06/ActionsTutorial
