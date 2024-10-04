@@ -3,7 +3,7 @@
 title: Using GitHub Actions to automatically build your game and upload it to Steam
 description: Automating building and deploying game and saving yourself some time
 link: https://github.com/TesterHere06/ActionsTutorial
-date: 2024-10-4 23:45:00
+date: 2024-10-5 00:27:45
 tags:
   - github
   - automation
