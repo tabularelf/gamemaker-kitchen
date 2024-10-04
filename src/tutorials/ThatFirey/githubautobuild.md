@@ -2,13 +2,13 @@
 
 title: Using GitHub Actions to automatically build your game and upload it to Steam
 description: Automating building and deploying game and saving yourself some time
+link: https://github.com/TesterHere06/ActionsTutorial
 date: 2024-10-4 23:45:00
 tags:
   - github
   - automation
 authors:
   - ThatFirey
-
 ---
 
 Hello, my name is ThatFirey and today we'll set up automatic building, uploading to Steam and Itch.io, from just a couple of clicks, not requiring you to build the game from GameMaker or prepare it through SteamCMD or Butler. 
@@ -17,11 +17,19 @@ Hello, my name is ThatFirey and today we'll set up automatic building, uploading
 
 First of all we'll need a repository on GitHub, it can be a private or a public one depending on if you want others to access your code
 
+![repo-create](/site-assets/img/githubactions_guide_images/RepoCreate.png)
+
 Once created you now have to use a Git client to clone the repository on your machine. If you prefer ease of usage without command lines it's recommended to use GitHub Desktop on which the tutorial will be shown.
+
+![repo-clone](/site-assets/img/githubactions_guide_images/CloneRepo.png) ![repo-clone](/site-assets/img/githubactions_guide_images/CloneRepo2.png)
 
 Next after downloading and launching it, you have to login with your GitHub account and clone the repository you created. After that we will need to create or save the GameMaker project in the cloned folder.
 
+![project-create](/site-assets/img/githubactions_guide_images/GMProjCreate.png) ![repo-clone](/site-assets/img/githubactions_guide_images/CloneRepo2.png)
+
 After adding a project into cloned folder, GitHub Desktop will now track all changes done in GameMaker and overall in the project. You can commit and push your changes to GitHub's server and they will reflect in the repository.
+
+![repo-push](/site-assets/img/githubactions_guide_images/Push.png)
 
 # GitHub Actions Introduction
 
@@ -29,7 +37,11 @@ Now that we have our repository set-up we can get into the automatization of our
 
 Each action is done through Workflow files, which lists when the action has to start, what the action has to do and other infortmation.
 
+![actions-tutorial](/site-assets/img/githubactions_guide_images/ActionsShowcase.png)
+
 To start, go to Actions tab on your repository's GitHub page and press "Set up a workflow yourself". You'll be met with an editable file window, that's where we'll write out the jobs to do for automatic building, but first let's understand how it works
+
+![workflow-create](/site-assets/img/githubactions_guide_images/WorkflowCreate.png)
 
 The workflow file first starts with the name of the action that it's doing so type
 
@@ -127,6 +139,10 @@ Igor is a GameMaker command line tool to allow building games without using the 
 
 You'll need to add the access key as a secret in your repository's settings under name of ACCESS_KEY
 
+![secret-create](/site-assets/img/githubactions_guide_images/AddingSecret.png)
+
+![secret-type](/site-assets/img/githubactions_guide_images/AccessKeySecret.png)
+
 Now, time to actually build the game using the set-up Igor
 ```
 name: Automatic Build On Push
@@ -209,9 +225,15 @@ jobs:
 
 And there we have it! Our full working workflow file to build the game, you can test it out for yourself now by making a push after making any sort of change in your game, pushing it to GitHub and checking the Actions page on your repository, after it finished the process of the action, you can click on it and download the made artifact, aka your build.
 
+![artifact-download](/site-assets/img/githubactions_guide_images/ArtifactShow.png)
+
 There's one more fix you have to do however if you are using the Steamworks extension. Make sure to remove the post_build_step.bat file from your project's Steamworks' extension folder. So, extensions\steamworks\post_build_step.bat
 
+![delete-post-build](/site-assets/img/githubactions_guide_images/FolderShow1.png)
+
 And instead to keep the Steamworks integration, you will need to navigate to your SDK's path redistributable_bin, win64 folder and add the steam_api64.dll to your project's Steamworks extension
+
+![add-file](/site-assets/img/githubactions_guide_images/AddFile.png) ![steam-api](/site-assets/img/githubactions_guide_images/FolderShow2.png)
 
 The next section will be showing how to upload your game to Steam right after building the game, so if you just needed a build of your game, that's all for this tutorial, thanks for checking it out! And for those who stay for more...
 
@@ -227,7 +249,6 @@ on:
   workflow_run:
     workflows: ['Automatic Build On Push']
     types: [completed]
-	
 permissions:
    actions: read
 ```
@@ -242,7 +263,6 @@ on:
   workflow_run:
     workflows: ['Automatic Build On Push']
     types: [completed]
-	
 permissions:
    actions: read
 jobs:
@@ -269,7 +289,6 @@ on:
   workflow_run:
     workflows: ['Automatic Build On Push']
     types: [completed]
-	
 permissions:
    actions: read
 jobs:
@@ -290,6 +309,9 @@ jobs:
 
 And for the last job we'll be using [steam-deploy](https://github.com/game-ci/steam-deploy) Action by game-ci, but before that we need to aquire config.vdf file from SteamCMD to allow GitHub to automatically log into your account without MFA (Multi-Factor Authentication), you can find it inside your Steamworks SDK folder "sdk\tools\ContentBuilder/builder"
 Launch steamcmd.exe and type "login username password", it will also request your Steam Guard code if you have it enabled. Once you successfuly logged in, you can close steamcmd.exe and in the same folder there should now be the config folder, inside which you will find the config.vdf. Open the file in notepad or any other text editor and copy all the contents inside it, we now need to encode that data into Base64 format, you can use command "cat config/config.vdf | base64 > config_base64.txt" if you're using Linux or Linux subsystem for Windows. Or you can use online tools to encode that data into Base64, bot variants work.
+
+![configvdf](/site-assets/img/githubactions_guide_images/ConfigVdf.png) ![steam-api](/site-assets/img/githubactions_guide_images/FolderShow2.png)
+
 Copy the generated base64 code and create two new secrets. "STEAM_USERNAME" - containing your steam login username. And "STEAM_CONFIG_VDF" - with pasted in base64 code.
 And now we finally add the Steam deploy action
 
@@ -300,7 +322,6 @@ on:
   workflow_run:
     workflows: ['Automatic Build On Push']
     types: [completed]
-	
 permissions:
    actions: read
 jobs:
