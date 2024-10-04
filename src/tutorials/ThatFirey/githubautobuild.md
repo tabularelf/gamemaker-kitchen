@@ -352,3 +352,5 @@ You will need to add your own app's ID to the appID setting, as well as the bran
 
 And congrats, you have now set up automatic building and publishing to Steam, saving yourself plentiful of time with just a press of the Push button.
 Thank you for checking out the tutorial and good luck on game-making! ^^
+
+Big thank you to TabularElf for helping me understand deploying things with GitHub Actions and Ross Manthorp for their tutorial on GitHub Actions with GameMaker which you can read over here: https://gamemaker.io/en/blog/bs-tech-automate-builds
