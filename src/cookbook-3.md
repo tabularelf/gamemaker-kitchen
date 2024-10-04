@@ -61,6 +61,9 @@ How to submit:
 ### Q: Am I allowed to make a tutorial on an existing GameMaker resource?
 **A**: Yes, you can make a tutorial on libraries or tools, made for GameMaker! (Including your own)
 
+### Q: Can I upload assets specific to the tutorial to the repository?
+**A**: Images, that are under 5MB I'll allow. Anything else will be reviewed on a case-by-case basis.
+
 ### Q: Can I sell my tutorial?
 **A**: The aim of this jam is specifically for FOSS resources. However, we do allow anyone to setup donations for their resources (including pay what you want models)!
 

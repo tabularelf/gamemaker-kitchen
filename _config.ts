@@ -139,7 +139,7 @@ site.preprocess([".md"], (page) => {
   if (authors != undefined) {
 	authors = authors.map((author) => {return author.toLowerCase().trim()});
 	page.data.authors = authors;
-	console.log(authors);
+	//console.log(authors);
   }
 });
 
