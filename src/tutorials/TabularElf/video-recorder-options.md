@@ -47,7 +47,7 @@ However, you may prefer some free alternatives so I'll list them here.<br>
 - [ffmpeg](https://www.ffmpeg.org/) (it can [record screens](https://trac.ffmpeg.org/wiki/Capture/Desktop)).
 
 # Linux
-Some Linux distros do have built in ways of reecording, but not all support it exclusively.<br>
+Some Linux distros do have built in ways of recording, but not all support it exclusively.<br>
 And as this could get get vastly bloated easily, I am going to assume that you're reading this because your distro doesn't support it out of the box.
 
 ### Simple, but effective
