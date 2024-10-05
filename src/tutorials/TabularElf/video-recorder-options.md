@@ -27,7 +27,7 @@ There are other video recorders out there that don't come stock with Windows. Fo
 ### Simple, but effective
 - [Bandicam](https://www.bandicam.com/)
 - Nvidia Shadow Play (This requires a Nvidia GPU! This is apart of the Nvidia GeForce Experience and can be accessed via the in-game overlay (`alt + z`) or record via this shortcut (`alt + f9`). Shortcuts *can* be changed.)
-- Intel Arc Control (This requires an Intel Arc GPU! Can be accessed via Intel Arc Control -> Studio -> Capture. Note that this requires a display to be connected to your Intel Arc GPU. No shortcuts as of October 5th 2024)
+- Intel Arc Studio Capture (This requires an Intel Arc GPU! Can be accessed via Intel Arc Control -> Studio -> Capture. Note that this requires a display to be connected to your Intel Arc GPU. No shortcuts as of October 5th 2024)
 
 ### Powerful GUI recorders
 - [OBS (Open Broadcaster Software)](https://obsproject.com/)
