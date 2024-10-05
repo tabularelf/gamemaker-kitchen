@@ -63,10 +63,9 @@ And as this could get get vastly bloated easily, I am going to assume that you'r
 
 
 # Formatting videos correctly
-For the most part, if you're using a simple recorder, like ShareX, SimpleScreenRecorder or Bandicam, those should automatically be in MP4, h264. Which is the universally supported format for all internet services. If you are using the latest version of OBS (Open Broadcaster Software) for the first time ever (as of writing, 30.2.3), it should automatically be set to Hybrid MP4 or Fragmented MP4, which is akin to MKV but within a MP4 container. The codec will be h264.
+For the most part, if you're using a simple recorder, like ShareX, SimpleScreenRecorder, one of the GPU provided screen recording utilities, or Bandicam, those should automatically be in MP4, h264. Which is the universally supported format for all internet services. If you are using the latest version of OBS (Open Broadcaster Software) for the first time ever (as of writing, 30.2.3), it should automatically be set to Hybrid MP4 or Fragmented MP4, which is akin to MKV but within a MP4 container. The codec will be h264.
 
 If you are using a more complex recorder or have modified your encoder settings, you'll want to ensure that they can be converted to MP4, h264.<br>
-For an explanation on why I keep on mentioning MP4, h264, feel free to read Codec and Container.
 
 ### Codec
 A codec is simply the data of the video itself. It describes the video, how it stores each and every pixel, the amount of bits it has, how it's compressed, whether it's lossless or lossy compression, etc.<br>
@@ -86,7 +85,7 @@ Example containers:
 - MOV
 - AVI
 - WMV (It is a codec too)
-- WebM (Another internet standard) 
+- WebM
 - FLV
 
 ## OBS (Open Broadcaster Software)
