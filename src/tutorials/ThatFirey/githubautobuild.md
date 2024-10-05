@@ -13,7 +13,7 @@ authors:
   - ThatFirey
 ---
 
-Hello, my name is ThatFirey and today we'll set up automatic building, uploading to Steam and Itch.io, from just a couple of clicks, not requiring you to build the game from GameMaker or prepare it through SteamCMD or Butler. 
+Hello, my name is ThatFirey and today we'll set up automatic building and uploading to Steam, from just a couple of clicks, not requiring you to build the game from GameMaker or prepare it through SteamCMD. 
 
 # Initial repository set-up
 
