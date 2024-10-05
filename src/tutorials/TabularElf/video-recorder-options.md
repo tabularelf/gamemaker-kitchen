@@ -22,12 +22,14 @@ If you are on Windows 10, you can use Xbox Game Bar (`start + alt + r`) to start
 With the introduction of an update (KB5030310), the built in Windows Snippet Tool has been upgraded to handle recording. TODO: Fill in more info about this.
 
 ### Windows other versions, or those who want more control 
-There are other video recorders out there that don't come stock with Windows. For convience sake, I'll stick to a small list of video recorders that I would highly recommend.
+There are other video recorders out there that don't come stock with Windows. For convience sake, I'll stick to a small list of video recorders that I would highly recommend. However, I will also like to point out that if you have a dedicated GPU on your machine, there is software that does come with your respective GPUs.
+
+- Nvidia Shadow Play (This requires a Nvidia GPU! This is apart of [Nvidia GeForce Experience](https://www.nvidia.com/en-au/geforce/geforce-experience/) and can be accessed via the in-game overlay (`alt + z`) or record via this shortcut (`alt + f9`). Shortcuts *can* be changed.)
+- Intel Arc Studio Capture (This requires an Intel Arc GPU! This is apart of [Intel Arc Control](https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/arc-control.html) and can be accessed via Intel Arc Control -> Studio -> Capture. Note that this requires a display to be connected to your Intel Arc GPU. No shortcuts as of October 5th 2024)
+- AMD ReLive (This requires an AMD compatiable GPU! Only available as apart of the [Radeon™ Software suite](https://www.amd.com/en/resources/support-articles/faqs/DH-023.html).)
 
 ### Simple, but effective
 - [Bandicam](https://www.bandicam.com/)
-- Nvidia Shadow Play (This requires a Nvidia GPU! This is apart of the Nvidia GeForce Experience and can be accessed via the in-game overlay (`alt + z`) or record via this shortcut (`alt + f9`). Shortcuts *can* be changed.)
-- Intel Arc Studio Capture (This requires an Intel Arc GPU! Can be accessed via Intel Arc Control -> Studio -> Capture. Note that this requires a display to be connected to your Intel Arc GPU. No shortcuts as of October 5th 2024)
 
 ### Powerful GUI recorders
 - [OBS (Open Broadcaster Software)](https://obsproject.com/)
@@ -65,7 +67,7 @@ And as this could get get vastly bloated easily, I am going to assume that you'r
 # Formatting videos correctly
 For the most part, if you're using a simple recorder, like ShareX, SimpleScreenRecorder, one of the GPU provided screen recording utilities, or Bandicam, those should automatically be in MP4, h264 (or AVC). Which is the universally supported format for all internet services. If you are using the latest version of OBS (Open Broadcaster Software) for the first time ever (as of writing, 30.2.3), it should automatically be set to Hybrid MP4 or Fragmented MP4, which is akin to MKV but within a MP4 container. The codec will be h264 (or AVC).
 
-If you are using a more complex recorder or have modified your encoder settings, you'll want to ensure that they can be converted to MP4, h264 (or AVC).<br>
+If you are using a more complex recorder or have modified your encoder settings, you'll want to ensure that they can be converted to MP4, h264 (or AVC). Videos frame rates should be 30 or 60 (where 60 is more ideal these days, but not necessary on all accounts).<br>
 
 ### Codec
 A codec is simply the data of the video itself. It describes the video, how it stores each and every pixel, the amount of bits it has, how it's compressed, whether it's lossless or lossy compression, etc.<br>
