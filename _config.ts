@@ -34,6 +34,7 @@ site
   .ignore("run_submission_library.js")
   .copy("site-assets/")
   .copy("CNAME")
+  .copy(".well-known/atproto-did")
   .use(resolveUrls())
   .use(postcss())
   .use(terser())
