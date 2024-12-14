@@ -101,7 +101,7 @@ if (instance_exists(obj_PauseMenu))
 // do own part of the gameplay logic
 ```
 
-However, this can get quite unwieldy and bug-prone the more objects you add - the developer must remember to add the condition in each elevant object, or else some instances might keep running while the rest is paused. What's worse, if the developer comes up with another entity that blocks the core gameplay logic, they need to modify the condition for each affected object:
+However, this can get quite unwieldy and bug-prone the more objects you add - the developer must remember to add the condition in each relevant object, or else some instances might keep running while the rest is paused. What's worse, if the developer comes up with another entity that blocks the core gameplay logic, they need to modify the condition for each affected object:
 
 ```gml
 if (instance_exists(obj_PauseMenu) || instance_exists(obj_Tutorial) || instance_exists(obj_Inventory) || ...)
