@@ -1,14 +1,49 @@
 ---
 title: gooey
-description: small, sprite-based UI library for Gamemaker LTS+
+description: a small, sprite-based UI library for Gamemaker 2023+
 logo: https://img.itch.zone/aW1nLzExNjk5Nzk0LnBuZw==/original/PEvEOR.png
 link: https://manta-ray.itch.io/gooey
-date: 2024-06-14 21:57:00
+date: 2024-12-31 00:00:00
 tags:
+  - gui
   - ui
-  - lts
+  - interface
+  - library
 authors:
   - manta-ray
 ---
 
-As you probably know, window_set_fullscreen() does not work on HTML5. So  after searching online, I basically copy/pasted a small Javascript code for a GMS1 extension found [in this forum post](https://forum.yoyogames.com/index.php?threads/html5-button-to-switch-to-fullscreen.18436/#post-446787) (full credit to the original author),  in order to create a button that is added on top of the game canvas (I chose the bottom right corner but you can change that on the provided script), that lets you toggle full screen on or off.  Check out the demo "game" above.
+**gooey** is a small UI library that lets you create menus, HUD and other UI elements in Gamemaker 2023+, with a few lines of code, using sprites.
+
+[Download the latest version](https://cdn.matix-media.net/dd/17921ac4) directly, or [visit the itch.io page](https://manta-ray.itch.io/gooey) for more info.
+
+
+**gooey** has the following features:
+
+* Drag and drop setup - Import the YYMPS and start building!
+* Sprite-based - all widgets work with nine-sliced sprites directly within Gamemaker
+* Intuitive code for setting up the UI - focus on the What, not on the How
+* Struct based, with a set it and forget it manager object
+* Setters/getters for properties
+* Fluent interface (i.e. you can chain methods together)
+* Kenney's amazing UI asset pack sprites are included for testing
+* Text based on JujuAdams's superb Scribble renderer
+* Free and open source (FOSS) (MIT license)
+
+**gooey** currently supports the following widgets natively:
+
+* Panels (the containers for everything else)
+* Groups  (to group stuff together)
+* Grids (to layout stuff in Panels or Groups)
+* Buttons
+* Canvases (surfaces)
+* Checkboxes
+* Dropdowns
+* Option Groups
+* Progress Bars
+* Sliders
+* Sprites
+* Tabs (tabbed Panels) 
+* Text Boxes
+* Text (labels)
+* Spinners
