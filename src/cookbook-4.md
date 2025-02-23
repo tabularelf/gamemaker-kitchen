@@ -141,7 +141,7 @@ B. Directly published onto #your_resources
 **A**: Ideally your tutorial should be made either for the latest monthly version of GameMaker, or the LTS release of GameMaker. 
 
 ### Q: Am I allowed to make a tutorial on an existing GameMaker resource?
-**A**: Yes, you can make a tutorial on libraries or tools, made for GameMaker! (Including your own)
+**A**: Yes, you can make a tutorial on libraries or tools, made for GameMaker! (Including your own. Including ones previously submitted to Cookbook Jam.)
 
 ### Q: Can I upload assets specific to the tutorial to the repository?
 **A**: Images, that are under 5MB I'll allow. Anything else will be reviewed on a case-by-case basis.
