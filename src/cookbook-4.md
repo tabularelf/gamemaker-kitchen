@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 description: Cookbook 4 - Library, Tools, Tutorial jam!
 menu:
-  visible: false
+  visible: true
   title: Cookbook Jam 4
   order: 11
 ---
@@ -17,6 +17,8 @@ menu:
 Got a tool or system in one or several of your projects that you use often? Or an idea in your head that you want to experiment with but don’t have a good excuse, or just got an unfinished prototype? It could be useful for any or specific projects, or a fun time to tinker around with brand new ideas! Or perhaps you want to make a GameMaker specific tutorial? Whatever the case may be, this is the jam for you! 
 
 [Join the GameMaker Kitchen Discord server](https://discord.gg/EaGY2wyQmz) to discuss the jam in #cookbook_jam! 
+
+### Note: If you wish to submit to itch.io, please click [here](https://itch.io/jam/cookbook-jam-4)!
 
 <h3>Libraries and tools</h3>
 <button class="collapsible">Open collapsible</button>
@@ -94,31 +96,31 @@ B. Directly published onto #your_resources
 **A**: While I am willing to recommend some, I highly encourage reading out each of the licenses that are available from [https://choosealicense.com/](https://choosealicense.com/) and picking one that suits you best. Every license has its own rules and requirements. If you wish to see what I use, [click here to read up about MIT](https://choosealicense.com/licenses/mit/). 
 
 # Libraries and tools
-**Q**: Can I sell my library?
+### Q: Can I sell my library?
 **A**: The aim of this jam is specifically for FOSS libraries. However, we do allow anyone to setup donations for their libraries (including pay what you want models)!
 
-**Q**: What license should I apply to my libraries?
+### Q: What license should I apply to my libraries?
 **A**: While I am willing to recommend some, I highly encourage reading out each of the licenses that are available from https://choosealicense.com/ and picking one that suits you best. Every license has its own rules and requirements. If you wish to see what I use, click here to read up about MIT. 
 
-**Q**: I'm already working on a library for GameMaker, can I join the jam still and submit it?
+### Q: I'm already working on a library for GameMaker, can I join the jam still and submit it?
 **A**: While ideally with many jams it's intended for submissions to be made completely from scratch, I 100% welcome any and all existing submissions that are being worked on, provided that they have not been released previously, were previously undocumented, or were only half completed.
 
-**Q**: There’s a library I want to make but XYZ has already made something, is that still allowed? 
+### Q: There’s a library I want to make but XYZ has already made something, is that still allowed? 
 **A**: YES! All libraries count, including ones that are similar to another. Every library aims to achieve a certain goal, and follows a certain pattern. And there are libraries that do work well enough for many people. But, that also means that not everyone will also find said library to work for what they need. In the last 5 years, I’ve come across many different libraries/tools/extensions that all achieve similar goals. From localisation, to texture atlas builders, to interpreter machines, to lighting systems, to input systems and many many more! 
 
-**Q**: What can I use to make documentation for my library? 
+### Q: What can I use to make documentation for my library? 
 **A**: If your repository is public (which it needs to be to submit it!), then github wiki is a good option. You can also add JSdoc to your functions directly in GameMaker.
 
-**Q**: How big can my library be?
+### Q: How big can my library be?
 **A**: As big as you are willing to document it all. :) 
 
-**Q**: How should I handle versioning my libraries? 
+### Q: How should I handle versioning my libraries? 
 **A**: There's a couple out there, see software versioning for more info.
 
-**Q**: I’d like to make something in mind for LTS, what should I do? 
+### Q: I’d like to make something in mind for LTS, what should I do? 
 **A**: Make your project in LTS. Even with the project conversion tool now exposed as an UI as of 2024.2, there’s a huge difference in terms of capabilities between both LTS and monthly. To minimize the amount of effort of converting, rewriting any code or using something that just doesn’t exist in LTS, you should use GameMaker LTS from the start.
 
-**Q**: Am I allowed to use a dependency of another library/tool, if it aids in my submission?
+### Q: Am I allowed to use a dependency of another library/tool, if it aids in my submission?
 **A**: Dependencies are allowed WITHIN reason. Provided that they do not take up the majority of the submission itself (should be one or a few aspects that they cover, not basically be THE submission). And crediting andl icensing MUST be given as per the authors own dependency credits and licensing.
 
 # Tutorials
@@ -154,9 +156,9 @@ B. Directly published onto #your_resources
 
 <script>
 // Set the date we're counting down to
-var countDownDateTimeStart = new Date("03/15/2024 1:00:00 PM UTC"); // UTC
+var countDownDateTimeStart = new Date("03/15/2025 1:00:00 PM UTC"); // UTC
 var countDownDateTime = countDownDateTimeStart;
-var countDownDateTimeEnd = new Date("04/15/2024 2:00:00 PM UTC"); // UTC
+var countDownDateTimeEnd = new Date("04/15/2025 2:00:00 PM UTC"); // UTC
 var countDownTime = countDownDateTime.getTime(); 
 var dateText = "Jam Starts";
 
