@@ -58,7 +58,7 @@ Got a tool or system in one or several of your projects that you use often? Or a
 - For Videos: All videos should be submitted to YouTube and embeded onto the tutorial page submission directly. 
 - For Text: The tutorial *must* be in at least a format that could be transferred to markdown, with preferably minimal effort. This is to allow the possibility of porting it over to GameMaker Kitchens website whenever necessary. (Unless you are submitting to the GameMaker Kitchen website yourself).
 
-###How to submit:
+### How to submit:
 
 We offer two ways of submitting a tutorial.
 
