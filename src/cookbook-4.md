@@ -54,7 +54,7 @@ Got a tool or system in one or several of your projects that you use often? Or a
 - You may work on a tutorial that was already in progress before the jam started, but it should be in an incomplete or prototype state. No submitting a tutorial that was already finished before the jam started!
 - The tutorial *may* be in video or text form. (Or both!)
 - For Videos: All videos should be submitted to YouTube and embeded onto the tutorial page submission directly. 
-- For Text: The tutorial *must* be in at least a format that could be transferred to markdown, with preferably minimal effort.
+- For Text: The tutorial *must* be in at least a format that could be transferred to markdown, with preferably minimal effort. This is to allow the possibility of porting it over to GameMaker Kitchens website whenever necessary. (Unless you are submitting to the GameMaker Kitchen website yourself).
 
 ###How to submit:
 
@@ -69,11 +69,11 @@ B. Directly published onto #your_resources
 1. Fork [this repository](https://github.com/tabularelf/gamemaker-kitchen).
 2. Clone with your favourite git client, and make a new branch.
 3. Make a new folder in `/src/tutorials/` with your name, for your tutorial/s.
-4. Refer to this [page](https://github.com/tabularelf/gamemaker-kitchen/wiki/Making-or-editing-an-entry-(Post-Library-Tool-Asset-etc)) for setting up your tutorial page, as well as markdown that is valid. 
+4. Refer to this [page](https://github.com/tabularelf/gamemaker-kitchen/wiki/Making-or-editing-an-entry-(Post-Library-Tool-Asset-etc)) for setting up your tutorial page, as well as markdown that is valid. Add a tag called `cookbook-jam-4`.
 5. Once you have finished setting up your tutorial page and you are ready to submit, make a pull request to the main repository.
 
 ### #your_resources
-1. Upload your tutorial to #your_resources as a new thread.
+1. Upload your tutorial to #your_resources as a new thread. 
 2. Link back to #cookbook_jam.
 
 </div>
@@ -81,6 +81,47 @@ B. Directly published onto #your_resources
 <h3>Frequently asked questions</h3>
 <button class="collapsible">Open collapsible</button>
 <div class="content">
+
+# General
+
+### Q: What is FOSS?
+**A**: FOSS stands for "Free and Open-Source Software". Indicating that the software and code is available for everyone, to be used by anyone for free. Whether it be commercial or non-commercial used. This is done by a license that grants the right to use, copy, study, and change the software in anyway.
+
+### Q: What is a license?
+**A**: A license is a form of legal permission, to use the provided software/code. By providing a license, you allow people to take your existing software/code and use it as per the license terms. These mainly cover usage, modifications and even redistribution. But other license terms may apply.
+
+### Q: What license should I apply to my resources?
+**A**: While I am willing to recommend some, I highly encourage reading out each of the licenses that are available from [https://choosealicense.com/](https://choosealicense.com/) and picking one that suits you best. Every license has its own rules and requirements. If you wish to see what I use, [click here to read up about MIT](https://choosealicense.com/licenses/mit/). 
+
+# Libraries and tools
+**Q**: Can I sell my library?
+**A**: The aim of this jam is specifically for FOSS libraries. However, we do allow anyone to setup donations for their libraries (including pay what you want models)!
+
+**Q**: What license should I apply to my libraries?
+**A**: While I am willing to recommend some, I highly encourage reading out each of the licenses that are available from https://choosealicense.com/ and picking one that suits you best. Every license has its own rules and requirements. If you wish to see what I use, click here to read up about MIT. 
+
+**Q**: I'm already working on a library for GameMaker, can I join the jam still and submit it?
+**A**: While ideally with many jams it's intended for submissions to be made completely from scratch, I 100% welcome any and all existing submissions that are being worked on, provided that they have not been released previously, were previously undocumented, or were only half completed.
+
+**Q**: There’s a library I want to make but XYZ has already made something, is that still allowed? 
+**A**: YES! All libraries count, including ones that are similar to another. Every library aims to achieve a certain goal, and follows a certain pattern. And there are libraries that do work well enough for many people. But, that also means that not everyone will also find said library to work for what they need. In the last 5 years, I’ve come across many different libraries/tools/extensions that all achieve similar goals. From localisation, to texture atlas builders, to interpreter machines, to lighting systems, to input systems and many many more! 
+
+**Q**: What can I use to make documentation for my library? 
+**A**: If your repository is public (which it needs to be to submit it!), then github wiki is a good option. You can also add JSdoc to your functions directly in GameMaker.
+
+**Q**: How big can my library be?
+**A**: As big as you are willing to document it all. :) 
+
+**Q**: How should I handle versioning my libraries? 
+**A**: There's a couple out there, see software versioning for more info.
+
+**Q**: I’d like to make something in mind for LTS, what should I do? 
+**A**: Make your project in LTS. Even with the project conversion tool now exposed as an UI as of 2024.2, there’s a huge difference in terms of capabilities between both LTS and monthly. To minimize the amount of effort of converting, rewriting any code or using something that just doesn’t exist in LTS, you should use GameMaker LTS from the start.
+
+**Q**: Am I allowed to use a dependency of another library/tool, if it aids in my submission?
+**A**: Dependencies are allowed WITHIN reason. Provided that they do not take up the majority of the submission itself (should be one or a few aspects that they cover, not basically be THE submission). And crediting andl icensing MUST be given as per the authors own dependency credits and licensing.
+
+# Tutorials
 
 ### Q: I'm already working on a tutorial for GameMaker, can I join the jam still and submit it?
 **A**: While many jams require submissions to be made completely from scratch, I 100% welcome any and all half finished tutorials you've worked on previously, provided that they have not already been released.
@@ -105,15 +146,8 @@ B. Directly published onto #your_resources
 
 ### Q: Can I sell my tutorial?
 **A**: The aim of this jam is specifically for FOSS resources. However, we do allow anyone to setup donations for their resources (including pay what you want models)!
+</div>
 
-### Q: What is FOSS?
-**A**: FOSS stands for "Free and Open-Source Software". Indicating that the software and code is available for everyone, to be used by anyone for free. Whether it be commercial or non-commercial used. This is done by a license that grants the right to use, copy, study, and change the software in anyway.
-
-### Q: What is a license?
-**A**: A license is a form of legal permission, to use the provided software/code. By providing a license, you allow people to take your existing software/code and use it as per the license terms. These mainly cover usage, modifications and even redistribution. But other license terms may apply.
-
-### Q: What license should I apply to my resources?
-**A**: While I am willing to recommend some, I highly encourage reading out each of the licenses that are available from [https://choosealicense.com/](https://choosealicense.com/) and picking one that suits you best. Every license has its own rules and requirements. If you wish to see what I use, [click here to read up about MIT](https://choosealicense.com/licenses/mit/). 
 
 </div>
 
