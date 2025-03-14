@@ -88,7 +88,7 @@ jobs:
 
 First step done - Action checked out the project, now the second step is locating the yyp file of your GameMaker project to build, this does not require a marketplace action and can be run through the command line
 
-```
+```yaml
 name: Automatic Build On Push
 on: 
   push:
@@ -111,7 +111,7 @@ jobs:
 
 Running this will automatically find the path to your yyp file and save it to the variable steps.find_yyp.outputs.yyp-path, now we can get to actually building our project using Igor Setup and Igor Build actions
 
-```
+```yaml
 name: Automatic Build On Push
 on: 
   push:
@@ -146,7 +146,7 @@ You'll need to add the access key as a secret in your repository's settings unde
 ![secret-type](/site-assets/img/githubactions_guide_images/AccessKeySecret.png)
 
 Now, time to actually build the game using the set-up Igor
-```
+```yaml
 name: Automatic Build On Push
 on: 
   push:
@@ -185,7 +185,7 @@ If you encounter any errors during these steps, you will need to make sure your 
 
 Next step we now need to upload the built file into the artifact. Artifact is a file or collection of files produced during a workflow run, which allows it to be downloaded by the user or used in another workflow (Which we'll use for uploading to Steam)
 
-```
+```yaml
 name: Automatic Build On Push
 on: 
   push:
@@ -244,7 +244,7 @@ Note: You can only do this if you have your own Steamworks Game
 
 Uploading to Steam will have to be done in a separate workflow file, but it also has to run right after the building workflow, as it needs to download the build artifact from it, so our "on: " will have to be like this:
 
-```
+```yaml
 name: Steam Deploy
 on: 
   workflow_call:
@@ -284,7 +284,7 @@ Note: The "secrets.GITHUB_TOKEN" doesn't need to be set up in repository's setti
 
 Next, we unpack the downloaded archive
 
-```
+```yaml
 name: Steam Deploy
 on: 
   workflow_call:
@@ -317,7 +317,7 @@ Launch steamcmd.exe and type "login username password", it will also request you
 Copy the generated base64 code and create two new secrets. "STEAM_USERNAME" - containing your steam login username. And "STEAM_CONFIG_VDF" - with pasted in base64 code.
 And now we finally add the Steam deploy action
 
-```
+```yaml
 name: Steam Deploy
 on: 
   workflow_call:

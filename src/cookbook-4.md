@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.njk
-description: Cookbook 4 - Library, Tools, Tutorial jam!
+description: Cookbook 4 - Library, Tools, Tutorial jam! Oh my!
 menu:
-  visible: false
+  visible: true
   title: Cookbook Jam 4
   order: 11
 ---
@@ -17,6 +17,8 @@ menu:
 Got a tool or system in one or several of your projects that you use often? Or an idea in your head that you want to experiment with but don’t have a good excuse, or just got an unfinished prototype? It could be useful for any or specific projects, or a fun time to tinker around with brand new ideas! Or perhaps you want to make a GameMaker specific tutorial? Whatever the case may be, this is the jam for you! 
 
 [Join the GameMaker Kitchen Discord server](https://discord.gg/EaGY2wyQmz) to discuss the jam in #cookbook_jam! 
+
+### Note: If you wish to submit to itch.io, please click [here](https://itch.io/jam/cookbook-jam-4)!
 
 <h3>Libraries and tools</h3>
 <button class="collapsible">Open collapsible</button>
@@ -56,7 +58,7 @@ Got a tool or system in one or several of your projects that you use often? Or a
 - For Videos: All videos should be submitted to YouTube and embeded onto the tutorial page submission directly. 
 - For Text: The tutorial *must* be in at least a format that could be transferred to markdown, with preferably minimal effort. This is to allow the possibility of porting it over to GameMaker Kitchens website whenever necessary. (Unless you are submitting to the GameMaker Kitchen website yourself).
 
-###How to submit:
+### How to submit:
 
 We offer two ways of submitting a tutorial.
 
@@ -139,7 +141,7 @@ B. Directly published onto #your_resources
 **A**: Ideally your tutorial should be made either for the latest monthly version of GameMaker, or the LTS release of GameMaker. 
 
 ### Q: Am I allowed to make a tutorial on an existing GameMaker resource?
-**A**: Yes, you can make a tutorial on libraries or tools, made for GameMaker! (Including your own)
+**A**: Yes, you can make a tutorial on libraries or tools, made for GameMaker! (Including your own. Including ones previously submitted to Cookbook Jam.)
 
 ### Q: Can I upload assets specific to the tutorial to the repository?
 **A**: Images, that are under 5MB I'll allow. Anything else will be reviewed on a case-by-case basis.
@@ -154,9 +156,9 @@ B. Directly published onto #your_resources
 
 <script>
 // Set the date we're counting down to
-var countDownDateTimeStart = new Date("03/15/2024 1:00:00 PM UTC"); // UTC
+var countDownDateTimeStart = new Date("03/15/2025 1:00:00 PM UTC"); // UTC
 var countDownDateTime = countDownDateTimeStart;
-var countDownDateTimeEnd = new Date("04/15/2024 2:00:00 PM UTC"); // UTC
+var countDownDateTimeEnd = new Date("04/15/2025 2:00:00 PM UTC"); // UTC
 var countDownTime = countDownDateTime.getTime(); 
 var dateText = "Jam Starts";
 
