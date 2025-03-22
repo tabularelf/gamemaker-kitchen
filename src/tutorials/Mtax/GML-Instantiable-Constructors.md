@@ -379,8 +379,8 @@ else
 3. Edit `ExampleMovingInstance()` constructor to declare `previousLocation = [instance.x, instance.y];` at the end of its `createEvent` and at the start of its `stepEvent`. Then, replace its `drawEvent` code with the following:
 ```GML
 draw_sprite(instance.sprite_index, instance.image_index,
-			lerp(previousLocation[0], instance.x, EventQueue.cycle),
-			lerp(previousLocation[1], instance.y, EventQueue.cycle));
+		lerp(previousLocation[0], instance.x, EventQueue.cycle),
+		lerp(previousLocation[1], instance.y, EventQueue.cycle));
 ```
 
 After launching the project, the movement of the example moving instance should appear smoother on displays with refresh rate of 120 and higher, as its movement is now interpolated during additional `Draw` events to target location set during each `Step` event executing at the end of the cycle. This is the simplest example of this concept.
