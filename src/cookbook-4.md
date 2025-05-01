@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 description: Cookbook 4 - Library, Tools, Tutorial jam! Oh my!
 menu:
-  visible: true
+  visible: false
   title: Cookbook Jam 4
   order: 11
 ---
