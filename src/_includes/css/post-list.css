@@ -10,7 +10,7 @@
 
 .postList-title {
   display: inline-block;
-  padding: 0.5em 0.2em;
+  padding: 0.5em 0;
   font-size: 1.2rem;
 
   &[aria-current="page"] {
