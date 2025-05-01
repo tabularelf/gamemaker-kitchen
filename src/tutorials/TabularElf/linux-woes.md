@@ -39,13 +39,14 @@ If you are using Arch Linux, you may be able to download directly from the AUR.
 ## Manual extraction + Installation
 In a lot of cases, you may have the `.deb` package unable to install, or need to manually install it yourself. You can remedy that by extracting it manually.
 Extracting .deb archives manually can be done via this command.
+
 ```bash
 ar -x ~/Downloads/GameMaker-Beta-####.####.#.###.deb
 ```
 
-Where **#** is the version number of the package you wish to extract. This will allow you to extract the underlying package itself.
+Where **#** is the version number of the .deb package you wish to extract. This will allow you to extract the underlying .deb package itself.
 
-In regards to packages, you still need *all* dependencies as listed in the **setting up Ubuntu** helpdesk guide. But, if you are as luck as I am, you may be able to get away with installing some.
+In regards to dependencies, you still need *all* dependencies as listed in the **setting up Ubuntu** helpdesk guide. But, if you are as luck as I am, you may be able to get away with installing some.
 For non-ARM, ffmpeg/appimage/linuxdeploy/steam-runtimes may be all you need at minimal installed. As GameMaker on testing will build out .appimages by default, and you can still export with .appimage.
 On ARM-based distros, or if you are wanting to export zip builds over app image, all of the other dependencies are required. 
 
