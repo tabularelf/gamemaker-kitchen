@@ -16,16 +16,17 @@ For modern GM versions, Constructor offers a more stable build experience than [
 Constructor can currently compile for the current build target (your OS), and can switch between build configs.
 
 ## Features
- - **Run compile, run and clean jobs** (technically can be in parallel!)
-   - Stop jobs by closing their tab
-   - YYC Support
- - **View compile output** (duh)
- - **Compile and runner error parsing** (view them nice and neat rather than scrolling the log!)
- - **Runtime selection & project-specific properties**
-   - Project build configuration select (`#macro SOMETHING:Config ...` support)
- - **Control Panel** (*see screenshot below*)
-   - Centralised error display for build and configuration problems
- - Automatic check for updates
+- **Easily run, package releases, or clean projects from GMEdit!**
+  - **Execute multiple builds side-by-side** in managed separate directories (disable reusing tabs for this.)
+  - **Build and Runtime error parsing** (view them nice and neat rather than scrolling the log!)
+  - **Close a build tab to stop it** (or use the hotkey.)
+- **Switch between VM or YYC**. (Building for other systems is planned, eventually.)
+- **Switch build configurations** (`#macro Config:SOMETHING ...`) via the Control Panel, or by right-clicking a config in the project sidebar.
+- **Support for Beta, Monthly, and LTS runtimes**, with a per-project switch, and warnings for project-incompatible selections.
+- **Support for HTML5 and GX.Games targets**. Note that the "Package" option for both of these is currently not working YYG have not documented its usage for these targets, and the IDE uses a proprietary extra-undocumented method.
+- **Automatic update-checking**. (This calls the GitHub API to check the latest release and can be toggled off.)
+- **Readable, central error messages** - the Control Panel shows any configuration issues, or internal errors. All errors display context, and most try to provide tips to resolve the issue where possible.
+- **Android support and remote build targets** - you can compile for an Android device, or an external Linux or MacOS device by configuring the devices in the IDE and selecting them in Constructor.
 
 ## Installation
 See the [**GitHub README**](https://github.com/thennothinghappened/GMEdit-Constructor?tab=readme-ov-file#gmedit-constructor) for information.
