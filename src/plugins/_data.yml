@@ -1,0 +1,8 @@
+type: plugin
+category: resource
+title: Unknown
+layout: layouts/resource.njk
+includeReadingTime: false
+searchtype: "type=plugin"
+authors: 
+  - Unknown Author
