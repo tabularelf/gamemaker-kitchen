@@ -13,7 +13,7 @@ As the title suggests, Constructor is a plugin for YellowAfterlife's [GMEdit](<h
 
 For modern GM versions, Constructor offers a more stable build experience than [builder](<https://github.com/YAL-GMEdit/builder>), which is an older plugin that directly invokes the asset compiler rather than using the CLI toolchain.
 
-Constructor can currently compile for the current build target (your OS), and can switch between build configs.
+Constructor supports Windows, MacOS and Linux, both web platforms, and can build to external devices, including Android.
 
 ## Features
 - **Easily run, package releases, or clean projects from GMEdit!**
@@ -31,12 +31,15 @@ Constructor can currently compile for the current build target (your OS), and ca
 ## Installation
 See the [**GitHub README**](https://github.com/thennothinghappened/GMEdit-Constructor?tab=readme-ov-file#installation) for information.
 
+
 ## Issues
-If you have any issues with Constructor, feel free to either ask here, or make a post on the [GitHub Issues](<https://github.com/thennothinghappened/GMEdit-Constructor/issues>) page for the project. I'll try to get back to you when I can, but no guarantees.
+If you have any issues with Constructor, feel free to either ask on Discord (below), or make a post on the [GitHub Issues](<https://github.com/thennothinghappened/GMEdit-Constructor/issues>) page. I'll try to get back to you when I can, but no guarantees.
 
 ## Feature requests
-If there's anything else you'd like out of Constructor that isn't mentioned here, the same applies as above with issues - here or make a feature request by opening an issue on GitHub.
+If there's anything else you'd like out of Constructor that isn't mentioned here, the same applies as above with issues - make a feature request by opening an issue on GitHub!
 
 I hope Constructor is a useful tool - though please note that I can only test on the machines I have available to me, so there's gonna be edge cases.
+
+Finally, I also have a thread for this project on the [GameMaker Kitchen Discord server](https://discord.com/channels/724320164371497020/1208360272570490930), for quick feedback!
 
 Thanks, and have fun :)
