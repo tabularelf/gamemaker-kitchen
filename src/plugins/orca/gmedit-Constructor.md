@@ -29,7 +29,7 @@ Constructor can currently compile for the current build target (your OS), and ca
 - **Android support and remote build targets** - you can compile for an Android device, or an external Linux or MacOS device by configuring the devices in the IDE and selecting them in Constructor.
 
 ## Installation
-See the [**GitHub README**](https://github.com/thennothinghappened/GMEdit-Constructor?tab=readme-ov-file#gmedit-constructor) for information.
+See the [**GitHub README**](https://github.com/thennothinghappened/GMEdit-Constructor?tab=readme-ov-file#installation) for information.
 
 ## Issues
 If you have any issues with Constructor, feel free to either ask here, or make a post on the [GitHub Issues](<https://github.com/thennothinghappened/GMEdit-Constructor/issues>) page for the project. I'll try to get back to you when I can, but no guarantees.
