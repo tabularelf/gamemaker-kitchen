@@ -1,5 +1,12 @@
+
+footer {
+  flex-grow: 1;
+  align-content: flex-end;
+}
+
 .footer {
   border-bottom: 1px dashed var(--lightgray);
+  margin-bottom: 2em;
   display: flex;
   flex-wrap: wrap;
 
