@@ -11,6 +11,10 @@
 .post-tags {
   display: inline;
 }
+.post-link {
+  display: block;
+  line-height: 2;
+}
 .post-body {
   font-size: 1.2em;
   line-height: 1.4;

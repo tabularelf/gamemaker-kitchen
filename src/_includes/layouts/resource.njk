@@ -21,6 +21,11 @@ bodyClass: body-post
 	</nav>
 	</h2>
 	
+	{% if link and link != "N/A" %}
+	<div class="post-link">
+		<a href="{{ link }}" target="_blank">Link to {{ title }}</a>
+	</div>
+	{% endif %}
 
     <nav class="post-tags">
     {% for tag in tags %}
@@ -31,10 +36,6 @@ bodyClass: body-post
 	<time class="post-date" datetime="{{ date | date('DATETIME') }}">
 		{{ date | date('HUMAN_DATE') }} 
 	</time>
-	
-	{% if link and link != "N/A" %}
-		<br><a href="{{ link }}" target="_blank">Link to {{ title }}</a>
-	{% endif %}
 	
 	<!-- GM Version -->
 	{% if gm_versions %}
