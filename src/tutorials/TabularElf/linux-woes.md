@@ -30,11 +30,11 @@ Finding your compiled Linux builds ran from the IDE (remote or local):
 Create and add `[{"Key":"is_enabled","Value":true},{"Key":"value","Value":92}]` via your preferred text editor.
 Start up GameMaker.
 
-Installing GameMaker on Linux in other ways (unofficial):
+## Installing GameMaker on Linux in other ways (unofficial):
 
 ## Arch Linux
 If you are using Arch Linux, you may be able to download directly from the AUR.
-https://aur.archlinux.org/packages/gamemaker-beta-bin
+[https://aur.archlinux.org/packages/gamemaker-beta-bin](https://aur.archlinux.org/packages/gamemaker-beta-bin).
 
 ## Manual extraction + Installation
 In a lot of cases, you may have the `.deb` package unable to install, or need to manually install it yourself. You can remedy that by extracting it manually.
