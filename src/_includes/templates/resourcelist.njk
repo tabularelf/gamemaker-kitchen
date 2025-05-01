@@ -1,10 +1,14 @@
 <ul class="resourceList">
 	{% for post in postslist %}
+	{% if post.data.banner %}
+	<li class="resourceCard resourceCard-with-banner" style="background-image:url({{ post.data.banner }})">
+	{% else %}
 	<li class="resourceCard">
+	{% endif %}
 	{% if post.data.logo %} 
 		<a href="{{ post.data.url }}" class="resourceCard-logo"><img src="{{ post.data.logo }}" {% if post.data.logo_alt %} alt="{{ logo_alt }}" {% endif %} ></a>
 	{% endif %}
-	<div {% if post.data.banner %} class="resourceCard-banner" style="background-image:url({{ post.data.banner }})" {% else %} class="resourceCard-info" {% endif %}>
+	<div class="resourceCard-info">
 	<a href="{{ post.data.url }}" class="resourceCard-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
 	{% if post.data.title %}
 		<strong>{{ post.data.title }}</strong>{% if post.data.paid %}💰{% endif %}
