@@ -18,6 +18,11 @@
    border-radius: 1em;
 }
 
+.resourceCard-with-banner {
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 .resourceCard-info {
    width: 100%;
    display: flex;
@@ -47,12 +52,6 @@
    color: var(--color-text);
    font-weight: normal;
    margin-right: 0.2em;
-}
-
-.resourceCard-banner {
-   border-radius: 1em;
-   width: 100%;
-   box-sizing: border-box;
 }
  
 .resourceCard-logo {
