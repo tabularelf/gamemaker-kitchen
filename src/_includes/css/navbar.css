@@ -3,14 +3,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 1em;
+  gap: 1em 2em;
 
-  & a {
-    padding: 1em;
-    display: block;
-
-    &:not(:hover) {
-      text-decoration: none;
-    }
+  & a:not(:hover) {
+	text-decoration: none;
   }
 }
 
@@ -20,15 +17,16 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 1em 2em;
 
   & [aria-current="page"] {
     font-weight: bold;
     text-decoration: underline;
   }
 }
+
 .navbar-search {
-  padding: 0 1em;
-  margin-left: auto;
   display: flex;
-  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
