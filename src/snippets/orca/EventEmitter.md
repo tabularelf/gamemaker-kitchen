@@ -192,7 +192,9 @@ function EventEmitter() constructor {
 				var listener = eventListeners[i];
 				
 				if (is_method(listener)) {
-					method_call(listener, data);
+					with (method_get_self(listener)) {
+						script_execute_ext(method_get_index(listener), data);
+					}
 				} else {
 					script_execute_ext(listener, data);
 				}
