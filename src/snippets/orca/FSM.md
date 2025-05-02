@@ -79,8 +79,7 @@ self.fsm.state(MyState.FromAToB, {
 <summary>Real-world usage</summary>
 
 Below is an abridged excerpt from [gml-simpledraw](https://github.com/thennothinghappened/gml-simpledraw/blob/main/objects/oSimpleDraw/Create_0.gml),
-which uses this FSM class. There's not really much special here, but I thought it may be worthwhile sharing as this is a pretty simple,
-usable, and uncomplicated FSM.
+which uses this FSM class.
 
 ```gml
 fsm = new FSM("none");
