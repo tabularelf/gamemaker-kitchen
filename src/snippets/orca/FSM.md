@@ -46,7 +46,7 @@ enum MyState {
 	FromAToB
 };
 
-self.fsm = new FSM(MyState.C);
+self.fsm = new FSM(MyState.A);
 
 self.fsm.state(MyState.A, {
 	// ...
@@ -59,10 +59,6 @@ self.fsm.state(MyState.A, {
 });
 
 self.fsm.state(MyState.B, {
-	// ...
-});
-
-self.fsm.state(MyState.C, {
 	// ...
 });
 
