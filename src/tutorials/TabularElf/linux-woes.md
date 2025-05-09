@@ -14,6 +14,7 @@ authors:
 The helpdesk post here on [setting up Ubuntu](https://help.gamemaker.io/hc/en-us/articles/235186168-Setting-Up-For-Ubuntu), while is mainly for Ubuntu, does technically apply to all distros.
 However, there may be times where you run into issues that seem strange or peculiar, that no other platform suffers. This guide is to give you a brief jolt down on every possible scenario, as well as common things you can do.
 
+### Filepaths you may need to know
 Finding your GameMaker profiles (and um.json)
 **`/home/.config/GameMakerStudio2-Beta/`**
 
@@ -26,9 +27,11 @@ Finding your GameMaker Runtimes folder (And ui.log)
 Finding your compiled Linux builds ran from the IDE (remote or local):
 **`/home/GameMakerStudio2/`**
 
-`/home/.local/share/GameMakerStudio2-Beta/dpi_override.json`
-Create and add `[{"Key":"is_enabled","Value":true},{"Key":"value","Value":92}]` via your preferred text editor.
-Start up GameMaker.
+## When I start up GameMaker, the IDE looks messed up!
+This may be caused by a DPI-related issue on some distro platforms. To work around this, you may override it directly.
+Create a file at `/home/.local/share/GameMakerStudio2-Beta/dpi_override.json`.
+And add the following. `[{"Key":"is_enabled","Value":true},{"Key":"value","Value":92}]` via your preferred text editor. 
+After starting GameMaker back up, your DPI will be overriden.
 
 ## Installing GameMaker on Linux in other ways (unofficial):
 
@@ -50,4 +53,6 @@ In regards to dependencies, you still need *all* dependencies as listed in the *
 For non-ARM, ffmpeg/appimage/linuxdeploy/steam-runtimes may be all you need at minimal installed. As GameMaker on testing will build out .appimages by default, and you can still export with .appimage.
 On ARM-based distros, or if you are wanting to export zip builds over app image, all of the other dependencies are required. 
 
-### Note: linuxdeploy/appimage/steam-runtimes is not needed on ARM-based distros at the time of writing.
+Note: linuxdeploy/appimage/steam-runtimes is not needed on ARM-based distros at the time of writing.
+
+Distrobox: TBA
