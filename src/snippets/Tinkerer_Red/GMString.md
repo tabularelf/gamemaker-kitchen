@@ -7,7 +7,7 @@ tags:
   - string
   - wrapper
 authors:
-  - c-red
+  - Tinkerer_Red
 ---
 
 A very simple script to allow for using JS syntax for GM strings.

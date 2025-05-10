@@ -7,7 +7,7 @@ tags:
   - string
   - lts
 authors:
-  - c-red
+  - Tinkerer_Red
 ---
 
 ```gml

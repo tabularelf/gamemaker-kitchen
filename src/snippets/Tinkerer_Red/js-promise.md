@@ -8,7 +8,7 @@ tags:
   - asynchronous
   - lts
 authors:
-  - c-red
+  - Tinkerer_Red
 ---
 
 This is a 1:1 port of Javascript's promise object class. Apart from the requirement to use camel case for words like; then, all, catch, etc, The syntax works exactly the same as it would in Javascript.

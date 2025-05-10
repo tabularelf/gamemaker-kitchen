@@ -9,7 +9,7 @@ tags:
   - multithreading
   - threading
 authors:
-  - c-red
+  - Tinkerer_Red
 ---
 
 # Multiprocessing!
