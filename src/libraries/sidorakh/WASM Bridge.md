@@ -3,7 +3,7 @@ title: WASM Bridge
 link: https://github.com/Sidorakh/wasm-bridge
 description: Include JavaScript/Web API's code in your WASM builds
 threadLink: https://discord.com/channels/724320164371497020/1288127496553758835
-docs: ""
+docs: https://docs.sidorakh.net/wasm-bridge/#/2.1.0/
 paid: false
 date: 2024-09-24 13:18:47
 tags:
