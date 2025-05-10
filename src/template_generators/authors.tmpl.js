@@ -8,7 +8,7 @@ export default function* (site) {
       content = authorPage.data.content;
     }
     yield {
-      url: (`/authors/${author}/`).replace(/\s+/g, '-'),
+      url: (`/authors/${author.replace(/\s+/g, '-')}/`),
       title: `Author “${author}”`,
       content: content,
 	  name: author,

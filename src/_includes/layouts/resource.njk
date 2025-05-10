@@ -15,7 +15,7 @@ bodyClass: body-post
 	<nav class="post-author">
 		{% if authors %}
 			{% for author in authors %}
-				<a href="/authors/{{ author | lowercase | replace(" ", "-") }}">{{ author }}</a>{% if not loop.last %}, {% endif %}
+				<a href="/authors/{{ author | lowercase | replace(" ", "-") | replace("_", "-") }}">{{ author }}</a>{% if not loop.last %}, {% endif %}
 			{% endfor %}
 		{% endif %} 
 	</nav>
