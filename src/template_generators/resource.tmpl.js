@@ -13,7 +13,10 @@ export default function ({ search }, { url }) {
       link: lib.data.link,
       paid: lib.data.paid,
       threadLink: lib.data.threadLink,
+      docs: lib.data.docs,
       logo: lib.data.logo ?? lib.data.banner,
+      tags: lib.data.tags,
+      author: lib.data.authors,
     });
   }
   
@@ -27,7 +30,10 @@ export default function ({ search }, { url }) {
       description: snippet.data.description,
       paid: snippet.data.paid,
       threadLink: snippet.data.threadLink,
+      docs: snippet.data.docs,
       logo: snippet.data.logo ?? snippet.data.banner,
+      tags: snippet.data.tags,
+      author: snippet.data.authors,
     });
   }
   
@@ -41,7 +47,10 @@ export default function ({ search }, { url }) {
       description: asset.data.description,
       paid: asset.data.paid,
       threadLink: asset.data.threadLink,
+      docs: asset.data.docs,
       logo: asset.data.logo ?? asset.data.banner,
+      tags: asset.data.tags,
+      author: asset.data.authors,
     });
   }
   
@@ -55,6 +64,8 @@ export default function ({ search }, { url }) {
       link: tutorial.data.link,
       threadLink: tutorial.data.threadLink,
       logo: tutorial.data.logo ?? tutorial.data.banner,
+      tags: tutorial.data.tags,
+      author: tutorial.data.authors,
     });
   }
 
@@ -68,7 +79,10 @@ export default function ({ search }, { url }) {
       description: tool.data.description,
       paid: tool.data.paid,
       threadLink: tool.data.threadLink,
+      docs: tool.data.docs,
       logo: tool.data.logo ?? tool.data.banner,
+      tags: tool.data.tags,
+      author: tool.data.authors,
     });
   }
 
@@ -81,7 +95,10 @@ export default function ({ search }, { url }) {
       description: plugin.data.description,
       link: plugin.data.link,
       threadLink: plugin.data.threadLink,
+      docs: plugin.data.docs,
       logo: plugin.data.logo ?? plugin.data.banner,
+      tags: plugin.data.tags,
+      author: plugin.data.authors,
     });
   }
 
