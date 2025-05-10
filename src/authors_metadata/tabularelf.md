@@ -1,5 +1,5 @@
 ---
-title: TabularElf
+title: "tabularelf"
 description: TabualarElf, owner of GameMaker Kitchen
 ---
 
