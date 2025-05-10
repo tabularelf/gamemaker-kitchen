@@ -3,6 +3,7 @@ title: GMEdit
 description: "A high-end code editor for GameMaker: Studio, GameMaker Studio 2.x, and more!"
 link: https://yellowafterlife.itch.io/gmedit
 docs: https://github.com/YellowAfterlife/GMEdit/wiki
+threadLink: https://canary.discord.com/channels/724320164371497020/794236091896168468
 date: 2025-05-11 05:15:00
 paid: false
 
