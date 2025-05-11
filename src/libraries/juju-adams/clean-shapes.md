@@ -3,6 +3,8 @@ title: Clean Shapes
 description: Antialiased primitive drawing
 link: https://github.com/JujuAdams/clean-shapes/
 logo: https://raw.githubusercontent.com/JujuAdams/clean-shapes/master/LOGO.png
+docs: https://www.jujuadams.com/clean-shapes
+supportLink: https://github.com/JujuAdams/clean-shapes/issues
 date: 2024-03-11 02:16:00
 tags:
   - geometry

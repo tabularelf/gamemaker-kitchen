@@ -3,6 +3,8 @@ title: SNAP
 description: Data format converters
 link: https://github.com/JujuAdams/snap/
 logo: https://raw.githubusercontent.com/JujuAdams/SNAP/master/LOGO.png
+docs: https://www.jujuadams.com/snap
+supportLink: https://github.com/JujuAdams/snap/issues
 date: 2024-03-11 02:05:00
 tags:
   - data

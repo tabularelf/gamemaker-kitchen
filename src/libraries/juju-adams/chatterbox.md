@@ -3,6 +3,8 @@ title: Chatterbox
 description: Narrative scripting tool
 link: https://github.com/JujuAdams/chatterbox/
 logo: https://raw.githubusercontent.com/JujuAdams/Chatterbox/master/LOGO.png
+docs: https://www.jujuadams.com/chatterbox
+supportLink: https://github.com/JujuAdams/chatterbox/issues
 date: 2024-03-11 02:08:00
 tags:
   - dialogue

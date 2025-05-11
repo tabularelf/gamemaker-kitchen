@@ -3,6 +3,7 @@ title: Snitch
 description: Logging and crash handling system
 link: https://github.com/JujuAdams/snitch/
 logo: https://raw.githubusercontent.com/JujuAdams/Snitch/main/LOGO.png
+supportLink: https://github.com/JujuAdams/snitch/issues
 date: 2024-03-11 02:10:00
 tags:
   - logging

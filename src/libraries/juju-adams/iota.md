@@ -3,6 +3,8 @@ title: iota
 description: Miniature fixed timestep library
 link: https://github.com/JujuAdams/iota/
 logo: https://raw.githubusercontent.com/JujuAdams/iota/master/LOGO.png
+docs: https://www.jujuadams.com/iota
+supportLink: https://github.com/JujuAdams/iota/issues
 date: 2024-03-11 02:14:00
 tags:
   - time

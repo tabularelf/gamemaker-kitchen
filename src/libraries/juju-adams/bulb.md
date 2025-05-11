@@ -3,6 +3,8 @@ title: Bulb
 description: 2D lighting and shadows
 link: https://github.com/JujuAdams/bulb/
 logo: https://raw.githubusercontent.com/JujuAdams/bulb/master/LOGO.png
+docs: https://www.jujuadams.com/bulb
+supportLink: https://github.com/JujuAdams/bulb/issues
 date: 2024-03-11 02:15:00
 tags:
   - shadows
