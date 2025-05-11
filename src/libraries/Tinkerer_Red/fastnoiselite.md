@@ -6,7 +6,7 @@ date: 2024-06-14 23:00:00
 tags:
   - noise
 authors:
-  - c-red
+  - Tinkerer_Red
 ---
 
 FastNoise Lite is an extremely portable open source noise generation library with a large selection of noise algorithms. This library focuses on high performance while avoiding platform/language specific features, allowing for easy ports to as many possible languages.
