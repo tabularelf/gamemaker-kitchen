@@ -8,6 +8,8 @@ After cloning the repository, open the project directory in your favorite editor
 
 You will need Deno in order to run Lume, so [Install Deno](https://docs.deno.com/runtime/manual#install-deno) by following the directions on their site. 
 
+**Note**: This repo is currently on v1.46.0. If you need to downgrade, please use the following commmand: `deno upgrade --version 1.4.6`
+
 Afterwards, you must build the site.
 
 Open a terminal and ensure you're in the project directory at the top level (IE: `\gamemaker-kitchen`) and run:
