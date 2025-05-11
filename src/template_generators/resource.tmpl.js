@@ -17,6 +17,7 @@ export default function ({ search }, { url }) {
       logo: lib.data.logo ?? lib.data.banner,
       tags: lib.data.tags,
       author: lib.data.authors,
+      date: lib.data.date,
     });
   }
   
@@ -34,6 +35,7 @@ export default function ({ search }, { url }) {
       logo: snippet.data.logo ?? snippet.data.banner,
       tags: snippet.data.tags,
       author: snippet.data.authors,
+      date: snippet.data.date,
     });
   }
   
@@ -51,6 +53,7 @@ export default function ({ search }, { url }) {
       logo: asset.data.logo ?? asset.data.banner,
       tags: asset.data.tags,
       author: asset.data.authors,
+      date: asset.data.date,
     });
   }
   
@@ -66,6 +69,7 @@ export default function ({ search }, { url }) {
       logo: tutorial.data.logo ?? tutorial.data.banner,
       tags: tutorial.data.tags,
       author: tutorial.data.authors,
+      date: tutorial.data.date,
     });
   }
 
@@ -83,6 +87,7 @@ export default function ({ search }, { url }) {
       logo: tool.data.logo ?? tool.data.banner,
       tags: tool.data.tags,
       author: tool.data.authors,
+      date: tool.data.date,
     });
   }
 
@@ -99,6 +104,7 @@ export default function ({ search }, { url }) {
       logo: plugin.data.logo ?? plugin.data.banner,
       tags: plugin.data.tags,
       author: plugin.data.authors,
+      date: plugin.data.date,
     });
   }
 
