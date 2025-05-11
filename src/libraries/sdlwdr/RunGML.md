@@ -13,4 +13,4 @@ tags:
 authors:
   - sdlwdr
 ---
-yep, it's possible to make a system that permits this
+A lisp-like runtime scripting language.  Run code from included JSON files, or use the included console object to write+run code during gameplay.
