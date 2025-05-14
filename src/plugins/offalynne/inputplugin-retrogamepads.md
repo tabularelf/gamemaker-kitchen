@@ -7,6 +7,7 @@ tags:
   - Input
   - Retro
   - Gamepad
+  - Input-plugin
 authors:
   - offalynne
 ---
