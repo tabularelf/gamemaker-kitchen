@@ -6,6 +6,7 @@ threadLink: https://discord.com/channels/724320164371497020/1347133083442479136
 docs: ""
 paid: false
 date: 2025-03-06 09:05:55
+parent: Scribble
 tags:
   - Scribble
   - Emoji

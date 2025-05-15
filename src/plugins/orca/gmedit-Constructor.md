@@ -4,6 +4,7 @@ description: Igor-based compilation straight from GMEdit!
 link: https://github.com/thennothinghappened/GMEdit-Constructor
 date: 2025-05-1 13:00:00
 threadLink: https://discord.com/channels/724320164371497020/1208360272570490930
+parent: GMEdit
 tags:
   - GMEdit
   - Tool
