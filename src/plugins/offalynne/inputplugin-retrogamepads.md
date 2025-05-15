@@ -3,6 +3,7 @@ title: Retro Gamepads Input Plug-in
 description: Additional gamepad type and icon configurations for Input
 link: https://github.com/offalynne/InputPlugin-RetroGamepads
 date: 2025-05-14 14:27:00
+parent: Input
 tags:
   - Input
   - Retro

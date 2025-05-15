@@ -3,6 +3,7 @@ title: Text Input Plug-in
 description: Cross platform player text entry for Input
 link: https://github.com/offalynne/InputPlugin-Text
 date: 2025-05-14 14:26:00
+parent: Input
 tags:
   - Input
   - Text
