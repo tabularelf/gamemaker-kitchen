@@ -26,6 +26,11 @@ bodyClass: body-post
 		<a href="{{ link }}" target="_blank">Link to {{ title }}</a>
 	</div>
 	{% endif %}
+	{% if plugins.length > 0 %}
+	<div class="post-link">
+		<a href="plugins" target="_parent">{{ plugins.length }} Plugins available here!</a>
+	</div>
+	{% endif %}
 
     <nav class="post-tags">
     {% for tag in tags %}
