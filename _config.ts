@@ -76,6 +76,9 @@ site.filter("uppercase", (value) => value.toUpperCase());
 // Filter to convert a string to uppercase
 site.filter("lowercase", (value) => value.toLowerCase());
 
+// Filter to stripping the first character from a string
+site.filter("trimStartSlash", (value) => value.substring(1));
+
 site.data("getAuthors", function authors(): string[] {
   const authors = new Set();
 

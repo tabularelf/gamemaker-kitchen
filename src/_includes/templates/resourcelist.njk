@@ -39,7 +39,7 @@
 
 		<div class="resourceCard-rowContainer">
 		{% if post.data.plugins.length > 0 %}
-			<a href="../../{{ post.data.url }}plugins/" class="resourceCard-author"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+			<a href="../../{{ post.data.url | trimStartSlash }}plugins/" class="resourceCard-author"{% if entry.data.url == url %} aria-current="page"{% endif %}>
 				{{ post.data.plugins.length }} Plugins available here!
 			</a>
 			<br>
