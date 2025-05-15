@@ -1,12 +1,7 @@
 ---
 title: JS Promise in GM
 link: https://github.com/tinkerer-red/GML-Promise
-description: This library mimics the JavaScript
-  [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  model, making it possible to manage asynchronous operations like HTTP
-  requests, file loading/saving, and more, directly within GameMaker Studio
-  using a familiar promise-based approach. All native asynchonous functions can
-  now also be used with a promise approach.
+description: JS style promises added to GML, as well as an abundant number of async functions which can now return a promise.
 threadLink: https://discord.com/channels/724320164371497020/1188696458732511283
 docs: ""
 paid: false
