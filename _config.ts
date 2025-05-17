@@ -22,6 +22,7 @@ import lang_glsl from "npm:highlight.js/lib/languages/glsl";
 import lang_json from "npm:highlight.js/lib/languages/json";
 import lang_markdown from "npm:highlight.js/lib/languages/markdown";
 import lang_yaml from "npm:highlight.js/lib/languages/yaml";
+import search from "lume/plugins/search.ts";
 
 const site = lume({
   location: new URL("https://gamemakerkitchen.com"),
@@ -79,6 +80,8 @@ site.filter("lowercase", (value) => value.toLowerCase());
 // Filter to stripping the first character from a string
 site.filter("trimStartSlash", (value) => value.substring(1));
 
+site.filter("safeURL", (str: string) => str.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-"));
+
 site.data("getAuthors", function authors(): string[] {
   const authors = new Set();
 
@@ -86,7 +89,19 @@ site.data("getAuthors", function authors(): string[] {
     page.data.authors?.forEach((author: string) => authors.add(author))
   );
 
-  return Array.from(authors);
+  let newAuthors = Array.from(authors);
+  let newAuthorsLowerCased = newAuthors.map(author => author.toLowerCase());
+  let authorsFinal = [];
+  ///newAuthorsLowerCased = newAuthors.filter(author => newAuthorsLowerCased.includes(author));
+  newAuthors.forEach(author => {
+    if ((!(authorsFinal.includes(author))) && (!(authorsFinal.map(author => author.toLowerCase()).includes(author.toLowerCase())))) {
+      authorsFinal.push(author);
+    }
+  });
+  return authorsFinal.map((author) => {return {
+    author,
+    authorSafe: author.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-")
+  }});
 });
 
 site.data("getAuthorsPage", function authors(myAuthor): string[] {
@@ -124,26 +139,32 @@ site.preprocess([".md"], (page) => {
   
   // Normalize tags
   if (tags != undefined) {
-	tags = [...new Set(tags)];
-	tags = tags.map((tag) => {
-		tag = tag.toLowerCase().trim();
-		if (Object.hasOwn(dbMatch, tag)) {
-			tag = dbMatch[tag];
-		}
-	
-		return tag;
-	});
-	
-	// Save the normalized tags 
-	page.data.tags = tags;
+	  tags = [...new Set(tags)];
+	  tags = tags.map((tag) => {
+	  	tag = tag.toLowerCase().trim();
+	  	if (Object.hasOwn(dbMatch, tag)) {
+	  		tag = dbMatch[tag];
+	  	}
+    
+	  	return tag;
+	  });
+  
+	  // Save the normalized tags 
+	  page.data.tags = tags;
   }
   
   let authors = page.data.authors;
   if (authors != undefined) {
-	authors = authors.map((author) => {return author.toLowerCase().trim()});
-	page.data.authors = authors;
-	//console.log(authors);
+	   page.data.authorsSafe = authors.map((author) => author.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-"));
+     page.data.authorsMetadata = authors.map((author) => {
+      return {
+        name: author,
+        safe: author.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-")
+      }
+     });
+	  //console.log(authors);
   }
+
 });
 
 export default site;

@@ -18,6 +18,7 @@ export default function ({ search }, { url }) {
       logo: lib.data.logo ?? lib.data.banner,
       tags: lib.data.tags,
       author: lib.data.authors,
+      authorsSafe: lib.data.authorsSafe,
       date: lib.data.date,
     });
   }
@@ -37,6 +38,7 @@ export default function ({ search }, { url }) {
       logo: snippet.data.logo ?? snippet.data.banner,
       tags: snippet.data.tags,
       author: snippet.data.authors,
+      authorsSafe: snippet.data.authorsSafe,
       date: snippet.data.date,
     });
   }
@@ -56,6 +58,7 @@ export default function ({ search }, { url }) {
       logo: asset.data.logo ?? asset.data.banner,
       tags: asset.data.tags,
       author: asset.data.authors,
+      authorsSafe: asset.data.authorsSafe,
       date: asset.data.date,
     });
   }
@@ -73,6 +76,7 @@ export default function ({ search }, { url }) {
       logo: tutorial.data.logo ?? tutorial.data.banner,
       tags: tutorial.data.tags,
       author: tutorial.data.authors,
+      authorsSafe: tutorial.data.authorsSafe,
       date: tutorial.data.date,
     });
   }
@@ -92,6 +96,7 @@ export default function ({ search }, { url }) {
       logo: tool.data.logo ?? tool.data.banner,
       tags: tool.data.tags,
       author: tool.data.authors,
+      authorsSafe: tool.data.authorsSafe,
       date: tool.data.date,
     });
   }
@@ -110,6 +115,7 @@ export default function ({ search }, { url }) {
       logo: plugin.data.logo ?? plugin.data.banner,
       tags: plugin.data.tags,
       author: plugin.data.authors,
+      authorsSafe: plugin.data.authorsSafe,
       date: plugin.data.date,
     });
   }

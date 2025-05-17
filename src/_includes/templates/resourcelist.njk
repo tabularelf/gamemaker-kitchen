@@ -22,10 +22,10 @@
 		<strong>
 		{% if post.data.authors %}
 			<div class="resourceCard-rowContainer">
-			{% for author in post.data.authors %}
+			{% for author in post.data.authorsMetadata %}
 				{% if loop.index < 3 %}
-					<a href="/authors/{{ author | lowercase | replace(" ", "-") | replace("_", "-")}}/" class="resourceCard-author"{% if entry.data.url == url %} aria-current="page"{% endif %}>
-						{{ author }}{% if not loop.last and loop.index < 3 %}, {% endif %}
+					<a href="/authors/{{ author.safe }}/" class="resourceCard-author"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+						{{ author.name }}{% if not loop.last and loop.index < 3 %}, {% endif %}
 					</a>
 				{% elif loop.index == 3 %}
 					<a href="{{ post.data.url }}/" class="resourceCard-author"{% if entry.data.url == url %} aria-current="page"{% endif %}>

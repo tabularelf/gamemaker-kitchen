@@ -14,8 +14,8 @@ bodyClass: body-post
 	<h2>
 	<nav class="post-author">
 		{% if authors %}
-			{% for author in authors %}
-				<a href="/authors/{{ author | lowercase | replace(" ", "-") | replace("_", "-") }}">{{ author }}</a>{% if not loop.last %}, {% endif %}
+			{% for author in authorsMetadata %}
+				<a href="/authors/{{ author.safe }}">{{ author.name }}</a>{% if not loop.last %}, {% endif %}
 			{% endfor %}
 		{% endif %} 
 	</nav>

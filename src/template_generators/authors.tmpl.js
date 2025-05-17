@@ -1,19 +1,21 @@
 export const layout = "layouts/author.njk";
 
 export default function* (site) {
-  for (const author of { site }.site.getAuthors()) {
+  console.log([...site.getAuthors()])
+  for (const author of site.getAuthors()) {
     let content = "";
-    let authorPage = site.search.page(`type=authors_metadata title=${author}`);
+    let authorPage = site.search.page(`type=authors_metadata title=${author.author}`);
     if (authorPage != undefined) {
       content = authorPage.data.content;
     }
+    
     yield {
-      url: (`/authors/${author.replace(/\s+/g, '-')}/`),
-      title: `Author “${author}”`,
+      url: (`/authors/${author.authorSafe}/`),
+      title: `Author “${author.author}”`,
       content: content,
-	  name: author,
+	  name: author.author,
       type: "author",
-      author,
+      author: author.author,
     };
   }
 }
