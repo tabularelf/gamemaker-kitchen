@@ -20,6 +20,7 @@ export default function ({ search }, { url }) {
       author: lib.data.authors,
       authorsSafe: lib.data.authorsSafe,
       date: lib.data.date,
+	  type: 'library',
     });
   }
   
@@ -40,6 +41,7 @@ export default function ({ search }, { url }) {
       author: snippet.data.authors,
       authorsSafe: snippet.data.authorsSafe,
       date: snippet.data.date,
+	  type: 'snippet',
     });
   }
   
@@ -60,6 +62,7 @@ export default function ({ search }, { url }) {
       author: asset.data.authors,
       authorsSafe: asset.data.authorsSafe,
       date: asset.data.date,
+	  type: 'asset',
     });
   }
   
@@ -78,7 +81,7 @@ export default function ({ search }, { url }) {
       author: tutorial.data.authors,
       authorsSafe: tutorial.data.authorsSafe,
       date: tutorial.data.date,
-    });
+	  type: 'tutorial',
   }
 
   // Search tools
@@ -98,6 +101,7 @@ export default function ({ search }, { url }) {
       author: tool.data.authors,
       authorsSafe: tool.data.authorsSafe,
       date: tool.data.date,
+	  type: 'tool',
     });
   }
 
@@ -117,6 +121,7 @@ export default function ({ search }, { url }) {
       author: plugin.data.authors,
       authorsSafe: plugin.data.authorsSafe,
       date: plugin.data.date,
+	  type: 'plugin',
     });
   }
 
