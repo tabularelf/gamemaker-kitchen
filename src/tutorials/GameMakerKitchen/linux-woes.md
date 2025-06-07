@@ -8,7 +8,7 @@ tags:
   - IDE
   - Runtime
 authors:
-  - GMK
+  - GameMakerKitchen
 ---
 
 The helpdesk post here on [setting up Ubuntu](https://help.gamemaker.io/hc/en-us/articles/235186168-Setting-Up-For-Ubuntu), while is mainly for Ubuntu, does technically apply to all distros.
