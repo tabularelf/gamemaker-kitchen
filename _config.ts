@@ -9,7 +9,7 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import netlifyCMS from "lume/plugins/netlify_cms.ts";
 import gpm from "https://deno.land/x/gpm@v0.4.1/mod.ts";
 import {existsSync} from "https://deno.land/std/fs/mod.ts";
-//import minifyHTML from "lume/plugins/minify_html.ts";
+import minifyHTML from "lume/plugins/minify_html.ts";
 import readInfo from "lume/plugins/reading_info.ts";
 import favicon from "lume/plugins/favicon.ts";
 
@@ -61,13 +61,13 @@ site
     input: "/favicon_source.png",
     cache: false,
   }))
-  /*.use(minifyHTML({
+  .use(minifyHTML({
     options: {
       minify_js: true, 
       minify_css: true,
       keep_comments: false,
     }
-  }));*/
+  }));
 
 // _config.ts
 
