@@ -1,1 +1,26 @@
- 
+---
+title: GM-Sprite-Importer
+link: https://github.com/Emperor2000/gm-sprite-importer
+description: Automated importing of large collections of images for the GameMaker engine, built using Python.
+threadLink: https://discord.com/channels/724320164371497020/1261776898283929681
+docs: ""
+paid: false
+date: 2025-08-25 20:42:00
+tags:
+  - batch
+  - image
+  - sprite
+  - python
+authors:
+  - emperor2020
+---
+
+I created a python tool that allows you to batch import images into GameMaker and automatically convert these to sprites or sprite sheets.
+
+Features:
+Batch Import: Import multiple GIFs/PNGs into GameMaker.
+Sprite Sheets: Convert GIFs to sprite sheets automatically.
+Customization: Set sprite origins, sizes, and naming conventions.
+Auto updates .yyp project file on import.
+Overwrite sprite width and height (absolute size)
+Overwrite sprite origin -> absolute x and y or relative origin: Top Centre, Top Right, Middle Centre, Bottom Right
