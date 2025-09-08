@@ -1,7 +1,7 @@
 export const layout = "layouts/author.njk";
 
 export default function* (site) {
-  console.log([...site.getAuthors()])
+  //console.log([...site.getAuthors()])
   for (const author of site.getAuthors()) {
     let content = "";
     let authorPage = site.search.page(`type=authors_metadata title=${author.author}`);

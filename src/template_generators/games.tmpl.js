@@ -1,9 +1,8 @@
 export const layout = "layouts/libraries.njk";
-export const title = "Snippets";
+export const title = "Games";
 
 export default function* ({ search, paginate }) {
-  const posts = search.pages("type=snippet", "date=desc");
-
+  const posts = search.pages("type=game", "date=desc");
   for (
     const data of paginate(posts, { url, size: 24 })
   ) {
@@ -11,7 +10,7 @@ export default function* ({ search, paginate }) {
     if (data.pagination.page === 1) {
       data.menu = {
         visible: true,
-        order: 8,
+        order: 9,
       };
     }
 
@@ -21,8 +20,8 @@ export default function* ({ search, paginate }) {
 
 function url(n) {
   if (n === 1) {
-    return "/snippets/";
+    return "/games/";
   }
 
-  return `/snippets/${n}/`;
+  return `/games/${n}/`;
 }

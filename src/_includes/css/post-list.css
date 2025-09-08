@@ -1,10 +1,16 @@
 .postList {
   list-style: none;
   padding: 0;
+  line-height:0.9em;
 }
 
 .postList-date {
   font-size: 0.8rem;
+  color: var(--color-text);
+}
+
+.postList-description {
+  font-size: 1.0rem;
   color: var(--color-text);
 }
 

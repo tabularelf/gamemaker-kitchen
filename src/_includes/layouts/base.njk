@@ -47,7 +47,14 @@
       </ul>
 
     <div>
-      <button type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme</button>
+<div class="theme-toggle-wrapper">
+  <input type="checkbox" class="theme-toggle__input" id="themeSwitch" data-theme-toggle>
+  <label class="theme-toggle__label" for="themeSwitch">
+    <span class="theme-toggle__indicator"></span>
+    <span class="theme-toggle__decoration"></span>
+  </label>
+</div>
+</button>
       <script src="/js/theme-toggle.js"></script>
     </div>
 

@@ -12,6 +12,8 @@
     <time class="postList-date" datetime="{{ post.data.date | date('DATETIME') }}">
       {{ post.data.date | date('HUMAN_DATE') }}
     </time>
+
+    <p class="postList-description"> {{ post.data.description }}</p>
 	
 	  <!--  Force newline -->
 	  <br>

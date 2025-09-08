@@ -1,0 +1,7 @@
+type: game
+title: Unknown
+layout: layouts/resource.njk
+includeReadingTime: false
+searchtype: "type=game"
+authors: 
+  - Unknown Author

@@ -59,6 +59,14 @@ bodyClass: body-post
 	{% if donation_link %}
 		<a href="{{ donation_link }}" target="_blank">{{ donation_text }}</a>
 	{% endif %}
+    {% if h2s.length > 0 %}
+    <h3>Links:</h3>
+    <ul>
+      {% for heading in h2s %}
+        <li><a href="#{{ heading.id }}">{{ heading.content }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
 	</header>
 
   <div class="post-body">

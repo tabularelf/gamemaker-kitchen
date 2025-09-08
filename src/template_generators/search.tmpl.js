@@ -102,5 +102,15 @@ export default function ({ search }, { url }) {
     });
   }
 
+ // Search Games
+  for (const post of search.pages("type=game")) {
+    result.push({
+	    label: `Game: ${post.data.title}`,
+      search: `${post.data.title} ${post.data.tags.join(" ")}`,
+      value: url(post.data.url),
+      title: post.data.title,
+    });
+  }
+
   return JSON.stringify(result);
 }

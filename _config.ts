@@ -12,6 +12,7 @@ import {existsSync} from "https://deno.land/std/fs/mod.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import readInfo from "lume/plugins/reading_info.ts";
 import favicon from "lume/plugins/favicon.ts";
+import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 
 
 // Languages
@@ -45,6 +46,7 @@ site
       bash: lang_bash,
       gml: lang_gml,
       glsl: lang_glsl,
+      glsles: lang_glsl,
       json: lang_json,
       md: lang_markdown,
       yaml: lang_yaml
@@ -68,8 +70,6 @@ site
       keep_comments: false,
     }
   }));
-
-// _config.ts
 
 // Filter to convert a string to uppercase
 site.filter("uppercase", (value) => value.toUpperCase());
@@ -125,6 +125,28 @@ site.filter("getRandomPage", (pages) => {
 });
 
 site.preprocess([".md"], (page) => {
+  if (!page.src) {
+    page.data.h2s = [];
+  } else {
+    // Match Markdown H2 headers (lines starting with #, ## or ###)
+    const h2Matches = [...page.data.content.matchAll(/^(#{1,3})\s+(.*)$/gm)];
+    for (const match of h2Matches) {
+      const fullMatch = match[0]; // e"## My Heading"
+      const hashes = match[1];    // #, ##, # ##
+      const heading = match[2];   // "My Heading"
+      const id = heading.trim().toLowerCase().replace(/\s+/g, "-");
+
+      page.data.content = page.data.content.replace(fullMatch, `${hashes} ${heading}<a name="${id}"></a>`);
+    };
+
+    page.data.h2s = h2Matches.map(function(m) {
+        return {
+          content: m[2].trim(),
+          id: m[2].trim().toLowerCase().replace(/\s+/g, "-")
+        }
+    });
+  }
+
   let tags = page.data.tags;
 
   // We actually have this here so I don't gotta refactor a bunch of potential files
