@@ -142,6 +142,7 @@ site.preprocess([".md"], (page) => {
     page.data.h2s = h2Matches.map(function(m) {
         return {
           content: m[2].trim(),
+          num: m[1].length,
           id: m[2].trim().toLowerCase().replace(/\s+/g, "-")
         }
     });
