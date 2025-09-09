@@ -69,6 +69,7 @@ Entries:
 - [Write your code through Instantiable Constructors](/tutorials/mtax/gml-instantiable-constructors/)
 - [uuid.gml](https://github.com/sidorakh/uuid.gml)
 - [gx-keyboard-string](https://github.com/Sidorakh/gx-keyboard-string)
+- [Launchbox](https://github.com/Alphish/gm-launchbox)
 
 # Cookbook Jam 5
 [Link to jam page.](https://itch.io/jam/cookbook-jam-5)

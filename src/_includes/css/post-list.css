@@ -1,7 +1,6 @@
 .postList {
   list-style: none;
   padding: 0;
-  line-height:0.9em;
 }
 
 .postList-date {
@@ -9,15 +8,11 @@
   color: var(--color-text);
 }
 
-.postList-description {
-  font-size: 1.0rem;
-  color: var(--color-text);
-}
-
 .postList-title {
   display: inline-block;
   padding: 0.5em 0;
   font-size: 1.2rem;
+  line-height:1em;
 
   &[aria-current="page"] {
     font-weight: bold;

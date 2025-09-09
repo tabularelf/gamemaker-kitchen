@@ -129,7 +129,7 @@ site.preprocess([".md"], (page) => {
     page.data.h2s = [];
   } else {
     // Match Markdown H2 headers (lines starting with #, ## or ###)
-    const h2Matches = [...page.data.content.matchAll(/^(#{1,3})\s+(.*)$/gm)];
+    const h2Matches = [...page.data.content.matchAll(/^(#{1,2})\s+(.*)$/gm)];
     for (const match of h2Matches) {
       const fullMatch = match[0]; // e"## My Heading"
       const hashes = match[1];    // #, ##, # ##
