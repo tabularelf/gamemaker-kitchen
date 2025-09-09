@@ -15,10 +15,10 @@ If you're looking for potential options, you've come to the right place! While I
 # Windows
 Windows nowadays comes with built in tools to recording your screen. So you may actually find those to be worthwhile enough for your needs.
 
-### Windows 10
+## Windows 10
 If you are on Windows 10, you can use Xbox Game Bar (`start + alt + r`) to start & stop a recording. And then you can access Xbox Game Bar (`start + g`) to bring up your captures. Or alternatively, you can navigate to `C:\Users\your_username\Videos\Captures` to bring up your captures. You can also adjust your capture settings by going to Settings -> Gaming -> Captures.
 
-### Windows 11
+## Windows 11
 With the introduction of an update (KB5030310), the built in Windows Snippet Tool has been upgraded to handle recording. TODO: Fill in more info about this.
 
 ### Windows other versions, or those who want more control 
@@ -44,23 +44,23 @@ However, you may prefer some free alternatives so I'll list them here.<br>
 
 **Note**: MacOSX out of the box does not support recording internal (desktop) audio. So if this is vital to you in anyway, you'll have to use a third party driver. [This](https://existential.audio/blackhole/) I recommend.
 
-### Powerful GUI recorders
+## Powerful GUI recorders
 - [OBS (Open Broadcaster Software)](https://obsproject.com/)
 
-### CLI only (Comamnd-Line-Interface)
+## CLI only (Comamnd-Line-Interface)
 - [ffmpeg](https://www.ffmpeg.org/) (it can [record screens](https://trac.ffmpeg.org/wiki/Capture/Desktop)).
 
 # Linux
 Some Linux distros do have built in ways of recording, but not all support it exclusively.<br>
 And as this could get get vastly bloated easily, I am going to assume that you're reading this because your distro doesn't support it out of the box.
 
-### Simple, but effective
+## Simple, but effective
 - [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
 
-### Powerful GUI recorders
+## Powerful GUI recorders
 - [OBS (Open Broadcaster Software)](https://obsproject.com/)
 
-### CLI only (Comamnd-Line-Interface)
+## CLI only (Comamnd-Line-Interface)
 - [ffmpeg](https://www.ffmpeg.org/) (it can [record screens](https://trac.ffmpeg.org/wiki/Capture/Desktop)).
 
 
@@ -69,7 +69,7 @@ For the most part, if you're using a simple recorder, like ShareX, SimpleScreenR
 
 If you are using a more complex recorder or have modified your encoder settings, you'll want to ensure that they can be converted to MP4, h264 (or AVC). Videos frame rates should be 30 or 60 (where 60 is more ideal these days, but not necessary on all accounts).<br>
 
-### Codec
+## Codec
 A codec is simply the data of the video itself. It describes the video, how it stores each and every pixel, the amount of bits it has, how it's compressed, whether it's lossless or lossy compression, etc.<br>
 Example codecs:
 - h264, or AVC (The internet standard)
@@ -79,7 +79,7 @@ Example codecs:
 - Apple Video
 - WMV (It is a container too)
 
-### Container
+## Container
 A container is simply a small file container for the video itself. Generally, the codec and container are separate from one another, however there are some exceptional ones.<br>
 Example containers:
 - MP4 (The internet standard)

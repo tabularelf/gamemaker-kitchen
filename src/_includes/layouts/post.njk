@@ -19,14 +19,42 @@ bodyClass: body-post
      {%- if includeReadingTime == true %}
       <p>{{ readingInfo.words }} words, {{ readingInfo.minutes }} min read</p>
     {% endif %}
-    {% if h2s.length > 0 %}
-    <h3>Links:</h3>
-    <ul>
-      {% for heading in h2s %}
-        <li><a href="#{{ heading.id }}">{{ heading.content }}</a></li>
+    
+    {# Handles rendering all of the page lists #}
+    	{% if h2s.length > 0 %}
+    	<h3>Links:</h3>
+    
+    	{% set minLevel = 999 %}
+    	{% for h in h2s %}
+    	  {% if h.num < minLevel %}
+    	    {% set minLevel = h.num %}
+    	  {% endif %}
+    	{% endfor %}
+    
+    	{% set prevLevel = 0 %}
+    	<ul>
+    	{% for heading in h2s %}
+    	    {% set level = heading.num - minLevel %}
+    
+    	    {% if level > prevLevel %}
+    	        {% for i in range(prevLevel, level) %}
+    	        <ul>
+    	        {% endfor %}
+    	    {% elif level < prevLevel %}
+    	        {% for i in range(level, prevLevel) %}
+    	        </ul>
+    	        {% endfor %}
+    	    {% endif %}
+    	    <li><a href="#{{ heading.id }}">{{ heading.content }}</a></li>
+    	    {% set prevLevel = level %}
+    	{% endfor %}
+    
+      {% for i in range(0, prevLevel) %}
+        </ul>
       {% endfor %}
-    </ul>
-    {% endif %}
+        </ul>
+      {% endif %}
+    
   </header>
   <div class="post-body">
     {{ content | safe }}
