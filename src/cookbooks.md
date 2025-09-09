@@ -64,8 +64,7 @@ Entries:
 
 Entries:
 
-- [RunGMML](https://snail-dream.itch.io/rungml)
-- [Hit-It](https://gwoolley.itch.io/hit-it-gamemaker)
+- [RunGML](https://snail-dream.itch.io/rungml)
 - [How to unlock your framerate in under 10 mins!](https://youtu.be/40iMwneEND4)
 - [Write your code through Instantiable Constructors](/tutorials/mtax/gml-instantiable-constructors/)
 - [uuid.gml](https://github.com/sidorakh/uuid.gml)
