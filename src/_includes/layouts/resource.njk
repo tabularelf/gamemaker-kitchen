@@ -51,7 +51,7 @@ bodyClass: body-post
 	{% endif %}
 	</p>
 
-	<!-- Add reading time info -->
+	{# Add reading time info #}
 	{%- if includeReadingTime == true %}
       <p>{{ readingInfo.words }} words, {{ readingInfo.minutes }} min read</p>
     {% endif %}
@@ -62,7 +62,7 @@ bodyClass: body-post
 
 	{# Handles rendering all of the page lists #}
 	{% if h2s.length > 0 %}
-	<h3>Links:</h3>
+	<h3>Contents:</h3>
 
 	{% set minLevel = 999 %}
 	{% for h in h2s %}
@@ -94,6 +94,7 @@ bodyClass: body-post
     {% endfor %}
       </ul>
     {% endif %}
+	
 	</header>
 
   <div class="post-body">
