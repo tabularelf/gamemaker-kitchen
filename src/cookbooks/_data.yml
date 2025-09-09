@@ -1,4 +1,4 @@
 type: posts
-layout: layouts/post.njk
+layout: layouts/base.njk
 includeReadingTime: true
 resource: cookbook

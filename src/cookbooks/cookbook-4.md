@@ -1,5 +1,4 @@
 ---
-layout: layouts/base.njk
 description: Cookbook 4 - Library, Tools, Tutorial jam! Oh my!
 menu:
   visible: false

@@ -1,5 +1,4 @@
 ---
-layout: layouts/base.njk
 description: Cookbook 3 - Tutorial Edition
 menu:
   visible: false
