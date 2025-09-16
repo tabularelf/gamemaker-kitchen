@@ -30,10 +30,17 @@ Finding your compiled Linux builds ran from the IDE (remote or local):
 # When I start up GameMaker, the IDE looks messed up!
 This may be caused by a DPI-related issue on some distro platforms. To work around this, you may override it directly.
 Create a file at `/home/.local/share/GameMakerStudio2-Beta/dpi_override.json`.
-And add the following <br>`[{"Key":"is_enabled","Value":true},{"Key":"value","Value":92}]` <br>via your preferred text editor. 
+And add the following 
+```json
+[{"Key":"is_enabled","Value":true},{"Key":"percentage","Value":92}]
+``` 
+via your preferred text editor. 
 After starting GameMaker back up, your DPI will be overriden.
 
-**Note**: As of more recent versions (presumably 2024.8+), this may have changed slightly. You may instead need to have `[{"Key":"is_enabled","Value":true},{"Key":"percentage","Value":92}]`.
+**Note**: As of more recent versions (presumably 2024.8+), this may have changed slightly. You may instead need to have 
+```json
+[{"Key":"is_enabled","Value":true},{"Key":"percentage","Value":92}]
+```
 
 # Installing GameMaker on Linux in other ways (unofficial):
 
