@@ -20,7 +20,7 @@
   line-height: 1.4;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  max-width: 100%;
+  max-width: 80%;
   overflow-x: hidden;
 
 /*
@@ -52,4 +52,10 @@
   & li {
     padding: 1em;
   }
+}
+.post-contents {
+  right: 2em; 
+  max-width: 80%;
+  position:fixed;
+  border: 2px inset var(--lightgray);
 }
