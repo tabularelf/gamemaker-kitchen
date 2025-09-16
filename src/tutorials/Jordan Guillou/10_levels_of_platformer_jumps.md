@@ -24,22 +24,6 @@ I've made a demo which features all 10 levels. You can try it below or CTRL-clic
 
 You can download the source code for the project for free from this <a href = "https://github.com/rooksword/10-Levels-of-Platformer-Jumps" target = "_blank">GitHub repo</a>.
 
-# Contents:
-
-0. GameMaker setup
-1. Stationary, fixed jump
-2. Stationary, smooth jump
-3. Simple physics
-4. Coyote time and input buffering
-5. Variable jump height
-6. Bounce pads and jump types
-7. Double jump
-8. Wall climb
-9. Wall jump
-10. Visual juice
-11. Bonus level (SFX)
-12. Conclusion
-
 # 0. GameMaker setup
 
 <img src="https://i.ibb.co/D1MsCv7/image.png" height="400">
