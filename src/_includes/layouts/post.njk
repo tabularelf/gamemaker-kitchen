@@ -20,11 +20,8 @@ bodyClass: body-post
       <p>{{ readingInfo.words }} words, {{ readingInfo.minutes }} min read</p>
     {% endif %}
     
-  </header>
-  <div class="post-body">
     {# Handles rendering all of the page lists #}
     	{% if h2s.length > 0 %}
-      <div class="post-contents">
     	<h3>Contents:</h3>
     
     	{% set minLevel = 999 %}
@@ -56,8 +53,10 @@ bodyClass: body-post
         </ul>
       {% endfor %}
         </ul>
-        </div>
       {% endif %}
+    
+  </header>
+  <div class="post-body">
     {{ content | safe }}
   </div>
 </article>

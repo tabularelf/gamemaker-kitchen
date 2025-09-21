@@ -59,13 +59,9 @@ bodyClass: body-post
 	{% if donation_link %}
 		<a href="{{ donation_link }}" target="_blank">{{ donation_text }}</a>
 	{% endif %}
-	
-	</header>
-  <div class="post-container">
-  <div class="post-body">
-		{# Handles rendering all of the page lists #}
+
+	{# Handles rendering all of the page lists #}
 	{% if h2s.length > 0 %}
-	<div class="post-contents">
 	<h3>Contents:</h3>
 
 	{% set minLevel = 999 %}
@@ -97,12 +93,14 @@ bodyClass: body-post
       </ul>
     {% endfor %}
       </ul>
-	  </div>
     {% endif %}
+	
+	</header>
+
+  <div class="post-body">
     {{ content | safe }}
   </div>
 </article>
-</div>
 
 <hr>
 
