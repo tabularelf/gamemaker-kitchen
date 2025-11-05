@@ -27,21 +27,6 @@ Finding your GameMaker Runtimes folder (And ui.log)
 Finding your compiled Linux builds ran from the IDE (remote or local):
 **`/home/GameMakerStudio2/`**
 
-# When I start up GameMaker, the IDE looks messed up!
-This may be caused by a DPI-related issue on some distro platforms. To work around this, you may override it directly.
-Create a file at `/home/.local/share/GameMakerStudio2-Beta/dpi_override.json`.
-And add the following 
-```json
-[{"Key":"is_enabled","Value":true},{"Key":"percentage","Value":92}]
-``` 
-via your preferred text editor. 
-After starting GameMaker back up, your DPI will be overriden.
-
-**Note**: As of more recent versions (presumably 2024.8+), this may have changed slightly. You may instead need to have 
-```json
-[{"Key":"is_enabled","Value":true},{"Key":"percentage","Value":92}]
-```
-
 # Installing GameMaker on Linux in other ways (unofficial):
 
 ## Arch Linux
@@ -65,3 +50,94 @@ On ARM-based distros, or if you are wanting to export zip builds over app image,
 Note: linuxdeploy/appimage/steam-runtimes is not needed on ARM-based distros at the time of writing.
 
 Distrobox: TBA
+
+# Bugs, tricks and tips:
+
+## When I start up GameMaker, the IDE looks messed up!
+This may be caused by a DPI-related issue on some distro platforms. To work around this, you may override it directly.
+Create a file at `/home/.local/share/GameMakerStudio2-Beta/dpi_override.json`.
+And add the following 
+```json
+[{"Key":"is_enabled","Value":true},{"Key":"percentage","Value":92}]
+``` 
+via your preferred text editor. 
+After starting GameMaker back up, your DPI will be overriden.
+
+**Note**: As of more recent versions (presumably 2024.8+), this may have changed slightly. You may instead need to have 
+```json
+[{"Key":"is_enabled","Value":true},{"Key":"percentage","Value":92}]
+```
+
+## I can't open the IDE on Fedora!
+Fedora, not unlike other distros *but* unlike Ubuntu, has some packages named differently. That's ok! Most dependencies, once you find and install them, will work out-of-the-box.
+Except for one: GameMaker's bundled `freetype` library, which relies on `bz2`. Because of the aforementioned package naming disparity, this also may include files themselves: as of the writing of this section, GameMaker looks specifically for `/usr/lib64/libbz2.so.1.0`, which is named/versioned differently on Fedora.
+
+Although tedious, you may do either one of the following:
+  - Create a symlink to `libbz2.so.####`, where # is the version present in your Fedora installation
+  - Modify the `SharpFont.dll.config` in `/opt/GameMaker-Beta/x86_64` to use the system's installed `freetype` package
+
+NOTE: **Be careful when modifying or moving around system files or program libraries and configurations, as doing so without caution may cause your program and/or system break!**
+
+### Creating a symlink to `libbz2.so.####`:
+If you're unfamiliar with what a symlink is, think of it like a Windows shortcut. It points towards a file.
+Simply go to `/usr/lib64` and then run this command:
+```bash
+ln -sf /path/to/file /path/to/symlink
+```
+
+Think of it as if `ln` stands for **l**i**n**k, where `/path/to/file` is Fedora's `libbz2.so.1.0` and `/path/to/symlink` is where you want to place your symlink. Do note your symlink has to be `/usr/lib64/libbz2.so.1.0` in order for this to work!
+
+### Modifying GameMaker's `SharpFont.dll.config`:
+GameMaker's SharpFont/`freetype` library makes use of the aformentioned `libbz2.so.1.0` file, but you can easily edit the configuration file to make use of the system's `freetype` library package in case you don't like fiddling in system directories.
+
+The configuration in question should be located in `/opt/GameMaker-Beta/x86_64` and can be opened in your text editor of choice (e.g. gedit, GNOME Text Editor, COSMIC Text Editor, Kate etc.) and by default should look like this:
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-x86_64-ubuntu-Release/freetype.so"    os="linux"   cpu="x86-64,x64,amd64" />
+	<dllmap dll="freetype.dll" wordsize="32" target="Vendor/freetype/freetype-armv7-ubuntu-Release/freetype.so"     os="linux"   cpu="arm,armv7,arm32"  />
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-aarch64-ubuntu-Release/freetype.so"   os="linux"   cpu="armv8,arm64"   	/>
+
+<!--
+	<dllmap dll="freetype.dll" wordsize="64" target="libfreetype.so.6"    os="linux"   cpu="x86-64,x64,amd64" />
+	<dllmap dll="freetype.dll" wordsize="32" target="libfreetype.so.6"     os="linux"   cpu="arm,armv7,arm32"  />
+	<dllmap dll="freetype.dll" wordsize="64" target="libfreetype.so.6"   os="linux"   cpu="armv8,arm64"   	/>
+-->
+
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-x86_64-windows-Release/freetype.dll"  os="windows" cpu="x86-64,x64,amd64" />
+	<dllmap dll="freetype.dll" wordsize="64" target="lib/windows/arm64/freetype.dll" os="windows" cpu="arm64"      />
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-x86_64-macos-Release/freetype.dylib"  os="osx"     cpu="x86-64,x64,amd64" />
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-aarch64-macos-Release/freetype.dylib" os="osx"  	 cpu="armv8,arm64"      />
+</configuration>
+```
+
+NOTE: The last pair does not affect linux, so it can be ignored.
+
+`<!--` and `-->` define comments in a XML file. Simply move the comment block from the second pair of `dllmap`s to the first. This will force GameMaker to use the system's installed `freetype` package. Your final configuration file should look like this:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+<!--
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-x86_64-ubuntu-Release/freetype.so"    os="linux"   cpu="x86-64,x64,amd64" />
+	<dllmap dll="freetype.dll" wordsize="32" target="Vendor/freetype/freetype-armv7-ubuntu-Release/freetype.so"     os="linux"   cpu="arm,armv7,arm32"  />
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-aarch64-ubuntu-Release/freetype.so"   os="linux"   cpu="armv8,arm64"   	/>
+-->
+
+	<dllmap dll="freetype.dll" wordsize="64" target="libfreetype.so.6"    os="linux"   cpu="x86-64,x64,amd64" />
+	<dllmap dll="freetype.dll" wordsize="32" target="libfreetype.so.6"     os="linux"   cpu="arm,armv7,arm32"  />
+	<dllmap dll="freetype.dll" wordsize="64" target="libfreetype.so.6"   os="linux"   cpu="armv8,arm64"   	/>
+  ...
+```
+
+## There's no fonts in the Save/Load dialog on Arch!
+This is a rather recent issue, mainly with Pango, GTK's text renderer, and apparently the Adwaita Sans font. Since GameMaker links directly to GTK 3 rather than relying on Zenity or `xdg-desktop-portal`s, the offending font will cause Pango to stop rendering any text.
+A relatively easy fix can be done by editing `$HOME/.config/gtk-3.0/gtk.css`, adding the following:
+```css
+* {
+    font-family: "Noto Sans"; /* Replace with your desired font */
+    font-size: 11pt; /* Adjust size as needed */
+}
+```
+
+NOTE: This will change all default GTK fonts.
