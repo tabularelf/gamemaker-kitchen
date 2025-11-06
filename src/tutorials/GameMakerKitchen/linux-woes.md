@@ -78,7 +78,7 @@ NOTE: If you try to disable AppArmor and it shows `sysctl: cannot stat /proc/sys
 After you're done setting up, get the latest GameMaker Beta IDE `.deb` package, just press the **Install .deb package** button and select the aformentioned file. It will do the installing for you, and you can call it a successful day.
 
 If you go into **Applications**, you should be able to see GameMaker here.
-![Screenshot From 2025-11-05 21-55-19]([https://i.imgur.com/DKphaUv.png](https://github.com/user-attachments/assets/6d23c06f-719b-4476-931f-dc31bf0fc994))
+<img width="1022" height="822" alt="Screenshot From 2025-11-05 21-55-19" src="https://github.com/user-attachments/assets/6d23c06f-719b-4476-931f-dc31bf0fc994" />
 
 Simply click on `GameMaker-Beta` and enjoy!
 
@@ -99,7 +99,7 @@ FAILED: Run Program Complete
 For the details of why this build failed, please review the whole log above and also see your Compile Errors window.
 ```
 While this may look bad, this is just GameMaker attempting to run the newly created AppImage file and failing for some reason. By this point, *your game has already been compiled and turned into an executable!* You can manually run the game by going into `$HOME/GameMakerStudo2/vm/YourProjectHere/AppDir` and double-click the `AppRun.AppImage` file. That's your game!
-![image]([https://i.imgur.com/DKphaUv.png](https://github.com/user-attachments/assets/775ebc83-5f90-46dc-990a-1e2ce6e62860))
+<img width="1071" height="739" alt="image" src="https://github.com/user-attachments/assets/775ebc83-5f90-46dc-990a-1e2ce6e62860" />
 
 # Bugs, tricks and tips:
 
