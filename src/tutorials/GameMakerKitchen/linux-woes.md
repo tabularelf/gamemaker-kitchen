@@ -66,6 +66,7 @@ NOTE: Distrobox names **must not contain characters such as spaces or otherwise 
 For now, we don't care about anything else there. *NVIDIA Support*, however, is useful if you *have a NVIDIA GPU installed.* Also, *Init process* makes the container run more *like a full VM rather than an application container*, but again, we don't care about that for now.
 
 Once you're properly set up, after another popup showing the creation process, you should be met with this screen:
+
 ![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510362292-c7e568a6-0019-4792-9af3-b121c6bbcb0d.png)
 
 Booting up the container can be done *by pressing the little terminal-like icon in the Container Status section.* This will bring up a terminal. It will take some time on first boot, as it has to download the necessary packages required to function properly.
@@ -79,6 +80,7 @@ NOTE: If you try to disable AppArmor and it shows `sysctl: cannot stat /proc/sys
 After you're done setting up, get the latest GameMaker Beta IDE `.deb` package, just press the **Install .deb package** button and select the aformentioned file. It will do the installing for you, and you can call it a successful day.
 
 If you go into **Applications**, you should be able to see GameMaker here.
+
 ![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510369521-6d23c06f-719b-4476-931f-dc31bf0fc994.png)
 
 Simply click on `GameMaker-Beta` and enjoy!
@@ -100,6 +102,7 @@ FAILED: Run Program Complete
 For the details of why this build failed, please review the whole log above and also see your Compile Errors window.
 ```
 While this may look bad, this is just GameMaker attempting to run the newly created AppImage file and failing for some reason. By this point, *your game has already been compiled and turned into an executable!* You can manually run the game by going into `$HOME/GameMakerStudo2/vm/YourProjectHere/AppDir` and double-click the `AppRun.AppImage` file. That's your game!
+
 ![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510371441-775ebc83-5f90-46dc-990a-1e2ce6e62860.png)
 
 # Bugs, tricks and tips:
