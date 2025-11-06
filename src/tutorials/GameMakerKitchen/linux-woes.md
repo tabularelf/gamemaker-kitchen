@@ -56,7 +56,8 @@ This is especially useful for installing apps on *immutable distros*, such as Fe
 NOTE: *Distroshelf, a graphical frontend for Distrobox, is highly recommended.* You can find and install it on Flatpak through your software manager (GNOME Software, Plasma Discover, Bazzite's Bazaar etc).
 
 Once you get Distroshelf installed, first thing you want to do is click that big, accent-colored **Create Distrobox** button (or the little **+** in the top-left corner). You'll be met with the following popup:
-<img width="1022" height="822" alt="Screenshot From 2025-11-05 21-40-50" src="https://github.com/user-attachments/assets/7115d595-cb34-4ee0-ae95-9c6900ac9d75" />
+
+![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510355359-7115d595-cb34-4ee0-ae95-9c6900ac9d75.png)
 
 First, you want to give your Distrobox a name and choose a *docker image* (basically, what distro to run as a container). You'll see a ton of them, but for now we want to use Ubuntu 24.04 since that's what GameMaker is officially supported on. After that, we name our new container "Ubuntu" (you can choose any name you want!)
 
@@ -65,7 +66,7 @@ NOTE: Distrobox names **must not contain characters such as spaces or otherwise 
 For now, we don't care about anything else there. *NVIDIA Support*, however, is useful if you *have a NVIDIA GPU installed.* Also, *Init process* makes the container run more *like a full VM rather than an application container*, but again, we don't care about that for now.
 
 Once you're properly set up, after another popup showing the creation process, you should be met with this screen:
-<img width="1022" height="822" alt="Screenshot From 2025-11-05 21-43-12" src="https://github.com/user-attachments/assets/c7e568a6-0019-4792-9af3-b121c6bbcb0d" />
+![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510362292-c7e568a6-0019-4792-9af3-b121c6bbcb0d.png)
 
 Booting up the container can be done *by pressing the little terminal-like icon in the Container Status section.* This will bring up a terminal. It will take some time on first boot, as it has to download the necessary packages required to function properly.
 
@@ -78,7 +79,7 @@ NOTE: If you try to disable AppArmor and it shows `sysctl: cannot stat /proc/sys
 After you're done setting up, get the latest GameMaker Beta IDE `.deb` package, just press the **Install .deb package** button and select the aformentioned file. It will do the installing for you, and you can call it a successful day.
 
 If you go into **Applications**, you should be able to see GameMaker here.
-<img width="1022" height="822" alt="Screenshot From 2025-11-05 21-55-19" src="https://github.com/user-attachments/assets/6d23c06f-719b-4476-931f-dc31bf0fc994" />
+![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510369521-6d23c06f-719b-4476-931f-dc31bf0fc994.png)
 
 Simply click on `GameMaker-Beta` and enjoy!
 
@@ -99,7 +100,7 @@ FAILED: Run Program Complete
 For the details of why this build failed, please review the whole log above and also see your Compile Errors window.
 ```
 While this may look bad, this is just GameMaker attempting to run the newly created AppImage file and failing for some reason. By this point, *your game has already been compiled and turned into an executable!* You can manually run the game by going into `$HOME/GameMakerStudo2/vm/YourProjectHere/AppDir` and double-click the `AppRun.AppImage` file. That's your game!
-<img width="1071" height="739" alt="image" src="https://github.com/user-attachments/assets/775ebc83-5f90-46dc-990a-1e2ce6e62860" />
+![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510371441-775ebc83-5f90-46dc-990a-1e2ce6e62860.png)
 
 # Bugs, tricks and tips:
 
