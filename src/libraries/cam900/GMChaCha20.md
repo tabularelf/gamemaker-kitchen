@@ -1,5 +1,5 @@
 ---
-title: GMBLAKE3
+title: GMChaCha20
 link: https://gitlab.com/cam900/gmchacha20
 description: ChaCha20 Stream cipher algorithm extension for GameMaker
 threadLink: https://discord.com/channels/724320164371497020/1408368555136778270
