@@ -1,7 +1,7 @@
 ---
 title: RenderDoc GMS2 Kit
 link: https://github.com/odditica/renderdoc-gms2-kit
-description: A RenderDoc settings file generator for GameMaker: Studio 2 projects.
+description: "A RenderDoc settings file generator for GameMaker: Studio 2 projects."
 docs: ""
 paid: false
 date: 2025-11-21 09:45:00
