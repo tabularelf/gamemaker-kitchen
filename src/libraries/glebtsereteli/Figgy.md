@@ -1,7 +1,7 @@
 ---
 title: Figgy
 link: https://github.com/glebtsereteli/Figgy
-description: About Centralized and persistent live configs for seamless game
+description: Centralized and persistent live configs for seamless game
   tuning and balancing in GameMaker.
 threadLink: https://discord.com/channels/724320164371497020/1441253042417696829
 docs: ""
