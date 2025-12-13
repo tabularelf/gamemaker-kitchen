@@ -7,20 +7,15 @@ docs: https://github.com/tinkerer-red/GMLC?tab=readme-ov-file#-gmlc-v100--initia
 threadLink: https://discord.com/channels/724320164371497020/1445121374644469780
 paid: false
 tags:
-  - multiple
-  - processes
-  - multithreading
-  - threading
+  - interpreter
+  - parser
+  - compiler
 authors:
   - Tinkerer_Red
 ---
+A GML interpreter written entirely in GML, allowing for arbitrary string execution.
 
-# Multiprocessing!
-An implementation of multiprocessing with a focus on simplicity.
+## [GMLC](https://github.com/tinkerer-red/GMLC)
+### - The C stands for Interpreter
 
-# Want multithreading?
-Well this isnt that.
-
-This is not multithreading, but instead it launches an additional process of the same game quietly and executes the function with the supplied arguments on a subprocess.
-
-The subprocess will not have access to any variables or data structures as the main process so be sure to send that information as an argument.
+The first full public release of GMLC, a runtime compiler and interpreter that lets GameMaker projects load, compile, and execute real GML code at runtime; enabling mod support, live scripting, and scratchpad experimentation directly inside GameMaker.
