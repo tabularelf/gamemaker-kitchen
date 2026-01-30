@@ -11,7 +11,7 @@ tags:
 authors:
   - offalynne
 ---
-Cross platform player text entry for [Input for GameMaker 2024.8](https://github.com/offalynne/Input)
+Cross platform player text entry for [Input for GameMaker Monthly](https://codeberg.org/offalynne/Input/)
 
 ### Supported Platforms
 
