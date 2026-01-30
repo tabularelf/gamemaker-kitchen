@@ -3,7 +3,7 @@ title: Input
 description: Comprehensive cross-platform input for GameMaker 2022 LTS
 link: https://codeberg.org/offalynne/Input
 logo: https://raw.githubusercontent.com/offalynne/Input/main/LOGO.png
-docs: https://offalynne.codeberg.page/Input/
+docs: https://offalynne.grebedoc.dev/Input/
 threadLink: https://discord.com/channels/1174070800060522537/1174071602300858439
 date: 2024-03-08 03:00:00
 tags:
