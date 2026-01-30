@@ -11,7 +11,7 @@ tags:
 authors:
   - offalynne
 ---
-Keyboard layout localization for [Input for GameMaker 2024.8](https://github.com/offalynne/Input).
+Keyboard layout localization for [Input for GameMaker Monthly](https://codeberg.org/offalynne/Input/).
 
 ### API
 
