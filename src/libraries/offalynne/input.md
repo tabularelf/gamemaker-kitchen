@@ -15,4 +15,4 @@ authors:
   - Juju Adams
 ---
 
-Comprehensive cross-platform input for GameMaker Monthly by <a href="https://www.jujuadams.com/" target="_blank">Juju Adams</a>, <a href="https://offalynne.neocities.org/">Alynne Keith</a>, and <a href="https://offalynne.codeberg.page/Input/#/10.3/Credits">Friends</a>
+Comprehensive cross-platform input for GameMaker Monthly by <a href="https://www.jujuadams.com/" target="_blank">Juju Adams</a>, <a href="https://offalynne.neocities.org/">Alynne Keith</a>, and <a href="https://offalynne.grebedoc.dev/Input/#/10.3/Credits">Friends</a>
