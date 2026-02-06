@@ -49,6 +49,33 @@ On ARM-based distros, or if you are wanting to export zip builds over app image,
 
 Note: linuxdeploy/appimage/steam-runtimes is not needed on ARM-based distros at the time of writing.
 
+## Other distro equivalents for required tools/packages
+
+| **Ubuntu**           | **Fedora**                 		| **Arch**     | **Notes**                                                   |
+|----------------------|----------------------------		|--------------|-------------------------------------------------------------|
+| build-essential      | @development-tools         		| base-devel   |                                                             |
+| clang                | clang                      		| clang        | Part of base-devel on Arch                                  |
+| ffmpeg               | ffmpeg                     		| ffmpeg       |                                                             |
+| libcurl4-openssl-dev | libcurl-devel/openssl-devel/openssl/curl | openssl/curl |                                                             |
+| libfuse2             | fuse                       		| fuse2        |                                                             |
+| libgl1-mesa-dev      | mesa-libGL-devel           		| mesa         |                                                             |
+| libglu1-mesa-dev     | mesa-libGLU-devel          		| mesa         |                                                             |
+| libopenal-dev        | openal-soft-dev            		| openal       | Provides headers and libraries on Arch                      |
+| libssl-dev           | openssl-devel              		| openssl      | Provides headers and libraries on Arch                      |
+| libxfixes-dev        | libXfixes-devel            		| libxfixes    |                                                             |
+| libxrandr-dev        | libXrandr-devel            		| libxrandr    |                                                             |
+| libxxf86vm-dev       | libXxf86vm-devel           		| libxxf86vm   |                                                             |
+| openssh-server       | openssh-server             		| openssh      | Provides headers and libraries on Arch                      |
+| zlib1g-dev           | zlib-ng-compat             		| zlib         | zlib-ng-compat may be the  closest match on Fedora          |
+| pulseaudio           | pulseaudio                 		| pulseaudio   | Will conflict with pipewire, optional due to pipewire-pulse |
+| nproc                | nproc                      		| nproc        | Preinstalled on most modern distros                         |
+| curl                 | curl                      			 | curl         | Provides headers and libraries on Arch                      |
+| zip/unzip                 | zip/unzip                      			 | zip/unzip         | Required, or else GameMaker will fail to launch your game when pressing Run (F5). Comes preinstalled on Ubuntu and Fedora desktop versions.                      |
+
+These are the closest Fedora/Arch equivalents for the Ubuntu packages and should work
+
+The zip exports are only really intended for Steam distribution, as the runner is linked against an ancient version of OpenSSL (among other libraries) because Valve guarantees to provide it in the Steam Runtime.
+
 ## Distrobox
 Think of Distrobox as a matryoshka doll, but with computers instead: it's a computer inside your computer! More specifically, a linux distro inside your current distro's terminal!
 This is especially useful for installing apps on *immutable distros*, such as Fedora Atomic/Kionite and its derivatives (e.g. Bazzite) where the core system files are *read-only and cannot be changed.*
@@ -181,12 +208,20 @@ NOTE: The last pair does not affect linux, so it can be ignored.
 	<dllmap dll="freetype.dll" wordsize="64" target="libfreetype.so.6"    os="linux"   cpu="x86-64,x64,amd64" />
 	<dllmap dll="freetype.dll" wordsize="32" target="libfreetype.so.6"     os="linux"   cpu="arm,armv7,arm32"  />
 	<dllmap dll="freetype.dll" wordsize="64" target="libfreetype.so.6"   os="linux"   cpu="armv8,arm64"   	/>
-  ...
+
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-x86_64-windows-Release/freetype.dll"  os="windows" cpu="x86-64,x64,amd64" />
+	<dllmap dll="freetype.dll" wordsize="64" target="lib/windows/arm64/freetype.dll" os="windows" cpu="arm64"      />
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-x86_64-macos-Release/freetype.dylib"  os="osx"     cpu="x86-64,x64,amd64" />
+	<dllmap dll="freetype.dll" wordsize="64" target="Vendor/freetype/freetype-aarch64-macos-Release/freetype.dylib" os="osx"  	 cpu="armv8,arm64"      />
+</configuration>
 ```
 
 ## There's no fonts in the Save/Load dialog on Arch!
 This is a rather recent issue, mainly with Pango, GTK's text renderer, and apparently the Adwaita Sans font. Since GameMaker links directly to GTK 3 rather than relying on Zenity or `xdg-desktop-portal`s, the offending font will cause Pango to stop rendering any text.
-A relatively easy fix can be done by editing `$HOME/.config/gtk-3.0/gtk.css`, adding the following:
+
+On GTK-based desktops (like GNOME, Cinnamon, Budgie, MATE, Xfce), navigate to the Font Selection settings on Cinnamon or Fonts in GNOME Tweaks/Budgie Desktop Settings/MATE's Desktop settings/Xfce's Appearence settings and change the Interface Font to something else. Same steps should technically apply to KDE in System Settings.
+
+On other desktops (such as LXQt, Trinity or a simple window manager setup) a relatively easy fix can be done by editing `$HOME/.config/gtk-3.0/gtk.css`, adding the following:
 ```css
 * {
     font-family: "Noto Sans"; /* Replace with your desired font */
@@ -195,3 +230,9 @@ A relatively easy fix can be done by editing `$HOME/.config/gtk-3.0/gtk.css`, ad
 ```
 
 NOTE: This will change all default GTK fonts.
+
+## Can't log into my Opera account from the distrobox method!
+If you can somehow bootup GameMaker via the terminal, or poke at ui.log, you can fetch the auth url that GameMaker spits out, as soon as you hit Log In, which you can manually open up in a browser and log in from there.
+
+## Can't launch my game from a zip export!
+Check the last paragraph on **Other distro equivalents for required tools/packages**. For the time being you can always export your game as an AppImage file, but the folders and/or files from your Included Files (`datafiles`) folder will not be visible to the user, as they are embedded into the package.
