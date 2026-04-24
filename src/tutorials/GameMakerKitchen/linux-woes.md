@@ -100,6 +100,8 @@ Booting up the container can be done *by pressing the little terminal-like icon 
 
 Once that's done you should be greeted with the classic bash prompt, and depending on what terminal you use, it might have a little box icon before the `[username@distrobox]:~$`. From here, just follow the **Setting Up for Ubuntu** guide linked at the top of this page.
 
+NOTE: You **will** need the following additional packages for the Ubuntu image. `libglu1-mesa zenity file`
+
 NOTE: If you see stuff like `dev/console: Cannot mkmod: Operation not permitted` during the Steam runtime download process, do not be alarmed! As long the last line keeps moving and looking like the usual `curl` progress output, you're good to go!
 
 NOTE: If you try to disable AppArmor and it shows `sysctl: cannot stat /proc/sys/kernel/apparmor_restrict_unprivileged_userns: No such file or directory`, that's actually fine! It means AppArmor is not present.
@@ -112,7 +114,11 @@ If you go into **Applications**, you should be able to see GameMaker here.
 
 Simply click on `GameMaker-Beta` and enjoy!
 
-NOTE: Attempting to compile a game might result in the following output:
+![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510371441-775ebc83-5f90-46dc-990a-1e2ce6e62860.png)
+
+## Misc notes in regards to setting up GameMaker in alternative ways
+
+In some configurations, attempting to compile a game might result in the following output:
 ```
 /bin/bash -c 'appimagetool --appimage-extract-and-run --runtime-file /home/user/GameMakerStudio2/vm/YourProjectHere/AppImage-runtime /home/user/GameMakerStudio2/vm/YourProjectHere/AppDir/ /home/user/GameMakerStudio2/vm/YourProjectHere/YourProjectHere.AppImage'
 appimagetool, continuous build (commit 5735cc5), build <local dev build> built on 2023-03-08 22:52:04 UTC
@@ -130,7 +136,6 @@ For the details of why this build failed, please review the whole log above and 
 ```
 While this may look bad, this is just GameMaker attempting to run the newly created AppImage file and failing for some reason. By this point, *your game has already been compiled and turned into an executable!* You can manually run the game by going into `$HOME/GameMakerStudo2/vm/YourProjectHere/AppDir` and double-click the `AppRun.AppImage` file. That's your game!
 
-![Screenshot](https://raw.githubusercontent.com/tabularelf/gamemaker-kitchen/refs/heads/master/src/site-assets/img/linux_woes/510371441-775ebc83-5f90-46dc-990a-1e2ce6e62860.png)
 
 # Bugs, tricks and tips:
 
