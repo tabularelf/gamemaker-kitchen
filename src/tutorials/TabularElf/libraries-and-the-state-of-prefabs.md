@@ -7,7 +7,6 @@ tags:
   - prefabs
   - libraries
   - tools
-  - extensions
 authors:
   - TabularElf
 ---
