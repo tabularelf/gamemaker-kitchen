@@ -1,5 +1,5 @@
 ---
-title: Libraries and the state of prefabs (part 1)
+title: Libraries and the state of prefabs
 description: A writeup on how porting libraries over to prefabs may go.
 date: 2026-04-26
 draft: false
