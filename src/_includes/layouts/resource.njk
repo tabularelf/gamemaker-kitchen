@@ -34,7 +34,7 @@ bodyClass: body-post
 
     <nav class="post-tags">
     {% for tag in tags %}
-      <a href="/tags/{{ tag | safeUrl }}/" class="tag">{{ tag }}</a>
+      <a href="/tags/{{ tag | safeURL }}/" class="tag">{{ tag }}</a>
     {% endfor %}
     </nav>
 
