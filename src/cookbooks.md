@@ -4,7 +4,7 @@ description: Cookbook Jams past and current.
 menu:
   visible: true
   title: Cookbooks
-  order: 10
+  order: 11
 ---
 
 Here lies all of the past and current Cookbook Jams and their entries! 

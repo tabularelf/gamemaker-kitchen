@@ -10,7 +10,7 @@ export default function* ({ search, paginate }) {
     if (data.pagination.page === 1) {
       data.menu = {
         visible: true,
-        order: 9,
+        order: 10,
       };
     }
 
