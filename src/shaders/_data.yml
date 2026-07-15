@@ -1,0 +1,10 @@
+type: shader
+category: resource
+title: Unknown
+layout: layouts/resource.njk
+donation_text: Donate!
+searchtype: "type=shader"
+logo_width: 300px
+logo_height: 100%
+authors: 
+  - Unknown Author
