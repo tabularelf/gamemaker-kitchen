@@ -164,7 +164,7 @@ site.preprocess([".md"], (page) => {
   if (tags != undefined) {
 	  tags = [...new Set(tags)];
 	  tags = tags.map((tag) => {
-	  	tag = tag.toLowerCase().trim();
+	  	tag = tag.toLowerCase().trim().replace(/\s+/g, "-");
 	  	if (Object.hasOwn(dbMatch, tag)) {
 	  		tag = dbMatch[tag];
 	  	}
