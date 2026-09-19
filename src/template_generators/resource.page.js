@@ -9,6 +9,7 @@ export default async function ({ search }, { url }) {
     var prefabs = await response.json();
     prefabs = prefabs.forEach((prefab) => {
       prefabsMap[prefab.gm.displayName] = {
+        fullname: prefab.name,
         name: prefab.gm.displayName,
         author: prefab.name.match("^@([A-Za-z0-9_-]+)/([A-Za-z0-9_.-]+)$")[1],
         url: `https://gmpm.gamemakerkitchen.com/-/web/detail/${prefab.name}`,
