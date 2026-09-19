@@ -141,7 +141,7 @@ cms.collection(
 );
 
 cms.collection(
-  "Libraries: All of the library content",
+  "Libraries: All of the cool libraries 😎",
   "src:libraries/**/*.md",
   [
     {
@@ -169,6 +169,296 @@ cms.collection(
       name: "paid",
       type: "checkbox",
       label: "Paid Asset?",
+    },
+    {
+      name: "authors",
+      type: "list",
+      label: "Authors",
+    },
+    {
+      name: "tags",
+      type: "list",
+      label: "Tags",
+    },
+    {
+      name: "gm_versions",
+      type: "list",
+      label: "GameMaker Versions",
+    },
+    {
+      name: "donation_link",
+      type: "url",
+      label: "Sponsor Link",
+    },
+    {
+      name: "content",
+      type: "markdown",
+      label: "Content",
+    },
+  ],
+);
+
+cms.collection(
+  "Tools: All of the cool tools 😎",
+  "src:tools/**/*.md",
+  [
+    {
+      name: "title",
+      type: "text",
+      label: "Title",
+    },
+    url,
+    {
+      name: "link",
+      type: "url",
+      label: "Link",
+    },
+    {
+      name: "logo",
+      type: "url",
+      label: "Logo",
+    },
+    {
+      name: "banner",
+      type: "url",
+      label: "Banner",
+    },
+    {
+      name: "paid",
+      type: "checkbox",
+      label: "Paid Asset?",
+    },
+    {
+      name: "authors",
+      type: "list",
+      label: "Authors",
+    },
+    {
+      name: "tags",
+      type: "list",
+      label: "Tags",
+    },
+    {
+      name: "gm_versions",
+      type: "list",
+      label: "GameMaker Versions",
+    },
+    {
+      name: "donation_link",
+      type: "url",
+      label: "Sponsor Link",
+    },
+    {
+      name: "content",
+      type: "markdown",
+      label: "Content",
+    },
+  ],
+);
+
+cms.collection(
+  "Assets: All of the cool assets 😎",
+  "src:assets/**/*.md",
+  [
+    {
+      name: "title",
+      type: "text",
+      label: "Title",
+    },
+    url,
+    {
+      name: "link",
+      type: "url",
+      label: "Link",
+    },
+    {
+      name: "logo",
+      type: "url",
+      label: "Logo",
+    },
+    {
+      name: "banner",
+      type: "url",
+      label: "Banner",
+    },
+    {
+      name: "paid",
+      type: "checkbox",
+      label: "Paid Asset?",
+    },
+    {
+      name: "authors",
+      type: "list",
+      label: "Authors",
+    },
+    {
+      name: "tags",
+      type: "list",
+      label: "Tags",
+    },
+    {
+      name: "gm_versions",
+      type: "list",
+      label: "GameMaker Versions",
+    },
+    {
+      name: "donation_link",
+      type: "url",
+      label: "Sponsor Link",
+    },
+    {
+      name: "content",
+      type: "markdown",
+      label: "Content",
+    },
+  ],
+);
+
+cms.collection(
+  "Snippets: All of the cool snippets 😎",
+  "src:snippets/**/*.md",
+  [
+    {
+      name: "title",
+      type: "text",
+      label: "Title",
+    },
+    url,
+    {
+      name: "link",
+      type: "url",
+      label: "Link",
+    },
+    {
+      name: "logo",
+      type: "url",
+      label: "Logo",
+    },
+    {
+      name: "banner",
+      type: "url",
+      label: "Banner",
+    },
+    {
+      name: "paid",
+      type: "checkbox",
+      label: "Paid Asset?",
+    },
+    {
+      name: "authors",
+      type: "list",
+      label: "Authors",
+    },
+    {
+      name: "tags",
+      type: "list",
+      label: "Tags",
+    },
+    {
+      name: "gm_versions",
+      type: "list",
+      label: "GameMaker Versions",
+    },
+    {
+      name: "donation_link",
+      type: "url",
+      label: "Sponsor Link",
+    },
+    {
+      name: "content",
+      type: "markdown",
+      label: "Content",
+    },
+  ],
+);
+
+cms.collection(
+  "Plugins: All of the cool plugins 😎",
+  "src:plugins/**/*.md",
+  [
+    {
+      name: "title",
+      type: "text",
+      label: "Title",
+    },
+    {
+      name: "parent",
+      type: "text",
+      label: "Parent",
+    },
+    url,
+    {
+      name: "link",
+      type: "url",
+      label: "Link",
+    },
+    {
+      name: "logo",
+      type: "url",
+      label: "Logo",
+    },
+    {
+      name: "banner",
+      type: "url",
+      label: "Banner",
+    },
+    {
+      name: "paid",
+      type: "checkbox",
+      label: "Paid Asset?",
+    },
+    {
+      name: "authors",
+      type: "list",
+      label: "Authors",
+    },
+    {
+      name: "tags",
+      type: "list",
+      label: "Tags",
+    },
+    {
+      name: "gm_versions",
+      type: "list",
+      label: "GameMaker Versions",
+    },
+    {
+      name: "donation_link",
+      type: "url",
+      label: "Sponsor Link",
+    },
+    {
+      name: "content",
+      type: "markdown",
+      label: "Content",
+    },
+  ],
+);
+
+cms.collection(
+  "Tutorials: All of the amazing tutorials 🔥",
+  "src:tutorials/**/*.md",
+  [
+    {
+      name: "title",
+      type: "text",
+      label: "Title",
+    },
+    url,
+    {
+      name: "link",
+      type: "url",
+      label: "Link",
+    },
+    {
+      name: "logo",
+      type: "url",
+      label: "Logo",
+    },
+    {
+      name: "banner",
+      type: "url",
+      label: "Banner",
     },
     {
       name: "authors",
