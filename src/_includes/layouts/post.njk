@@ -21,12 +21,12 @@ bodyClass: body-post
     {% endif %}
     
     {# Handles rendering all of the page lists #}
-    	{% if h2s.length > 0 %}
+    	{% ifAsync h2s.length > 0 %}
     	<h3>Contents:</h3>
     
     	{% set minLevel = 999 %}
     	{% for h in h2s %}
-    	  {% if h.num < minLevel %}
+    	  {% ifAsync h.num < minLevel %}
     	    {% set minLevel = h.num %}
     	  {% endif %}
     	{% endfor %}
@@ -36,7 +36,7 @@ bodyClass: body-post
     	{% for heading in h2s %}
     	    {% set level = heading.num - minLevel %}
     
-    	    {% if level > prevLevel %}
+    	    {% ifAsync level > prevLevel %}
     	        {% for i in range(prevLevel, level) %}
     	        <ul>
     	        {% endfor %}
@@ -68,14 +68,14 @@ bodyClass: body-post
     {%- set previousPost = search.previousPage(url, "type=posts") %}
     {%- if previousPost %}
     <li>
-      ← Previous: <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
+      ← Previous: <a href="{{ previouspost.url }}" rel="prev">{{ previouspost.title }}</a>
     </li>
     {% endif %}
 
     {%- set nextPost = search.nextPage(url, "type=posts") %}
     {%- if nextPost %}
     <li>
-      <strong>Next: <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a> →</strong>
+      <strong>Next: <a href="{{ nextpost.url }}" rel="next">{{ nextpost.title }}</a> →</strong>
     </li>
     {% endif %}
   </ul>

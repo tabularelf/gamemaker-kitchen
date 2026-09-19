@@ -11,6 +11,6 @@ footerMenu:
 
 <div class="block-tag-list">
   {% for page in search.pages("type=author", "author") %}
-    <a href="{{ page.data.url }}" class="tag is-big">{{ page.data.author }}</a>
+    <a href="{{ page.url }}" class="tag is-big">{{ page.author }}</a>
   {% endfor %}
 </div>

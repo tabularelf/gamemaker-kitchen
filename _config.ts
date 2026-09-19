@@ -6,13 +6,14 @@ import codeHighlight from "lume/plugins/code_highlight.ts";
 import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
-import netlifyCMS from "lume/plugins/netlify_cms.ts";
+//import netlifyCMS from "lume/plugins/netlify_cms.ts";
 import gpm from "https://deno.land/x/gpm@v0.4.1/mod.ts";
-import {existsSync} from "https://deno.land/std/fs/mod.ts";
+//import {existsSync} from "https://deno.land/std/fs/mod.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import readInfo from "lume/plugins/reading_info.ts";
 import favicon from "lume/plugins/favicon.ts";
-import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
+//import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
+import nunjucks from "lume/plugins/nunjucks.ts";
 
 
 // Languages
@@ -63,6 +64,7 @@ site
     input: "/favicon_source.png",
     cache: false,
   }))
+  .use(nunjucks())
   .use(minifyHTML({
     options: {
       minify_js: true, 
@@ -70,6 +72,11 @@ site
       keep_comments: false,
     }
   }));
+
+site
+  .add("_includes/css")
+  .add("js")
+  .add("styles.css")
 
 // Filter to convert a string to uppercase
 site.filter("uppercase", (value) => value.toUpperCase());
@@ -85,19 +92,22 @@ site.filter("safeURL", (str: string) => str.toLowerCase().trim().replaceAll(/\s+
 site.data("getAuthors", function authors(): string[] {
   const authors = new Set();
 
-  site.pages.forEach((page) =>
+  site.pages.forEach(function (page) {
     page.data.authors?.forEach((author: string) => authors.add(author))
-  );
+  });
+
 
   let newAuthors = Array.from(authors);
   let newAuthorsLowerCased = newAuthors.map(author => author.toLowerCase());
   let authorsFinal = [];
+
   ///newAuthorsLowerCased = newAuthors.filter(author => newAuthorsLowerCased.includes(author));
   newAuthors.forEach(author => {
     if ((!(authorsFinal.includes(author))) && (!(authorsFinal.map(author => author.toLowerCase()).includes(author.toLowerCase())))) {
       authorsFinal.push(author);
     }
   });
+
   return authorsFinal.map((author) => {return {
     author,
     authorSafe: author.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-")
@@ -107,10 +117,10 @@ site.data("getAuthors", function authors(): string[] {
 site.data("getAuthorsPage", function authors(myAuthor): string[] {
   const authors = new Set();
 
-  site.pages.forEach((page) =>
+  site.pages.forEach((page) => 
     page.data.authors?.forEach((author: string) => {
 		if (page.data.authors.includes(myAuthor)) {
-			authors.add(page);
+			authors.add(page.data);
 		}
 	})
   );
@@ -124,70 +134,72 @@ site.filter("getRandomPage", (pages) => {
   return pages[randomIndex];
 });
 
-site.preprocess([".md"], (page) => {
-  if (!page.src) {
-    page.data.h2s = [];
-  } else {
-    // Match Markdown H2 headers (lines starting with #, ## or ###)
-    const h2Matches = [...page.data.content.matchAll(/^(#{1,2})\s+(.*)$/gm)];
-    for (const match of h2Matches) {
-      const fullMatch = match[0]; // e"## My Heading"
-      const hashes = match[1];    // #, ##, # ##
-      const heading = match[2];   // "My Heading"
-      const id = heading.trim().toLowerCase().replace(/\s+/g, "-");
+site.preprocess([".md"], (pages) => {
+  for (const page of pages) {
+    if (!page.src) {
+      page.h2s = [];
+    } else {
+      // Match Markdown H2 headers (lines starting with #, ## or ###)
+      const h2Matches = [...page.data.content.matchAll(/^(#{1,2})\s+(.*)$/gm)];
+      for (const match of h2Matches) {
+        const fullMatch = match[0]; // e"## My Heading"
+        const hashes = match[1];    // #, ##, # ##
+        const heading = match[2];   // "My Heading"
+        const id = heading.trim().toLowerCase().replace(/\s+/g, "-");
 
-      page.data.content = page.data.content.replace(fullMatch, `${hashes} ${heading}<a name="${id}"></a>`);
-    };
+        page.data.content = page.data.content.replace(fullMatch, `${hashes} ${heading}<a name="${id}"></a>`);
+      };
 
-    page.data.h2s = h2Matches.map(function(m) {
+      page.data.h2s = h2Matches.map(function (m) {
         return {
           content: m[2].trim(),
           num: m[1].length,
           id: m[2].trim().toLowerCase().replace(/\s+/g, "-")
         }
-    });
-  }
+      });
+    }
 
-  let tags = page.data.tags;
+    let tags = page.data.tags;
+    //console.log(tags)
 
-  // We actually have this here so I don't gotta refactor a bunch of potential files
-  const dbMatch = {
-    "localisation":   "localization",
-    "sprite":        "sprites",
-    "array":         "arrays",
-    "string":        "strings",
-    "vector":        "vectors",
-    "buffer":        "buffers",
-  };
-  
-  // Normalize tags
-  if (tags != undefined) {
-	  tags = [...new Set(tags)];
-	  tags = tags.map((tag) => {
-	  	tag = tag.toLowerCase();
-	  	if (Object.hasOwn(dbMatch, tag)) {
-	  		tag = dbMatch[tag];
-	  	}
+    // We actually have this here so I don't gotta refactor a bunch of potential files
+    const dbMatch = {
+      "localisation": "localization",
+      "sprite": "sprites",
+      "array": "arrays",
+      "string": "strings",
+      "vector": "vectors",
+      "buffer": "buffers",
+    };
+
+    // Normalize tags
+    if (tags != undefined) {
+      tags = tags.map((tag) => {
+        tag = tag.toLowerCase();
+        if (Object.hasOwn(dbMatch, tag)) {
+          tag = dbMatch[tag];
+        }
+
+        return tag;
+      });
+
+      page.data.tags = tags;
+    }
+
+    let authors = page.data.authors;
     
-	  	return tag;
-	  });
-  
-	  // Save the normalized tags 
-	  page.data.tags = tags;
-  }
-  
-  let authors = page.data.authors;
-  if (authors != undefined) {
-	   page.data.authorsSafe = authors.map((author) => author.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-"));
-     page.data.authorsMetadata = authors.map((author) => {
-      return {
-        name: author,
-        safe: author.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-")
-      }
-     });
-	  //console.log(authors);
-  }
+    if (authors != undefined) {
+      page.data.authorsSafe = authors.map((author) => author.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-"));
+      page.data.authorsMetadata = authors.map((author) => {
+        return {
+          name: author,
+          safe: author.toLowerCase().trim().replaceAll(/\s+/g, '-').replaceAll("_", "-").replaceAll(" ", "-")
+        }
+      });
 
+      //console.log(authors);
+    }
+  }
 });
 
 export default site;

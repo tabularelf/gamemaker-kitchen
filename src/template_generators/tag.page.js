@@ -1,7 +1,10 @@
 export const layout = "layouts/tag.njk";
 
 export default function* ({ search }) {
-  for (var tag of search.tags()) {
+  const tags = new Set(search.values("tags"));
+  //console.log([...tags]);
+
+  for (var tag of tags) {
     yield {
       url: `/tags/${tag}/`,
       title: `Tagged “${tag}”`,

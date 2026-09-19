@@ -1,26 +1,26 @@
 <ul class="postList">
   {% for post in postslist %}
   <li class="postList-post">
-    <a href="{{ post.data.url }}" class="postList-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
-      {% if post.data.title %}
-        <strong>{{ post.data.title }}</strong>
+    <a href="{{ post.url }}" class="postList-title"{% ifAsync entry.url == url %} aria-current="page"{% endif %}>
+      {% ifAsync post.title %}
+        <strong>{{ post.title }}</strong>
       {% else %}
         <code>{{ post.url }}</code>
       {% endif %}
     </a>
 
-    <time class="postList-date" datetime="{{ post.data.date | date('DATETIME') }}">
-      {{ post.data.date | date('HUMAN_DATE') }}
+    <time class="postList-date" datetime="{{ post.date | date('DATETIME') }}">
+      {{ post.date | date('HUMAN_DATE') }}
     </time>
 
-    <p class="postList-description"> {{ post.data.description }}</p>
+    <p class="postList-description"> {{ post.description }}</p>
 	
 	  <!--  Force newline -->
 	  <br>
-    {% for tag in post.data.tags %}
+    {% for tag in post.tags %}
     {% set page = search.page("type=tag tag='" + tag + "'") %}
-    {% if page %}
-    <a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
+    {% ifAsync page %}
+    <a href="{{ page.url  }}" class="tag">{{ tag }}</a>
     {% endif %}
     {% endfor %}
   </li>
