@@ -381,12 +381,12 @@ cms.collection(
       type: "text",
       label: "Title",
     },
+    url,
     {
       name: "parent",
       type: "text",
-      label: "Parent",
+      label: "Parent Resource",
     },
-    url,
     {
       name: "link",
       type: "url",
