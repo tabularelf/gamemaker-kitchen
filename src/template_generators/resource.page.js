@@ -57,6 +57,7 @@ export default async function ({ search }, { url }) {
       author: snippet.authors,
       authorsSafe: snippet.authorsSafe,
       date: snippet.date,
+      prefab: prefabsMap[snippet.title],
 	  type: 'snippet',
     });
   }
@@ -78,6 +79,7 @@ export default async function ({ search }, { url }) {
       author: asset.authors,
       authorsSafe: asset.authorsSafe,
       date: asset.date,
+      prefab: prefabsMap[asset.title],
 	  type: 'asset',
     });
   }
@@ -118,6 +120,7 @@ export default async function ({ search }, { url }) {
       author: tool.authors,
       authorsSafe: tool.authorsSafe,
       date: tool.date,
+      prefab: prefabsMap[tool.title],
 	  type: 'tool',
     });
   }
@@ -138,6 +141,7 @@ export default async function ({ search }, { url }) {
       author: plugin.authors,
       authorsSafe: plugin.authorsSafe,
       date: plugin.date,
+      prefab: prefabsMap[plugin.title],
 	  type: 'plugin',
     });
   }
