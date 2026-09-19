@@ -77,7 +77,9 @@
         "deno.land:443",
         "esm.sh:443",
         "registry.npmjs.org:443",
-        "api.github.com:443"
+        "api.github.com:443",
+        "codeload.github.com:443",
+        "gmpm.gamemakerkitchen.com:443"
       ],
       "env": true,
       "run": true,
