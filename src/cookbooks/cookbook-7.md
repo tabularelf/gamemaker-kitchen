@@ -22,6 +22,7 @@ Got a tool or system in one or several of your projects that you use often? Or a
 ### Requirements for participation: 
 - Must be familiar with source control of some kind (Github, Bitbucket, Gitlab, Codeberg) 
 - Must have a basic fundamental understanding of GameMaker and GameMaker Language (not for complete beginners!)
+- Please make prefabs only for 2026.1 betas, or unless LTS 2026.1 comes out. LTS 2026.0 is NOT supported at all, and the submissions will be heavily focused on ensuring that they work in 2026.1. 
 
 ### Requirements for submission:
 - You may work on a project that was already in progress before the jam started, but it should be in an incomplete or prototype state. No submitting a library that was already finished before the jam started!
@@ -86,7 +87,7 @@ In addition, please add a "cookbook-7" tag upon submitting a prefab, to filter f
 **A**: There's a couple out there, see software versioning for more info.
 
 ### Q: I’d like to make something in mind for LTS, what should I do? 
-**A**: Make your project in LTS. Even with the project conversion tool now exposed as an UI as of 2024.2, there’s a huge difference in terms of capabilities between both LTS and monthly. To minimize the amount of effort of converting, rewriting any code or using something that just doesn’t exist in LTS, you should use GameMaker LTS from the start.
+**A**: As of LTS 2026.0, I would not recommend making a prefab for LTS 2026.0. Please use the beta version of GameMaker instead. (Or until LTS 2026.1 comes out.)
 
 ### Q: Am I allowed to use a dependency of another library/tool, if it aids in my submission?
 **A**: Dependencies are allowed WITHIN reason. Provided that they do not take up the majority of the submission itself (should be one or a few aspects that they cover, not basically be THE submission). And crediting andl icensing MUST be given as per the authors own dependency credits and licensing.
@@ -100,7 +101,7 @@ In addition, please add a "cookbook-7" tag upon submitting a prefab, to filter f
 // Set the date we're counting down to
 var countDownDateTimeStart = new Date("11/17/2026 1:00:00 PM UTC"); // UTC
 var countDownDateTime = countDownDateTimeStart;
-var countDownDateTimeEnd = new Date("12/21/2026 2:00:00 PM UTC"); // UTC
+var countDownDateTimeEnd = new Date("12/21/2026 1:00:00 PM UTC"); // UTC
 var countDownTime = countDownDateTime.getTime(); 
 var dateText = "Jam Starts";
 
