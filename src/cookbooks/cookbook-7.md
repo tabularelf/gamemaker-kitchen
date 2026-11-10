@@ -22,7 +22,7 @@ Got a tool or system in one or several of your projects that you use often? Or a
 ### Requirements for participation: 
 - Must be familiar with source control of some kind (Github, Bitbucket, Gitlab, Codeberg) 
 - Must have a basic fundamental understanding of GameMaker and GameMaker Language (not for complete beginners!)
-- Please make prefabs only for 2026.1 betas, or unless LTS 2026.1 comes out. LTS 2026.0 is NOT supported at all (due to bugs!), and the submissions will be heavily focused on ensuring that they work in 2026.1. 
+- Please make prefabs only for 2026.1 betas, or unless LTS 2026.1 comes out. LTS 2026.0 is NOT supported at all (due to bugs!), and the reviews will be solely taken place in 2026.1 (beta or LTS 2026.1).
 
 ### Requirements for submission:
 - You may work on a project that was already in progress before the jam started, but it should be in an incomplete or prototype state. No submitting a library that was already finished before the jam started!
