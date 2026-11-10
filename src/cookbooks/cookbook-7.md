@@ -46,6 +46,7 @@ AI agents MUST NOT add Signed-off-by tags. The human submitter is responsible fo
 
 ### How to submit your library:
 Please refer to [this guide](https://github.com/tabularelf/Libraries-and-the-state-of-prefabs).
+In addition, please add a "cookbook-7" tag upon submitting a prefab, to filter results.
 
 <h3>Frequently asked questions</h3>
 <button class="collapsible">Open collapsible</button>
