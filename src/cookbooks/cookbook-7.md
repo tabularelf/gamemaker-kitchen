@@ -45,7 +45,7 @@ AI agents MUST NOT add Signed-off-by tags. The human submitter is responsible fo
 - Taking full responsibility for any work done by the AI assistant
 
 ### How to submit your library:
-Please refer to [this guide](https://github.com/tabularelf/Libraries-and-the-state-of-prefabs).
+Please refer to [this guide](https://github.com/tabularelf/Libraries-and-the-state-of-prefabs).<br>
 In addition, please add a "cookbook-7" tag upon submitting a prefab, to filter results.
 
 <h3>Frequently asked questions</h3>
